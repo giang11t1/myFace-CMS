@@ -1,0 +1,1173 @@
+{% set current_page = 'cauhinh' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Cấu hình & thông tin tài khoản</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content page-account">
+            <div class="clearfix report-tab">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#tab-1" role="tab" data-toggle="tab">Thông tin chung</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#tab-2" role="tab" data-toggle="tab">Gói dịch vụ</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#tab-3" role="tab" data-toggle="tab">Nhân viên quản trị</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#tab-4" role="tab" data-toggle="tab">Thay đổi tài khoản chủ sở hữu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-content report-tab-content tab-content-account">
+               <div class="tab-pane active" id="tab-1" role="tabpanel" >
+                  <div class="panel box-panel box1">
+                   	<h3 class="title_box">Thông tin chủ sở hữu shop</h3>
+                   	<div class="infor infor_">
+                   		<p class="name_account">(Anh) Raymond</p>
+                   		<span class="icon-update">
+                   			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                   			Cập nhật
+                   		</span>
+                   		<ul>
+                   			<li class="row"><b>Điện thoại: </b> <span>0902813891</span></li>
+                   			<li class="row"><b>Email: </b> <span>173993146352528@facebook.com</span></li>
+                   		</ul>
+                   	</div>
+                   	<form class="update">
+                   		<div class="wrapper">
+                   			<ul class="col-md-6">
+                      			<li class="row">
+                   					<span>Họ tên chủ shop</span>
+                   					<input class="form-control" type="text" name="" value="Raymond Goldington" placeholder="Nhập họ tên chủ shop">
+                      			</li>
+                      			<li class="row">
+                   					<span>Điện thoại</span>
+                   					<input class="form-control" type="text" name="" value="0902813891" placeholder="Nhập điện thoại">
+                      			</li>
+                      			<li class="row">
+                   					<span>Email</span>
+                   					<input class="form-control" type="text" name="" value="Raymond.gold@itlvn.com" placeholder="Nhập email">
+                      			</li>
+                      			<li class="row">
+               						<div class="form-group">
+                                <div class="radio-inline">
+                                    <input value="option1" type="radio" checked="" name="gender">
+                                    <label>Anh</label>
+                                </div>
+                                <div class="radio-inline">
+                                    <input value="option2" type="radio" name="gender">
+                                    <label>Chị</label>
+                                </div>
+                              </div>
+                      			</li>
+                      		</ul>
+                   		</div>
+                   		<div class="wrap_btn">
+                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_update">Cập nhật thông tin</button>
+                   		</div>
+                   	</form>
+                  </div>
+                  <div class="panel box-panel box2">
+                   	<h3 class="title_box">Thông tin shop</h3>
+                   	<div class="infor infor_">
+                   		<p class="name_account">Giayxinh Giasi</p>
+                   		<span class="icon-update">
+                   			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                   			Cập nhật
+                   		</span>
+                   		<ul>
+                   			<li class="row"><b>Mã shop: </b> <span>2091-iya</span></li>
+                   			<li class="row"><b>Địa chỉ: </b> <span>350/6 lưu hữu phước, Phường 15, Quận 8, Thành Phố Hồ Chí Minh</span></li>
+                   			<li class="row"><b>Điện thoại: </b> <span>0902813891</span></li>
+                   			<li class="row"><b>Email: </b> <span>giasigiayxinh@gmail.com</span></li>
+                   		</ul>
+                   		<ul>
+                   			<li class="row"><b>Số tài khoản: </b> <span>01434224001</span></li>
+                   			<li class="row"><b>Ngân hàng: </b> <span>TPBank</span></li>
+                   			<li class="row"><b>Người thừa hưởng: </b> <span>Raymond Red</span></li>
+                   		</ul>
+                   	</div>
+                   	<form class="update">
+                   		<div class="wrapper">
+                   			<div class="col-md-6">
+	                   			<ul>
+	                      			<li class="row">
+	                   					<span>Tên shop</span>
+	                   					<input class="form-control" type="text" name="" value="Giayxinh Giasi" placeholder="Nhập tên shop" disabled>
+	                      			</li>
+	                      			<li class="row">
+	                   					<span>Mã shop</span>
+	                   					<input class="form-control" type="text" name="" value="2091-iya" placeholder="Nhập mã shop" disabled>
+	                      			</li>
+	                      			<li class="row">
+	                   					<span>Điện thoại</span>
+	                   					<input class="form-control" type="text" name="" value="0932 437 288" placeholder="Nhập điện thoại">
+	                      			</li>
+	                      			<li class="row">
+	                   					<span>Email</span>
+	                   					<input class="form-control" type="text" name="" value="Raymond.gold@itlvn.com" placeholder="Nhập email" disabled>
+	                      			</li>
+	                      			<li class="row">
+	                      				<span>Tỉnh/ Thành phố</span>
+	                   					<div class="wrap_select">
+											<select class="form-control">
+											    <option>Chọn Tỉnh/ Thành phố</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+											</select>
+											<i class="fa fa-angle-down" aria-hidden="true"></i>
+										</div>
+	                      			</li>
+	                      			<li class="row">
+	                      				<div class="col-md-6">
+	                      					<span>Quận/ Huyện</span>
+	                      					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Quận/ Huyện</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+	                      				</div>
+	                      				<div class="col-md-6">
+	                      					<span>Phường/ Xã</span>
+	                      					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Phường/ Xã</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+	                      				</div>
+	                      			</li>
+	                      			<li class="row">
+	                      				<span>Địa chỉ</span>
+	                      				<input class="form-control" type="text" name="" placeholder="Nhập thông tin địa chỉ" value="350/6 lưu hữu phước">
+	                      			</li>
+	                      		</ul>
+	                   		</div>
+	                   		<div class="col-md-6">
+	                   			<b class="title">Thông tin tài khoản ngân hàng</b>
+	                   			<p>(Dùng để nhận tiền hàng / tiền C.O.D từ công ty vận chuyển / Nhận tiền thưởng từ myFace khi shop có tham gia chương trình khuyến mãi)</p>
+	                   			<ul class="form-bank">
+	                   				<li class="row">
+	                   					<span>Số tài khoản</span>
+	                   					<input class="form-control" type="text" name="" placeholder="Nhập số tài khoản" value="01434224001"> 
+	                   				</li>
+	                   				<li class="row">
+	                   					<span>Ngân hàng</span>
+	                   					<input class="form-control" type="text" name="" placeholder="Ngân hàng" value="TPBank"> 
+	                   				</li>
+	                   				<li class="row">
+	                   					<span>Người thừa hưởng</span>
+	                   					<input class="form-control" type="text" name="" placeholder="Nhập người thừa hưởng" value="Raymond Red"> 
+	                   				</li>
+	                   			</ul>
+	                   		</div>
+                   		</div>
+                   		<div class="wrap_btn">
+                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_update">Cập nhật thông tin</button>
+                   		</div>
+                   	</form>
+                  </div>
+                  <div class="panel box-panel box3">
+                   	<h3 class="title_box">Thông tin kho cửa hàng</h3>
+                   	<div class="infor-item">
+                   		<div class="infor infor1">
+	                   		<p class="name_account">Cửa hàng chính</p>
+	                   		<span class="icon-update">
+	                   			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+	                   			Cập nhật
+	                   		</span>
+	                   		<ul>
+	                   			<li class="row"><b>Tên địa điểm: </b> <span>giaysi</span></li>
+	                   			<li class="row"><b>Địa chỉ: </b> <span>350/6 lưu hữu phước, Phường 15, Quận 8, Thành Phố Hồ Chí Minh</span></li>
+	                   			<li class="row"><b>Điện thoại: </b> <span>0902813891</span></li>
+	                   		</ul>
+	                   	</div>
+	                   	<form class="update update-form1">
+	                   		<div class="wrapper">
+	                   			<div class="col-md-6">
+		                   			<ul>
+		                      			<li class="row">
+		                   					<span>Tên địa điểm</span>
+		                   					<input class="form-control" type="text" name="" value="giaysi" placeholder="Nhập tên địa điểm">
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Điện thoại</span>
+		                   					<input class="form-control" type="text" name="" value="0932 437 288" placeholder="Nhập điện thoại">
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Tỉnh/ Thành phố</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Tỉnh/ Thành phố</option>
+												    <option>Hồ chí minh</option>
+												    <option>Hà nội</option>
+												    <option>Nghệ an</option>
+												    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Quận/ Huyện</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Quận/ Huyện</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Phường/ Xã</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Phường/ Xã</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Địa chỉ</span>
+		                      				<input class="form-control" type="text" name="" placeholder="Nhập địa chỉ" value="350/6 lưu hữu phước">
+		                      			</li>
+		                      		</ul>
+		                   		</div>
+		                   		<div class="col-md-6"></div>
+	                   		</div>
+	                   		<div class="wrap_btn">
+	                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+	                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_update">Cập nhật thông tin</button>
+	                   		</div>
+	                   	</form>
+                   	</div>
+                   	<div class="sub-item">
+                   		<div class="infor infor2">
+	                   		<p class="name_account">Cửa hàng phụ 1</p>
+	                   		<span class="icon-update">
+	                   			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+	                   			Cập nhật
+	                   		</span>
+	                   		<span class="icon-delete remove-action" data-toggle="modal" data-target="#modal_delete">
+	                   			<i class="fa fa-trash" aria-hidden="true"></i>
+	                   			Xóa
+	                   		</span>
+	                   		<ul>
+	                   			<li class="row"><b>Tên địa điểm: </b> <span>giaysi</span></li>
+	                   			<li class="row"><b>Địa chỉ: </b> <span>350/6 lưu hữu phước, Phường 15, Quận 8, Thành Phố Hồ Chí Minh</span></li>
+	                   			<li class="row"><b>Điện thoại: </b> <span>0902813891</span></li>
+	                   		</ul>
+	                   	</div>
+	                   	<form class="update update-form2">
+	                   		<div class="wrapper">
+	                   			<div class="col-md-6">
+	                   				<ul>
+		                      			<li class="row">
+		                   					<span>Tên địa điểm</span>
+		                   					<input class="form-control" type="text" name="" value="giaysi" placeholder="Nhập tên địa điểm">
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Điện thoại</span>
+		                   					<input class="form-control" type="text" name="" value="0932 437 288" placeholder="Nhập điện thoại">
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Tỉnh/ Thành phố</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Tỉnh/ Thành phố</option>
+												    <option>Hồ chí minh</option>
+												    <option>Hà nội</option>
+												    <option>Nghệ an</option>
+												    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Quận/ Huyện</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Quận/ Huyện</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Phường/ Xã</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Phường/ Xã</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Địa chỉ</span>
+		                      				<input class="form-control" type="text" name="" placeholder="Nhập địa chỉ" value="350/6 lưu hữu phước">
+		                      			</li>
+		                      		</ul>
+		                   		</div>
+		                   		<div class="col-md-6">
+		                   		</div>
+	                   		</div>
+	                   		<div class="wrap_btn">
+	                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+	                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_update">Cập nhật thông tin</button>
+	                   		</div>
+	                   	</form>
+                   	</div>
+                   	<div class="sub-item">
+                   		<div class="infor infor2">
+	                   		<p class="name_account">Cửa hàng phụ 2</p>
+	                   		<span class="icon-update">
+	                   			<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+	                   			Cập nhật
+	                   		</span>
+	                   		<span class="icon-delete remove-action" data-toggle="modal" data-target="#modal_delete">
+	                   			<i class="fa fa-trash" aria-hidden="true"></i>
+	                   			Xóa
+	                   		</span>
+	                   		<ul>
+	                   			<li class="row"><b>Tên địa điểm: </b> <span>giaysi</span></li>
+	                   			<li class="row"><b>Địa chỉ: </b> <span>350/6 lưu hữu phước, Phường 15, Quận 8, Thành Phố Hồ Chí Minh</span></li>
+	                   			<li class="row"><b>Điện thoại: </b> <span>0902813891</span></li>
+	                   		</ul>
+	                   	</div>
+	                   	<form class="update update-form2">
+	                   		<div class="wrapper">
+	                   			<div class="col-md-6">
+	                   				<ul>
+		                      			<li class="row">
+		                   					<span>Tên địa điểm</span>
+		                   					<input class="form-control" type="text" name="" value="giaysi" placeholder="Nhập tên địa điểm">
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Điện thoại</span>
+		                   					<input class="form-control" type="text" name="" value="0932 437 288" placeholder="Nhập điện thoại">
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Tỉnh/ Thành phố</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Tỉnh/ Thành phố</option>
+												    <option>Hồ chí minh</option>
+												    <option>Hà nội</option>
+												    <option>Nghệ an</option>
+												    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Quận/ Huyện</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Quận/ Huyện</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Phường/ Xã</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Phường/ Xã</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Địa chỉ</span>
+		                      				<input class="form-control" type="text" name="" placeholder="Nhập địa chỉ" value="350/6 lưu hữu phước">
+		                      			</li>
+		                      		</ul>
+		                   		</div>
+		                   		<div class="col-md-6">
+		                   		</div>
+	                   		</div>
+	                   		<div class="wrap_btn">
+	                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+	                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_update">Cập nhật thông tin</button>
+	                   		</div>
+	                   	</form>
+                   	</div>
+                   	<div class="wrap-button">
+                  		<button class="btn btn-secondary btn-add-address" type="button">Thêm địa chỉ</button>
+                  		<form class="update add-form">
+	                   		<div class="wrapper">
+	                   			<div class="col-md-6">
+	                   				<ul>
+		                      			<li class="row">
+		                   					<span>Tên địa điểm</span>
+		                   					<input class="form-control" type="text" name="" value="" placeholder="Nhập tên địa điểm">
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Điện thoại</span>
+		                   					<input class="form-control" type="text" name="" value="" placeholder="Nhập điện thoại">
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Tỉnh/ Thành phố</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+												    <option>Chọn Tỉnh/ Thành phố</option>
+												    <option>Hồ chí minh</option>
+												    <option>Hà nội</option>
+												    <option>Nghệ an</option>
+												    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                   					<span>Quận/ Huyện</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Quận/ Huyện</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Phường/ Xã</span>
+		                   					<div class="wrap_select">
+												<select class="form-control">
+											    <option>Chọn Phường/ Xã</option>
+											    <option>Hồ chí minh</option>
+											    <option>Hà nội</option>
+											    <option>Nghệ an</option>
+											    <option>Đà Nẵng</option>
+												</select>
+												<i class="fa fa-angle-down" aria-hidden="true"></i>
+											</div>
+		                      			</li>
+		                      			<li class="row">
+		                      				<span>Địa chỉ</span>
+		                      				<input class="form-control" type="text" name="" placeholder="Nhập địa chỉ" value="">
+		                      			</li>
+		                      		</ul>
+		                   		</div>
+		                   		<div class="col-md-6">
+		                   		</div>
+	                   		</div>
+	                   		<div class="wrap_btn">
+	                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+	                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_add">Thêm</button>
+	                   		</div>
+	                   	</form>
+                   	</div>
+                  </div>
+               </div><!-- end tab 1 -->
+               <div class="tab-pane" id="tab-2" role="tabpanel" >
+                  <div class="panel box-panel panel-package">
+                      <div class="package-heading">
+                          <h3 class="panel-title">Gói miễn phí</h3>
+                          <div class="row">
+                              <div class="col-xs-6">
+                                 <p>Bạn đang sử dụng Gói miễn phí <b>(0đ/ 30 ngày)</b> <br> ngày hết hạn: <b>15/05/2018</b></p>
+                              </div>
+                              <div class="col-xs-6">
+                                  <button class="btn btn-basic btn-package" value="">Gia hạn gói dịch vụ</button>
+                                  <button class="btn btn-secondary btn-upgrage" value="">Nâng cấp gói dịch vụ</button>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="panel-body package-content">
+                          <h3 class="title-package text-center">Gói dịch vụ myFace có những tính năng nổi bật</h3>
+                          <table class="table table-bordered pricing-table">
+			                <thead>
+			                    <tr>
+			                        <th>
+			                            <span class="hidden">Plan feature</span>
+			                        </th>
+			                        <th class="col-md-3 text-center">
+			                            <p class="title">Gói miễn phí</p>
+			                        </th>
+			                        <th class="col-md-3 text-center">
+			                            <p class="title">Gói thu phí</p>
+			                        </th>
+			                    </tr>
+			                </thead>
+			                <tbody>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Giá dịch vụ</span>
+			                        </th>
+			                        <td>
+			                            <span class="">Miễn phí</span>
+			                        </td>
+			                        <td>
+			                            <span class="">119.000</span>
+			                            <span>vnđ/tháng</span>
+			                        </td>
+			                    </tr>
+			                </tbody>
+			                <tbody>
+			                    <tr>
+			                        <th class="heading" colspan="3">
+			                            <span class="">Tính năng quản lý bán hàng</span>
+			                        </th>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Quản lý đơn hàng</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Quản lý danh mục sản phẩm</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Quản lý khách hàng</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Quản lý hệ thống báo cáo</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Quản lý chat & comment</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Kết nối cty vận chuyển tự động</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                </tbody>
+			                <tbody>
+			                    <tr>
+			                        <th class="heading" colspan="3">
+			                            <span class="">Tính năng Cấu hình & quản lý tài khoản</span>
+			                        </th>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Không giới hạn người quản lý tài khoản</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                3 người
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                Không giới hạn
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Quản lý comment + inbox</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Server riêng</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-remove" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                     <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Cấu hình khuyến mãi</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-remove" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Tự động ẩn comment sau khi nhận</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-remove" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                    <tr>
+			                        <th class="col-md-6">
+			                            <span class="">Tự động ẩn số điện thoại sau khi nhận</span>
+			                        </th>
+			                        <td>
+			                            <span class="">
+			                                <i class="fa fa-remove" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                        <td class="td-fee">
+			                            <span class="">
+			                                <i class="fa fa-check" aria-hidden="true"></i>
+			                            </span>
+			                        </td>
+			                    </tr>
+			                </tbody>
+			              </table>
+			            <button class="btn btn-secondary" value="">Mua ngay</button>
+                      </div>
+                  </div>
+					{% include "block/_upgrade_package.html" %} 
+					{% include "block/_extend_package.html" %}
+                </div><!-- end tab 2 -->
+                <div class="tab-pane" id="tab-3" role="tabpanel" >
+              		<button class="btn btn-secondary btn-create"><i class="fa fa-plus" aria-hidden="true"></i> Tạo nhân viên quản trị</button>
+                  <div class="show-list panel box-panel">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Danh sách quản trị viên</h3>
+                    </div>
+                    <div class="panel-body">
+                      <table class="table category-list-table">
+	                        <thead>
+	                            <tr>
+	                                <th>Tên quản trị</th>
+	                                <th>Email</th>
+	                                <th>Quyền truy cập</th>
+	                                <th class="action-col">sửa/xóa</th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr>
+	                                <td>
+	                                    <a class="cate-name" href="#">Hoàng Phi Hồng</a>
+	                                </td>
+	                                <td>
+	                                    <p>Hoangphihong@gmail.com</p>
+	                                </td>
+	                                <td>
+	                                    <p>Chủ shop</p>
+	                                </td>
+	                                <td class="action-col">
+	                                    <div class="action-list">
+	                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="#">
+	                                            <i class="fa fa-edit" aria-hidden="true"></i>
+	                                        </a>
+	                                    </div>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td>
+                                    <a class="cate-name" href="#">Hoàng Phi Hồng</a>
+	                                </td>
+	                                <td>
+	                                  <p>Hoangphihong@gmail.com</p>
+	                                </td>
+	                                <td>
+	                                    <p>Toàn quyền truy cập</p>
+	                                </td>
+	                                <td class="text-center">
+	                                    <div class="action-list">
+	                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="#">
+	                                            <i class="fa fa-edit" aria-hidden="true"></i>
+	                                        </a>
+	                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+	                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+	                                        </a>
+	                                    </div>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td>
+                                    <a class="cate-name" href="#">Hoàng Phi Hồng</a>
+	                                </td>
+	                                <td>
+                                    <p>Hoangphihong@gmail.com</p>
+	                                </td>
+	                                <td>
+	                                    <p>Toàn quyền truy cập</p>
+	                                </td>
+	                                <td class="text-center">
+	                                    <div class="action-list">
+	                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="#">
+	                                            <i class="fa fa-edit" aria-hidden="true"></i>
+	                                        </a>
+	                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+	                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+	                                        </a>
+	                                    </div>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td>
+                                    <a class="cate-name" href="#">Hoàng Phi Hồng</a>
+	                                </td>
+	                                <td>
+                                    <p>Hoangphihong@gmail.com</p>
+	                                </td>
+	                                <td>
+	                                    <p>Giới hạn quyền truy cập</p>
+	                                </td>
+	                                <td class="text-center">
+	                                    <div class="action-list">
+	                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="#">
+	                                            <i class="fa fa-edit" aria-hidden="true"></i>
+	                                        </a>
+	                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+	                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+	                                        </a>
+	                                    </div>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td>
+                                    <a class="cate-name" href="#">Hoàng Phi Hồng</a>
+	                                </td>
+	                                <td>
+                                    <p>Hoangphihong@gmail.com</p>
+	                                </td>
+	                                <td>
+                                    <p>Giới hạn quyền truy cập</p>
+	                                </td>
+	                                <td class="text-center">
+	                                    <div class="action-list">
+	                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="#">
+	                                            <i class="fa fa-edit" aria-hidden="true"></i>
+	                                        </a>
+	                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+	                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+	                                        </a>
+	                                    </div>
+	                                </td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+                    </div>
+                  </div>
+                  <!-- create admin -->
+                  <div class="create-admin">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Thêm quản trị viên</h3>
+                        </div>
+                        <div class="panel-body panel-padding update">
+                        	<div class="col-md-6 left-page"> 
+                        		<div class="wrapper">
+	                        		<ul>
+		                        		<li>
+		                        			<span>Họ tên</span>
+		                        			<input class="form-control" type="text" name="" placeholder="Nhập họ tên" value="">
+		                        		</li>
+		                        		<li>
+		                        			<span>Điện thoại</span>
+		                        			<input class="form-control" type="text" name="" placeholder="Nhập số điện thoại" value="">
+		                        		</li>
+		                        		<li>
+		                        			<span>Email</span>
+		                        			<input class="form-control" type="text" name="" placeholder="Nhập email" value="">
+		                        		</li>
+		                        		<li>
+			                   					<span>Mật khẩu</span>
+			                   					<input class="form-control" type="password" name="" value="" placeholder="Nhập mật khẩu">
+		                      			</li>
+		                      			<li>
+			                   					<span>Nhập lại mất khẩu</span>
+			                   					<input class="form-control" type="password" name="" value="" placeholder="Nhập lại mật khẩu">
+		                      			</li>
+		                        	</ul>
+	                        	</div>
+                        	</div>
+                        	<div class="col-md-6 right-page"> 
+	                        	<div class="block">
+	                        		<p class="title">Cấp quyền truy cập</p>
+	                        		 <div class="checkbox">
+                                  <input type="checkbox">
+                                  <label>Toàn quyền truy cập</label>
+                              	</div>
+	                        	</div>
+	                        	<div class="block">
+	                        		<p class="title">Tool quản lý bán hàng</p>
+	                        		<div class="row">
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                    <input type="checkbox">
+			                                    <label>Quản lý chung</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                    <input type="checkbox">
+			                                    <label>Chat & Comment</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Đơn hàng</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Sản phẩm</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Khách hàng</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Khuyến mãi</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Báo cáo</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Kênh bán hàng</label>
+			                              	</div>
+	                        			</div>
+	                        		</div>
+	                        	</div>
+	                        	<div class="block">
+	                        		<p class="title">Tool quản lý & cấu hình tài khoản</p>
+	                        		<div class="row">
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Thông tin chung</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Gói dịch vụ</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Nhân viên quản trị</label>
+			                              	</div>
+	                        			</div>
+	                        		</div>
+	                        	</div>
+	                        	<div class="btn-done text-right">
+	                        		<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+				                	<button type="button" class="btn btn-secondary" value="Tạo mới quản trị viên">Tạo mới quản trị viên</button>
+				                </div>
+                        	</div>
+                        </div>
+                    </div>
+				  </div>
+				  <!-- edit admin -->
+				  <div class="edit-admin">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Chỉnh sửa quản trị viên</h3>
+                        </div>
+                        <div class="panel-body panel-padding update">
+                        	<div class="col-md-6 left-page"> 
+                        		<div class="wrapper">
+	                        		<ul>
+		                        		<li>
+		                        			<span>Họ tên</span>
+		                        			<input class="form-control" type="text" name="" placeholder="Nhập họ tên" value="Hoàng Phi Hồng">
+		                        		</li>
+		                        		<li>
+		                        			<span>Điện thoại</span>
+		                        			<input class="form-control" type="text" name="" placeholder="Nhập số điện thoại" value="546347476">
+		                        		</li>
+		                        		<li>
+		                        			<span>Email</span>
+		                        			<input class="form-control" type="text" name="" placeholder="Nhập email" value="Hoangphihong@gmail.com">
+		                        		</li>
+		                        		<li>
+		                   					<span>Mật khẩu</span>
+		                   					<input class="form-control" type="password" name="" value="" placeholder="Nhập mật khẩu">
+		                      			</li>
+		                      			<li>
+		                   					<span>Nhập lại mất khẩu</span>
+		                   					<input class="form-control" type="password" name="" value="" placeholder="Nhập lại mật khẩu">
+		                      			</li>
+		                        	</ul>
+	                        	</div>
+                        	</div>
+                        	<div class="col-md-6 right-page"> 
+	                        	<div class="block">
+	                        		<p class="title">Cấp quyền truy cập</p>
+	                        		 <div class="checkbox">
+                                  <input type="checkbox">
+                                  <label>Toàn quyền truy cập</label>
+                              	</div>
+	                        	</div>
+	                        	<div class="block">
+	                        		<p class="title">Tool quản lý bán hàng</p>
+	                        		<div class="row">
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                    <input type="checkbox">
+			                                    <label>Quản lý chung</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                    <input type="checkbox">
+			                                    <label>Chat & Comment</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Đơn hàng</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Sản phẩm</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Khách hàng</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Khuyến mãi</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Báo cáo</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Kênh bán hàng</label>
+			                              	</div>
+	                        			</div>
+	                        		</div>
+	                        	</div>
+	                        	<div class="block">
+	                        		<p class="title">Tool quản lý & cấu hình tài khoản</p>
+	                        		<div class="row">
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Thông tin chung</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Gói dịch vụ</label>
+			                              	</div>
+	                        			</div>
+	                        			<div class="col-md-6">
+	                        				<div class="checkbox">
+			                                  <input type="checkbox">
+			                                  <label>Nhân viên quản trị</label>
+			                              	</div>
+	                        			</div>
+	                        		</div>
+	                        	</div>
+	                        	<div class="btn-done text-right">
+	                        		<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+				                	<button type="button" class="btn btn-secondary" value="Tạo mới quản trị viên">Cập nhật quản trị viên</button>
+				                </div>
+                        	</div>
+                        </div>
+                    </div>
+				  </div>
+                </div><!-- end tab 3 -->
+                <div class="tab-pane" id="tab-4" role="tabpanel" >
+                    <div class="panel box-panel">
+                      <h3 class="panel-title">Thông tin chủ sở hữu shop</h3>
+                      <div class="infor infor_">
+	                   		<p class="name_account">(Anh) Raymond</p>
+	                   		<ul>
+	                   			<li class="row"><b>Điện thoại: </b> <span>0902813891</span></li>
+	                   			<li class="row"><b>Email: </b> <span>173993146352528@facebook.com</span></li>
+	                   		</ul>
+	                   	</div>
+                    </div>
+                    <div class="panel box-panel">
+                    	<h3 class="panel-title">Thay đổi tài khoản chủ sở hữu</h3>
+                        <form class="update">
+		                   		<div class="wrapper">
+		                   			<ul class="col-md-6">
+		                      			<li class="row">
+			                   					<span>Họ tên chủ shop</span>
+			                   					<input class="form-control" type="text" name="" value="Raymond Goldington" placeholder="Nhập họ tên chủ shop">
+		                      			</li>
+		                      			<li class="row">
+			                   					<span>Điện thoại</span>
+			                   					<input class="form-control" type="text" name="" value="0902813891" placeholder="Nhập điện thoại">
+		                      			</li>
+		                      			<li class="row">
+			                   					<span>Email</span>
+			                   					<input class="form-control" type="text" name="" value="Raymond.gold@itlvn.com" placeholder="Nhập email">
+		                      			</li>		                      			
+		                      		</ul>
+		                   		</div>
+		                   		<div class="wrap_btn">
+		                   			<button class="btn btn-cancel" type="button">Hủy bỏ</button>
+		                   			<button class="btn btn-secondary" type="button" data-toggle="modal" data-target="#modal_update">Chọn làm chủ sở hữu</button>
+		                   		</div>
+		                   	</form>
+                    </div>
+                </div><!-- end tab 4 -->
+            </div>
+        </section>
+    </div>
+</main>
+{% include "block/_add-success-modal.html" %}
+{% include "block/_update-sucess-modal.html" %}
+{% include "block/_delete-success-modal.html" %}
+{% endblock %}

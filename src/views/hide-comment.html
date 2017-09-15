@@ -1,0 +1,75 @@
+{% set current_page = 'hide-comment' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Ẩn comment</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ẩn comment tự động</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table hide-comment-table">
+                        <thead>
+                            <tr>
+                                <th class="col-sm-5">Fanpage</th>
+                                <th class="col-sm-5">Trạng thái</th>
+                                <th class="col-sm-2 text-right"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-sm-5">
+                                    <a href="#" target="_blank">TinTin Shop</a>
+                                </td>
+                                <td class="col-sm-5">
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox">
+                                        <input type="checkbox" title="">
+                                        <label>
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                    <span class="active-status">Bỏ ẩn comment</span>
+                                </td>
+                                <td class="col-sm-2 text-right">
+                                    <input class="btn btn-secondary" value="Lưu" type="button">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-sm-5">
+                                    <a href="#" target="_blank">Hoa đào Shop</a>
+                                </td>
+                                <td class="col-sm-5">
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox">
+                                        <input type="checkbox" title="" checked="">
+                                        <label>
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                    <span class="active-status">Ẩn comment</span>
+                                </td>
+                                <td class="col-sm-2 text-right">
+                                    <input class="btn btn-secondary" value="Lưu" type="button">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

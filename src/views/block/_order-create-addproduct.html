@@ -1,0 +1,98 @@
+<table class="table table-hover add-product-table">
+    <thead>
+        <tr>
+            <th style="width: 445px;">Tên sản phẩm</th>
+            <th class="text-right">Giá bán</th>
+            <th class="text-right">Số lượng</th>
+            <th class="text-right">khối lượng (gram)</th>
+            <th class="text-right">thành tiền</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="block-list" style="width: 445px;">
+                <div class="item product-item">
+                    <div class="item-img">
+                        <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                    </div>
+                    <div class="item-info">
+                        <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                        <p class="item-description">( Màu xanh, size 36 )</p>
+                    </div>
+                </div>
+            </td>
+            <td class="text-right">120.000đ</td>
+            <td class="text-right">
+                <input class="form-control product-amount" value="3" type="number" name="">
+            </td>
+            <td class="text-right">200</td>
+            <td class="text-right">2.120.000đ</td>
+            <td class="text-center">
+                <a class="action-item" href="#" title="Xóa">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td class="block-list" style="width: 445px;">
+                <div class="item product-item">
+                    <div class="item-img">
+                        <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                    </div>
+                    <div class="item-info">
+                        <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                    </div>
+                </div>
+            </td>
+            <td class="text-right">120.000đ</td>
+            <td class="text-right">
+                <input class="form-control product-amount" value="3" type="number" name="">
+            </td>
+            <td class="text-right">200</td>
+            <td class="text-right">2.120.000đ</td>
+            <td class="text-center">
+                <a class="action-item" href="#" title="Xóa">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="2">
+                <div class="input-group add-product-group">
+                    <input id="inputSearchProduct" class="form-control" placeholder="Chọn sản phẩm" type="text">
+                    <div class="product-list-box" style="display: none;">
+                        <div class="product-list-SlimScroll">
+                            <ul class="block-list">
+                                {% for x in [1,2,3] %}
+                                <li class="item product-item">
+                                    <div class="item-img">
+                                        <a href="#">
+                                            <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                        </a>
+                                    </div>
+                                    <div class="item-info">
+                                        <a class="item-title" href="#">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace </a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <span class="input-group-btn">
+                        <input class="btn btn-secondary" value="Thêm" type="button">
+                    </span>
+                </div>
+            </td>
+            <td colspan="3">
+                <div class="total-price">
+                    <span>Tổng tiền đơn hàng:</span>
+                    <span class="pull-right">2,000,000đ</span>
+                </div>
+            </td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>

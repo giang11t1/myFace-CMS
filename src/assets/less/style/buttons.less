@@ -1,0 +1,75 @@
+.btn {
+    height: @form-control-height-base;
+    padding: 5px 18px;
+    border-radius: 999em;
+    font-size: @font-size-base;
+    line-height: 18px;
+    &:active:focus,
+    &:focus {
+        outline: none;
+    }
+    & + .btn {
+        margin-left: 10px;
+    }
+    &.btn-sm {
+        height: 26px;
+        padding: 6px 15px;
+        line-height: 10px;
+    }
+}
+.btn-default {
+    .button-variant(@primary-color; transparent; @primary-color);
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+        border-color: @primary-color;
+        background-color: @primary-color;
+        color: #fff;
+    }
+    // &:visited {
+    //     color: #fff;
+    // }
+}
+.btn-basic {
+    .button-variant(@text-color-1; transparent; @border-color-default);
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+        border-color:@border-color-focus;
+        background-color: transparent;
+        color: #fff;
+    }
+}
+.btn-secondary {
+    .button-variant(#fff; @primary-color; @primary-color);
+}
+.btn-success {
+    .button-variant(#fff; @general-color-4; @general-color-4);
+}
+.btn-warning {
+    .button-variant(#fff; @general-color-1; @general-color-1);
+}
+.btn-link {
+    color: @secondary-color;
+}
+.btn-cancel {
+    .button-variant(@text-color-2; #fff; @border-color-disable);
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+        border-color: @border-color-focus;
+        background-color: #fff;
+        color: @text-color-1;
+    }
+    &:visited {
+        color: @text-color-1;
+    }
+}
+.btn-fillter {
+    border-radius: @border-radius;
+    color: @text-color-2;
+}
+

@@ -1,0 +1,67 @@
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+    content: "×";
+    font-size: 20px;
+    line-height: 24px;
+    text-shadow: 0 1px 0 #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+ }
+.multi-select {
+    width: 100%;
+    min-height: 34px;
+    padding: 0 15px;
+    border: 1px solid @border-color-line;
+    border-radius: @border-radius;    
+}
+.multi-select-label {
+    .property-choosen-box & + {
+        width: 120px;
+        padding: 7px 0;
+        float: left;
+    }
+    & + .multi-select-list {
+        padding-left: 15px;
+        border-left: 1px solid @border-color-line;
+    }
+}
+.multi-select-list {
+    min-height: 24px;
+    padding: 2px 0;
+    .property-choosen-box & + {
+        margin-left: 120px;
+    }
+}
+.multiselect-item {
+    min-height: 25px;
+    padding: 2px 5px 2px 12px;
+    display: inline-block;
+    border: 1px solid @border-color-line;
+    border-radius: 999em;
+    background-color: @bg-color-2;
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    position: relative;
+    .ui-icon {
+        width: 17px;
+        text-align: right;
+        display: inline-block;
+        i {
+            position: absolute;
+            top: 0;
+            right: 5px;
+            font-weight: bold;
+            opacity: 0.2;
+        }
+    }
+}
+.remove-action {
+    cursor: pointer;
+    &:hover {
+        i {
+            opacity: 0.9;
+        }
+    }
+}

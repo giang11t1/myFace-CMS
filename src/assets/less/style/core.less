@@ -1,0 +1,229 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: @bg-color-2;
+    font-size: 13px;
+    line-height: 1.571em;
+    color: @typeface-color-1;
+   /* // * {
+    //     .transition(all 0.2s linear 0s);
+    // }*/
+}
+
+/* H1 - H6 font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+/* General Links */
+a {
+    color: @link-color;
+    cursor: pointer;
+    &:hover {
+        color: @link-hover-color;
+    }
+}
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+    color: @secondary-color;
+}
+img {
+    max-width: 100%;
+}
+body,
+.container {
+    min-width: 1024px;
+    overflow-x: auto;
+}
+main {
+    min-height: 300px;
+    > section {
+        width: 100%;
+    }
+}
+.background-img {
+    background-color: #cfdfed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.img-wrap {
+    width: 100%;
+    background-color: #000;
+    display: inline-block;
+    a,
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+.icon-fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.content-align-center {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.hdsd-link {
+    color: @text-color-3;
+    &.btn {
+        padding-right: 0;
+        padding-left: 0;
+        &:active {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+.nopadding {
+    padding: 0 !important;
+}
+.padding-15 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.padding-30 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+hr {
+    height: auto;
+    border-color: @border-color-default;
+}
+.secondary-text {
+    color: @primary-color;
+}
+.pagination-nav,
+.product-filter {
+   .bootstrap-select {
+       .btn-default {
+            color: @text-color-1;
+            background-color: transparent;
+            border-color: #ccc;
+            height: 32px;
+            padding: 5px 18px;
+            border-radius: 0;
+            font-size: 13px;
+            line-height: 18px;
+            border-radius: 3px;
+            padding: 5px 18px 5px 10px;
+            margin-left: 5px;
+            width: 100%;
+            .caret {
+                border-top: 4px dashed !important;
+                border-top: 4px solid \9 !important;
+                border-right: 4px solid transparent !important;
+                border-left: 4px solid transparent !important;
+                border-bottom: none;
+            }
+            &:active,
+            &:focus,
+            &:hover {
+                color: @text-color-1 !important;
+                background-color: rgba(0, 0, 0, 0) !important;
+                border-color: #ccc !important;
+            }
+        }
+        ul {
+            li{
+                a {
+                    padding: 6px 20px;
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .bootstrap-select.open {
+        > .dropdown-toggle.btn-default {
+            color: @text-color-1;
+            background-color: rgba(0, 0, 0, 0);
+            border-color: #ccc;
+            webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+.product-filter {
+    width: 100%;
+    .form-inline{
+        .col-sm-10 {
+           .form-group {
+                width: 100%;
+            }
+            .col-sm-4 {
+                padding-right: 0;
+            }
+        }
+    }
+}
+.pagination-nav {
+    > * {
+        display: inline-block;
+        vertical-align: middle;
+        & + * {
+            margin-left: 15px;
+        }
+    }
+    .bootstrap-select {
+        width: auto !important;
+    }
+}
+.full-width {
+    width: 100%;
+}
+.cta-block {
+    margin-bottom: 20px;
+}
+.cta-block-row {
+    margin-bottom: 10px;
+}
+.cta-with-border {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+.form-group {
+    position: relative;
+}
+label.error,
+.error {
+    width: 100%;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #eb3d3d !important;
+}
+.wrap-relative {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+

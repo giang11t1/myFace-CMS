@@ -1,0 +1,79 @@
+{% set current_page = 'auto-reply' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Trả lời tự động</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel auto-reply-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Trả lời tự động trên kênh Facebook</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="chanel-row-block chanel-row-head">Chọn Fanpage</div>
+                    <div class="auto-reply-setting-div">
+                        <div class="row fanpages-setting-row">
+                            <div class="col-xs-3">
+                                <div class="checkbox">
+                                    <input name="chk_fanpage[]" type="checkbox" checked="">
+                                    <label>TinTin Shop</label>
+                                </div>
+                            </div>
+                            {% for x in [1,2,3] %}
+                            <div class="col-xs-3">
+                                <div class="checkbox">
+                                    <input name="chk_fanpage[]" type="checkbox" >
+                                    <label>TinTin Shop</label>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="row setting-reply-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Nội dung trả lời tự động</label>
+                                    <textarea class="form-control" rows="4" placeholder="Nhập nội dung"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label">Từ ngày</label>
+                                    <div class="date-picker-group">
+                                        <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                        <span class="datepicker-icon">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="col-xs-6 col-md-3">
+                                <div class="form-group">
+                                    <label class="form-label">Đến ngày</label>
+                                    <div class="date-picker-group">
+                                        <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                        <span class="datepicker-icon">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right cta-block">
+                            <a class="btn btn-cancel" href="">Hủy bỏ</a>
+                            <input class="btn btn-secondary" value="Lưu" type="button">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

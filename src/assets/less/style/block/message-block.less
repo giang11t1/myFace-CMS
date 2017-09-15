@@ -1,0 +1,272 @@
+.message-block {
+    margin-left: 336px;
+    margin-right: 336px;
+    border-right: 1px solid @border-color-line;
+    .meassage-chat-box {
+        textarea {
+            height: 70px;
+        }
+    }
+}
+.customer-name {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 50px;
+    .text-overflow();
+}
+.meassage-content {
+    // height: 465px;
+    padding: 0px 0;
+}
+.message-review {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-bottom: @line;
+    display: inline-block;
+    width: 100%;
+    img {
+        max-height: 68px;
+        margin-bottom: 10px;
+        float: left;
+        padding: 0 20px;
+    }
+    .link-review {
+        max-width: 334px;
+        padding: 5px 30px;
+        display: inline-block;
+        color: @text-color-1;
+        font-size: 12px;
+        background-color: @bg-color-2;
+        border-radius: 3px;
+        position: relative;
+        text-align: left;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        max-height: 6.125em;
+        word-wrap: break-word;
+        &:before {
+            content: "\f0c1";
+            width: 30px;
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            left: 0;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+}
+.direct-chat-msg {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    position: relative;
+}
+.direct-chat-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    .right & {
+        left: auto;
+        right: 20px;
+    }
+}
+.direct-chat-text {
+    width: 100%;
+    padding: 0 50px;
+    float: left;
+    position: relative;
+    color: @text-color-1;
+    //Create the arrow
+    &:after,
+    &:before {
+        position: absolute;
+        right: 100%;
+        top: 15px;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        pointer-events: none;
+    }
+    &:after {
+        border-width: 5px;
+        margin-top: -5px;
+    }
+    &:before {
+        border-width: 6px;
+        margin-top: -6px;
+    }
+    a {
+        color: @text-color-1;
+        text-decoration: underline;
+        word-wrap: break-word;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    .direct-chat-text-inner {
+        max-width: 100%;
+        float: left;
+        border-radius: @border-radius;
+        padding: 10px;
+        background: @bg-color-2;
+        margin: 0 0 5px;
+        &:before {
+            content:"";
+            position:absolute;
+            height: 0;
+            width: 0;
+            left: 35px;
+            top: 15px;
+            border: 6px solid transparent;
+            border-right: 9px solid @bg-color-2;
+        }
+    }
+    .right & {
+        color: #fff;
+        &:after,
+        &:before {
+            right: auto;
+            left: 100%;
+            border-right-color: transparent;
+        }
+        a {
+            color: #fff;
+        }
+        .direct-chat-text-inner {
+            float: right;
+            background-color: @general-color-2;
+            &:after {
+                content:"";
+                position:absolute;
+                height: 0;
+                width: 0;
+                right: 35px;
+                top: 15px;
+                border: 6px solid transparent;
+                border-left: 9px solid @general-color-2;
+            }
+            &:before {
+                content: none;
+            }
+        }
+    }
+}
+.direct-chat-img {
+    max-width: 100%;
+    margin: 5px 50px 0 50px;
+    img {
+        max-height: 150px;
+        display: inline-block;
+        border-radius: @border-radius;
+    }
+    .right & {
+        text-align: right;
+        margin-right: 50px;
+        margin-left: auto;
+    }
+    &.mess-icon {
+        img {
+            max-width: 100px;
+            max-height: 100px;
+        }
+    }
+}
+.direct-chat-time {
+    padding: 0 50px;
+    margin-top: 5px;
+    font-size: 10px;
+    color: @text-color-3;
+    .right & {
+        text-align: right;
+    }
+}
+.message-type-tool {
+    position: relative;
+}
+.type-meassage-box {
+    min-height: 44px;
+    padding-right: 60px;
+    border-top: @line;
+    border-bottom: @line;
+    position: relative;
+}
+.type-mess-textarea {
+   min-height: 44px;
+   padding-left: 20px;
+   border: 0;
+   border-radius: 0;
+    &:focus {
+        box-shadow: none;
+        outline: 0;
+        border: 0;
+    }
+}
+.send-btn {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 50%;
+    background:  @primary-color url(../images/icons/send.png) center center no-repeat;
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+.meassage-tool-group {
+    height: 34px;
+    padding: 0 10px;
+    position: relative;
+}
+.tool-list {
+    .tool-item {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        display: inline-block;
+        text-align: center;
+    }
+    .upload-photo-local {
+        position: relative;
+        .tooltip {
+            top: -21px !important;
+        }
+        .tooltip-inner {
+            min-width: 75px;
+        }
+    }
+    .input-upload {
+        width: 34px;
+        height: 34px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.review-img-upload {
+    display: none;
+    position: absolute;
+    bottom: 135px;
+    left: 10px;
+    right: 10px;
+    border-radius: @border-radius;
+    padding: 10px;
+    border: @line;
+    background-color: #ffffff;
+    box-shadow: @box-shadown-2;
+}

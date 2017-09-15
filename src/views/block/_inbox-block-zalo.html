@@ -1,0 +1,163 @@
+<div class="chat-widget-item inbox-block">
+    <ul class="nav nav-tabs chat-widget-heading inbox-tabs-list">
+        <li class="active">
+            <a class="tab-item all-inbox" href="#">
+                <span data-toggle="tooltip" data-placement="top" title="Tất cả">&nbsp;</span>
+            </a>
+        </li>
+        <li>
+        <li>
+            <a class="tab-item lock-inbox" href="#">
+                <span data-toggle="tooltip" data-placement="top" title="Chưa đọc">&nbsp;</span>
+            </a>
+        </li>
+    </ul>
+    <div class="input-group inbox-search">
+        <div class="input-group-addon search-icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <input class="form-control" placeholder="Tìm kiếm" type="text">
+    </div>
+    <div class="inbox-list-Slimscroll">
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="all">
+                <ul class="block-list inbox-message-list">
+                    <li class="item active">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">Lạy Chúa, khi con nhắm mắt lại...</p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item new">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">
+                                <i class="fa fa-photo" aria-hidden="true"></i> đã gửi một hình ảnh
+                            </p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item new">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">
+                                đã gửi một nhãn dán
+                            </p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item new">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">
+                                <img src="assets/images/upload/mess-icon-2.jpg" alt="myface">
+                            </p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item new">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">
+                               <i class="fa fa-file" aria-hidden="true"></i> đã gửi một file
+                            </p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="item new">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">Lạy Chúa, khi con nhắm mắt lại...</p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    {% for x in [1,2,3,4,5,6] %}
+                    <li class="item">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">Lạy Chúa, khi con nhắm mắt lại...</p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="unread">
+                <ul class="block-list inbox-message-list">
+                    <li class="item new">
+                        <div class="item-img">
+                            <img src="assets/images/upload/zalo-avatarl.png" alt="myface">
+                        </div>
+                        <div class="item-info">
+                            <p class="item-title">Raymond Gold</p>
+                            <p class="item-description">Lạy Chúa, khi con nhắm mắt lại...</p>
+                        </div>
+                        <div class="timestamp-wrap">
+                            <span class="timestamp">1 giờ</span>
+                            <span class="kind-icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

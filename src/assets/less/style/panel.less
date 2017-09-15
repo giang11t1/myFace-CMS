@@ -1,0 +1,104 @@
+.box-panel {
+    background-color: #fff;
+    margin-bottom: 30px;
+    border: 0;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    .panel-heading {
+        min-height: 55px;
+        border-bottom: @line;
+        padding: 0 30px;
+        .link {
+            line-height: 55px;
+            font-size: 14px;
+            color: @text-color-3;
+            &:hover {
+                color: @text-color-1;
+            }
+        }
+    }
+    .panel-title {
+        font-size: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: inline-block;
+        font-weight: 600;
+        .price {
+            color: @primary-color;
+            font-weight: bold;
+        }
+    }
+    .panel-sub-title {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .panel-body {
+        padding: 0;
+        &.panel-padding {
+            padding: 20px 30px;
+        }
+        & + .panel-body {
+            border-top: @line;
+        }
+    }
+    .panel-footer {
+        min-height: 40px;
+        background-color: #fff;
+        border: 0;
+        &.panel-padding {
+            padding: 0 30px 20px;
+        }
+        .cta-block {
+            border-top: @line;
+            padding-top: 20px;
+        }
+        .sum-label {
+            line-height: 25px;
+        }
+    }
+    .panel-tool {
+        padding: 12px 0;
+    }
+    &.panel-sm {
+        .panel-heading {
+            min-height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .panel-title {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .panel-padding {
+            padding: 15px 20px;
+        }
+    }
+}
+.panel-group {
+    .panel-left {
+        width: 295px;
+        float: left;
+    }
+    .panel-right {
+        margin-left: 295px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .panel-box-heading {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .panel-box-title {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+.pagination {
+    margin: 0;
+}
+.panel-inner {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px 15px;
+    background-color: @bg-color-3;
+}

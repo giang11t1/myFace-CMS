@@ -1,0 +1,156 @@
+{% set current_page = 'promotion-product-create' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Tạo chương trình khuyến mãi</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel promotion-create-panel">
+                <div class="panel-body panel-padding">
+                    <h4 class="promotion-create-title">Chọn hình thức khuyến mãi</h4>
+                    {% include "block/_promotion-create-nav.html" %}
+                    <div class="promotion-create-content">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="promotion-create-control-group">
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <input class="promotion-option-control" data-id="radio-gift-product-1"  type="radio" name="promotion-option-control-1" checked="">
+                                            <label>Mua {x} sản phẩm cùng loại tặng 01 sản phẩm cùng loại</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="radio">
+                                            <input class="promotion-option-control" data-id="radio-gift-product-2" type="radio" name="promotion-option-control-1">
+                                            <label>Mua {x} sản phẩm cùng loại tặng {x} sản phẩm khác</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="promotion-form-body radio-gift-product-1 active">
+                                    <div class="list-group-noline promotion-group">
+                                        <div class="form-group">
+                                            <label class="form-label">Tên chương trình tặng quà</label>
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Thời gian áp dụng</label>
+                                            <div class="form-inline date-group">
+                                                <div class="form-group">
+                                                    <div class="date-picker-group">
+                                                        <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                        <span class="datepicker-icon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label">Đến</label>
+                                                    <div class="date-picker-group">
+                                                        <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                        <span class="datepicker-icon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Số lượng sản phẩm cùng loại tối thiểu</label>
+                                            <div class="input-group">
+                                                <input class="form-control" placeholder="0" type="number" min="1">
+                                                <div class="input-group-addon">Sản phẩm</div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Chọn sản phẩm áp dụng</label>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn sản phẩm áp dụng</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right cta-block">
+                                        <input class="btn btn-secondary" value="Lưu và kích hoạt chương trình" type="button">
+                                    </div>
+                                </div>
+                                <div class="promotion-form-body radio-gift-product-2">
+                                    <div class="list-group-noline promotion-group">
+                                        <div class="form-group">
+                                            <label class="form-label">Tên chương trình tặng quà</label>
+                                            <input class="form-control" id="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Thời gian áp dụng</label>
+                                            <div class="form-inline date-group">
+                                                <div class="form-group">
+                                                    <div class="date-picker-group">
+                                                        <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                        <span class="datepicker-icon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="form-label">Đến</label>
+                                                    <div class="date-picker-group">
+                                                        <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                        <span class="datepicker-icon">
+                                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Chọn sản phẩm áp dụng</label>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn sản phẩm áp dụng</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="form-label">Chọn sản phẩm tặng kèm</label>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn sản phẩm tặng kèm</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                    <option>Combo 2 Hộp Sữa Bột Ensure Gold Acti M2 400g</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right cta-block">
+                                        <input class="btn btn-secondary" value="Lưu và kích hoạt chương trình" type="button">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

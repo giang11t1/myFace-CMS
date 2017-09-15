@@ -1,0 +1,79 @@
+.add-product-group {
+    padding-right: 75px;
+    display: block;
+    float: left;
+    position: relative;
+    .ui-state-default {
+        width: 100% !important;
+        background-color: #fff;
+        border: @border-input;
+        border-radius: @border-radius !important;
+        display: block;
+        float: left;
+        overflow: hidden;
+        .form-control {
+            width: 100% !important;
+            height: 30px;
+            display: inline-block;
+            border: none;
+            outline: none;
+            overflow: visible;
+            text-align: left;
+            color: #555;
+        }
+    }
+    .input-group-btn {
+        width: 75px;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .insertProduct {
+        height: 30px;
+        padding: 6px 12px;
+        color: #555;
+        float: left;
+    }
+}
+.add-product-group .ui-state-default .insertProduct + .form-control {
+    width: auto !important;
+}
+//list-product
+.ui-autocomplete.ui-menu {
+    max-height: 152px;
+    padding: 0;
+    background: #fff;
+    border-radius: @border-radius;
+    overflow-y: auto;
+    .ui-menu-item {
+        list-style-image: none;
+        a {
+            padding: 6px 12px;
+            &.ui-state-focus {
+                background-color: @bg-color-2;
+                border: 0;
+                border-radius: 0;
+                margin: 0;
+                .product-box-des {
+                    color: @typeface-color-1;
+                }
+            }
+        }
+        .product-box-img,
+        .product-box-des {
+            text-align: left;
+        }
+        .product-box-img {
+            width: 65px;
+            img {
+                width: 50px !important;
+                height: 38px;
+                border-radius: @border-radius;
+            }
+        }
+        .product-box-des {
+            color: @typeface-color-1;
+        }
+    }
+}

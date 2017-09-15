@@ -1,0 +1,33 @@
+.cssreset() {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+    -moz-box-shadow: @shadow;
+    box-shadow: @shadow;
+}
+.placeholder(@color: @input-color-placeholder, @font-style) {
+    &:-moz-placeholder            { color: @color; font-style: @font-style; }
+    &::-moz-placeholder           { color: @color; font-style: @font-style; }
+    &:-ms-input-placeholder       { color: @color; font-style: @font-style; }
+    &::-webkit-input-placeholder  { color: @color; font-style: @font-style; }
+}
+.text-overflow() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.disabled {
+    pointer-events:none;
+    opacity:0.6;
+    cursor: not-allowed;
+}

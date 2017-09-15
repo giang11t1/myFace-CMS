@@ -1,0 +1,90 @@
+.main-sidebar {
+    width: 200px;
+    min-height: 100%;
+    padding-top: 50px;
+    position: fixed;
+    left: 0;
+    z-index: 99;
+    background-color: @bg-color-1;
+    .panel {
+        background: transparent;
+        border: none;
+    }
+}
+
+.sidebar-menu,
+.treeview-menu {
+    margin: 0;
+    padding: 0;
+    li {
+        padding: 0;
+        margin: 0;
+        >a {
+            padding: 14px 15px 14px 47px;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1;
+            display: block;
+        }
+    }
+}
+
+.sidebar-menu {
+    >li {
+        >a {
+            position: relative;
+            .icon {
+                width: 30px;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 15px;
+                background-position: left center;
+            }
+            &:hover {
+                background-color: @bg-color-4;
+            }
+            .pull-right-container {
+                .fa-angle-down {
+                    display: none;
+                }
+            }
+        }
+        &.active {
+            background-color: @bg-color-4;
+            >a {
+                color: #fff;
+                .pull-right-container {
+                    .fa {
+                        .rotate(90deg);
+                    }
+                    /*.fa-angle-down {
+                        display: block;
+                    }
+                    .fa-angle-right {
+                        display: none;
+                    }*/
+                }
+            }
+            >.treeview-menu {
+                display: block;
+            }
+            /*.collapse {
+                display: block;
+            }*/
+        }
+    } // Tree view menu
+    .treeview-menu {
+        >li {
+            &.active {
+                >a {
+                    color: @primary-color;
+                }
+            }
+        }
+    }
+}
+
+.panel-group .panel+.panel {
+    margin-top: 0;
+}

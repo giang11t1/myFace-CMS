@@ -1,0 +1,180 @@
+{% set current_page = 'group-customer-list' %} 
+{% extends "layout/_layout.html" %} 
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Nhóm khách hàng</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn btn-secondary" href="group-customer-create.html">+ Thêm nhóm khách hàng mới</a>
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i> Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section>
+        <!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Danh sách nhóm khách hàng</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table category-list-table group-customer-tb">
+                        <thead>
+                            <tr>
+                                <th>Mã</th>
+                                <th class="product-col">tên nhóm khách hàng</th>
+                                <th class="text-right">Số khách hàng</th>
+                                <th class="text-right">Ngày tạo</th>
+                                <th class="text-right">Trạng thái</th>
+                                <th class="text-center">Mô tả</th>
+                                <th class="action-col">sửa/xóa</th>
+                            </tr>
+                        </thead>
+                        <!-- in case empty data -->
+                        <!-- <tbody class="empty-product">
+                           <tr>
+	                           	<td colspan="8">
+	                           		<div class="text-center">
+	                           			<p>Shop của bạn chưa tạo nhóm khách hàng. bạn hãy tạo nhóm khách hàng tại đây.  <a href="group-customer-create.html">Tạo nhóm khách hàng</a></p>
+	                           			<p>Bạn có thể xem hướng dẫn tạo nhóm khách hàng tại đây. <a href="#">Hướng dẫn tạo nhóm khách hàng</a></p>
+	                           		</div>
+	                           	</td>
+                           </tr>
+                        </tbody> -->
+                        <!-- in case not empty -->
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a class="product-id" href="#">KHTT</a>
+                                </td>
+                                <td class="product-col">
+                                    <a class="name-group name-red" href="#">Khách hàng nhóm A</a>
+                                </td>
+                                <td class="text-center">
+                                    28
+                                </td>
+                                <td class="text-right">20/07/2017</td>
+                                <td class="text-center">
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                        <input type="checkbox" checked="" onclick="return false;" onkeydown="return false;">
+                                        <label>
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                </td>
+                                <td class="descript-content">
+                                    Once you told me about love.but then we all throw it away. Once you told me about love.but then we all throw it away.Once you told me about love.but then we all throw it away.Once you told me about love.but then we all throw it away.Once you told me about love.but then we all throw it away.Once you told me about love.but then we all throw it away.
+                                </td>
+                                <td class="action-col">
+                                    <div class="action-list">
+                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="group-customer-edit.html">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="action-item remove-action" data-placement="left" title="Xóa" href="#" data-toggle="modal" data-target=".modaldelete">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-id" href="#">KHTT</a>
+                                </td>
+                                <td class="product-col">
+                                    <a class="name-group name-green" href="#">Khách hàng nhóm B</a>
+                                </td>
+                                <td class="text-center">
+                                    28
+                                </td>
+                                <td class="text-right">20/07/2017</td>
+                                <td class="text-center">
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                        <input type="checkbox" checked="" onclick="return false;" onkeydown="return false;">
+                                        <label>
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                </td>
+                                <td class="descript-content">
+                                    Once you told me about love.but then we all throw it away.
+                                </td>
+                                <td class="action-col">
+                                    <div class="action-list">
+                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="edit-product-advanced.html">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="action-item remove-action" data-placement="left" title="Xóa" href="javascript:void(0)" data-toggle="modal" data-target=".modaldelete">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-id" href="#">KHTT</a>
+                                </td>
+                                <td class="product-col">
+                                    <a class="name-group name-blue" href="#">Khách hàng nhóm C</a>
+                                </td>
+                                <td class="text-center">
+                                    28
+                                </td>
+                                <td class="text-right">20/07/2017</td>
+                                <td class="text-center">
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                        <input type="checkbox" checked="" onclick="return false;" onkeydown="return false;">
+                                        <label>
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                </td>
+                                <td class="descript-content">
+                                    Once you told me about love.but then we all throw it away.
+                                </td>
+                                <td class="action-col">
+                                    <div class="action-list">
+                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="edit-product-advanced.html">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="action-item remove-action" data-placement="left" title="Xóa" href="javascript:void(0)" data-toggle="modal" data-target=".modaldelete">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- modal -->
+                    <div class="modaldelete modal fade warning-modal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title">Thông báo</h2>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                  <p>Bạn có chắc muốn xóa nhóm khách hàng này không?</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a class="btn btn-cancel" data-dismiss="modal">Hủy bỏ</a>
+                                    <button type="button" class="btn btn-warning" >Xác nhận</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

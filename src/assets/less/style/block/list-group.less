@@ -1,0 +1,209 @@
+.block-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    table & + {
+        background-color: transparent;
+    }
+    > .item {
+        .clearfix();
+        padding: 10px 0;
+        background: #fff;
+    }
+    .panel-padding & > {
+        .item {
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .item-img {
+        float: left;
+        border-radius: 4px;
+        overflow: hidden;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .item-info {
+        margin-left: 60px;
+    }
+    .item-title {
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .item-description {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: @text-color-3;
+        font-size: 13px;
+    }
+    .product-item {
+        background-color: transparent;
+    }
+}
+.chat-widget {
+    .block-list {
+        .item-img {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+.product-item {
+    background-color: transparent;
+    .item-img {
+        float: left;
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
+    .item-info {
+        margin-left: 74px;
+    }
+    .item-title {
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: none;
+        line-height: 22px;
+    }
+    .item-description {
+        font-size: 12px;
+        line-height: 22px;
+    }
+}
+
+//
+.product-list-box {
+    min-width: 350px;
+    max-width: 450px;
+    padding: 0;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    right: 84px;
+    z-index: 99;
+    .block-list {
+        padding: 7px 15px;
+        .product-item {
+            line-height: 22px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+    .add-product-group & + {
+        background-color: #fff;
+        border-radius: @border-radius;
+        border: @line-2;
+        .box-shadow(@box-shadown-2);
+    }
+    .upload-photo-product & + {
+        background-color: transparent;
+        top: auto;
+        bottom: 36px;
+        left: 10px;
+        text-align: left;
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 9px;
+            display: inline-block;
+            border-right: 7px solid transparent;
+            border-top: 7px solid #fff;
+            border-left: 7px solid transparent;
+            border-bottom-color: rgba(0, 0, 0, 0.2);
+        }
+        .product-search-box {
+            padding: 0;
+        }
+        .block-list {
+            .item-img {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            .item-info {
+                margin-left: 60px;
+            }
+        }
+    }
+}
+.product-list-wrap {
+    background-color: #fff;
+    border-radius: @border-radius;
+    border: @line-2;
+    .box-shadow(@box-shadown-2);
+}
+//
+
+.nhead {
+    width: 100%;
+    height: 52px;
+    background-color: @bg-color-thead;
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 30px;
+    text-transform: uppercase;
+    border-bottom: 1px solid @border-header-tb;
+    .content-align-center();
+    .checkbox-single {
+        display: inline-block;
+        padding-right: 5px;
+    }
+}
+.naction {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    background-color: @bg-color-3;
+    color: @primary-color;
+    border-top: @line;
+    padding-left: 30px;
+    .btn {
+        margin-left: 15px;
+    }
+}
+.nbody {
+    height: 400px;
+    overflow: hidden;
+    border-top: @line;
+    border-bottom: @line;
+    .list-control {
+        li {
+            padding-left: 25px;
+            border-top: 1px solid #f1f1f1;
+            border-left: 3px solid transparent;
+            cursor: pointer;
+            .content-align-center();
+            &:hover {
+                background-color: @bg-color-2;
+            }
+            &.active {
+                border-left-color: @primary-color;
+                background-color: @bg-color-2;
+            }
+            .item-info {
+                margin-left: 0;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+.nfoot {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 30px;
+}

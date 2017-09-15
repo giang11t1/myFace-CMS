@@ -1,0 +1,42 @@
+{% set current_page = 'login' %}
+{% extends "layout/_layout-base.html" %}
+{% block bodyclass%}page-login{% endblock %}
+{% block page-container %}
+<main>
+    <div class="login-form">
+        <h2 class="form-title">Đặt lại mật khẩu</h2>
+        <div class="form-group">
+            <input class="form-control" placeholder="Nhập mật khẩu mới" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" placeholder="Nhập lại mật khẩu mới" type="password">
+        </div>
+        <div class="form-group text-center">
+            <input class="btn btn-secondary cta-btn" value="Đặt lại mật khẩu" type="submit" data-toggle="modal" data-target=".alert-modal">
+        </div>
+    </div>
+    <p class="hotline text-center">
+        <a href="tel:1900636798">Hotline: 1900 636 798 ( 8h-18h / T2-T7 )</a>
+    </p>
+</main>
+<div class="modal fade alert-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Thông báo</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div class="alert-content">
+                    <p>Bạn đã cập nhật mật khẩu thành công</p>
+                </div>
+                <p class="text-right">
+                    <button class="btn btn-secondary" data-dismiss="modal" aria-label="Close" type="button">Đóng</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,89 @@
+.pagination {
+    li {
+        a,
+        span {
+            color: @secondary-color;
+            border-color: @border-color-default;
+            &:hover,
+            &:focus {
+                color: #fff;
+                background-color: @secondary-color;
+                border-color: @secondary-color;
+            }
+        }
+        &.active {
+            a {
+                background-color: @secondary-color;
+                color: #fff;
+            }
+        }
+        &:last-child,
+        &:first-child {
+            a,
+            span {
+                color: @text-color-1;
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background-color: @secondary-color;
+                    border-color: @secondary-color;
+                }
+            }
+        }
+    }
+}
+.datatables-length {
+    text-align: left;
+    .control-label {
+        float: left;
+        color: @typeface-color-3;
+        line-height: 34px;
+        margin-right: 10px;
+    }
+}
+.data-length-dropdown-select {
+    position: relative;
+    float: left;
+    .dropdown-toggle {
+        width: 155px;
+        height: 36px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 34px;
+        border: 1px solid @border-color-line;
+        border-radius: @border-radius;
+        cursor: pointer;
+        .fa {
+            position: absolute;
+            right: 15px;
+            line-height: 34px;
+        }
+    }
+}
+.data-length-dropdown {
+    top: auto;
+    bottom: 100%;
+    right: 0;
+    left: auto;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.data-length-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+        a {
+            &:hover {
+                background-color: @secondary-color;
+                color: #fff;
+            }
+        }
+        &.active {
+            a {
+                background-color: @secondary-color;
+                color: #fff;
+            }
+        }
+    }
+}

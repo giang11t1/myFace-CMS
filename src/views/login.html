@@ -1,0 +1,62 @@
+{% set current_page = 'login' %}
+{% extends "layout/_layout-base.html" %}
+{% block bodyclass%}page-login{% endblock %}
+{% block page-container %}
+<main>
+    <div class="login-form">
+        <h2 class="form-title">Đăng nhập vào myFace</h2>
+        <div class="form-group">
+            <input class="form-control" placeholder="Nhập địa chỉ email" type="email">
+        </div>
+        <div class="form-group">
+            <input class="form-control" placeholder="Nhập mật khẩu" type="password">
+        </div>
+        <div class="form-group">
+            <div class="checkbox remember-checkbox">
+                <input id="rememberCheck" checked type="checkbox">
+                <label for="rememberCheck">Duy trì đăng nhập</label>
+            </div>
+            <a class="pull-right forget-pass" data-toggle="modal" data-target=".forget-password-modal">Quên mật khẩu?</a>
+        </div>
+        <div class="form-group text-center">
+            <input class="btn btn-secondary cta-btn" value="Đăng nhập" type="submit">
+        </div>
+        <div class="form-group text-center">
+            <p class="show-register">
+                Bạn chưa có tài khoản?
+                <a class="link-to-register" href="register.html">Đăng ký</a>
+            </p>
+        </div>
+    </div>
+    <p class="hotline text-center">
+        <a href="tel:1900636798">Hotline: 1900 636 798 ( 8h-18h / T2-T7 )</a>
+    </p>
+</main>
+<footer class="">
+    <p>Copyright ©2016 - Công ty TNHH Thương mại Điện tử Modern Life.</p>
+</footer>
+<!-- forget password -->
+<div class="modal fade forget-password-modal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <div class="send-email-form">
+                    <h2>Bạn quên mật khẩu?</h2>
+                    <p>Chúng tôi sẽ gửi bạn hướng dẫn về cách thiết lập lại mật khẩu.</p>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Nhập email của bạn" type="email">
+                    </div>
+                    <p class="cta-block">
+                        <button class="btn btn-secondary" data-dismiss="modal" aria-label="Close" type="button">Lấy lại mật khẩu</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,206 @@
+{% set current_page = 'product-list-view' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <div class="clearfix">
+                <h2 class="page-title">Sản phẩm</h2>
+                <div class="pull-right right-header-group">
+                    <a class="btn btn-secondary" href="product-create.html">+ Tạo sản phẩm mới</a>
+                    <a class="btn hdsd-link">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        Hướng dẫn sử dụng
+                    </a>
+                </div>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-body">
+                    <div class="filtter-nav product-list-view-filter col-sm-12 product-filter">
+                        <div class="pull-right form-inline col-sm-9">
+                            <div class="col-sm-10">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="select-box">
+                                            <select class="form-control selectpicker" title="Danh mục sản phẩm" >
+                                                <option>Danh mục sản phẩm</option>
+                                                <option>Điện tử</option>
+                                                <option>Thời trang</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="select-box">
+                                            <select class="form-control selectpicker" title="Chọn kênh">
+                                                <option>Chọn kênh</option>
+                                                <option>Facebook</option>
+                                                <option>Zalo</option>
+                                                <option>myFace</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <div class="select-box">
+                                            <select class="form-control selectpicker" title="Trạng thái">
+                                                <option>Trạng thái</option>
+                                                <option>Kích hoạt</option>
+                                                <option>Không kích hoạt</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                    
+                            <div class="form-group col-sm-2">
+                                <input class="btn btn-secondary" value="Lọc sản phẩm" type="submit" name="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-relative">
+                        <table class="table product-list-table">
+                            <thead>
+                                <tr>
+                                    <th class="input-col">
+                                        <div class="checkbox checkbox-single">
+                                            <input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check">
+                                            <label></label>
+                                        </div>
+                                    </th>
+                                    <th>SKU</th>
+                                    <th class="text-center product-img-col"></th>
+                                    <th class="product-col">tên sản phẩm</th>
+                                    <th>danh mục</th>
+                                    <th class="text-right">số lượng</th>
+                                    <th class="text-right">giá bán</th>
+                                    <th class="text-right">kênh bán</th>
+                                    <th class="text-right active-on-off-col">trạng thái</th>
+                                    <th class="action-col">sửa/xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="input-col">
+                                        <div class="checkbox checkbox-single">
+                                            <input type="checkbox" class="checkbox_check" name="choose">
+                                            <label></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a class="product-id" href="product-detail.html">00001</a>
+                                    </td>
+                                    <td class="product-img-col">
+                                        <a href="product-create.html">
+                                            <img class="img-circle" src="assets/images/upload/bow.jpg" alt="myface">
+                                        </a>
+                                    </td>
+                                    <td class="product-col">
+                                        <a class="product-name" href="product-detail.html">Tai Nghe Bluetooth</a>
+                                    </td>
+                                    <td class="cate-col">
+                                        <a class="cate-name" href="category-detail.html">Thiết bị số</a>
+                                    </td>
+                                    <td class="text-right">12</td>
+                                    <td class="text-right">350.000đ</td>
+                                    <td class="text-right">
+                                        <p>
+                                            <span class="label label-facebook">Facebook</span>
+                                        </p>
+                                        <p>
+                                            <span class="label label-zalo">Zalo</span>
+                                        <p>
+                                        <p>
+                                            <span class="label label-myface">myFace</span>
+                                        <p>
+                                    </td>
+                                    <td class="text-right active-on-off-col">
+                                        <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                            <input type="checkbox" title="" checked="" onclick="return false;" onkeydown="return false;">
+                                            <label>
+                                                <span class="checked"></span>
+                                                <span class="toggle">&nbsp;</span>
+                                                <span class="unchecked"></span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td class="action-col">
+                                        <div class="action-list">
+                                            <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="product-update.html">
+                                                <i class="fa fa-edit" aria-hidden="true"></i>
+                                            </a>
+                                            <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% for x in [1,2,3,4,5,6,7,8,9] %}
+                                <tr>
+                                    <td class="input-col">
+                                        <div class="checkbox checkbox-single">
+                                            <input type="checkbox" class="checkbox_check" name="choose">
+                                            <label></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <a class="product-id" href="#">00001</a>
+                                    </td>
+                                    <td class="product-img-col">
+                                        <img class="img-circle" src="assets/images/upload/bow.jpg" alt="myface">
+                                    </td>
+                                    <td class="product-col">
+                                        <a class="product-name" href="product-detail.html">Tai Nghe Bluetooth</a>
+                                    </td>
+                                    <td class="cate-col">
+                                        <a class="cate-name" href="category-detail.html">Thiết bị số</a>
+                                    </td>
+                                    <td class="text-right">12</td>
+                                    <td class="text-right">350.000đ</td>
+                                    <td class="text-right">
+                                        <p>
+                                            <span class="label label-facebook">Facebook</span>
+                                        </p>
+                                        <p>
+                                            <span class="label label-zalo">Zalo</span>
+                                        <p>
+                                    </td>
+                                    <td class="text-right active-on-off-col">
+                                        <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Chưa kích hoạt">
+                                            <input type="checkbox" title="" onclick="return false;" onkeydown="return false;">
+                                            <label>
+                                                <span class="checked"></span>
+                                                <span class="toggle">&nbsp;</span>
+                                                <span class="unchecked"></span>
+                                            </label>
+                                        </span>
+                                    </td>
+                                    <td class="action-col">
+                                        <div class="action-list">
+                                            <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="product-update.html">
+                                                <i class="fa fa-edit" aria-hidden="true"></i>
+                                            </a>
+                                            <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer panel-padding">
+                    <label class="pull-left sum-label">Tổng sản phẩm: 325</label>
+                    {% include "block/_pagination-block.html" %}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
+

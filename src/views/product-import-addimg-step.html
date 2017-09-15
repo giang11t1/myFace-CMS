@@ -1,0 +1,189 @@
+{% set current_page = 'product-import-file' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Nhập sản phẩm </h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel">
+                <div class="panel-body progress-row">
+                    <a class="progress-step-title pass" href="product-import-editinfo-step.html" title="">
+                        <span>1</span> Sửa thông tin sản phẩm
+                    </a>
+                    <span class="next-icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                    <a class="progress-step-title active" href="product-import-addimg-step.html" title="">
+                        <span>2</span> Thêm hình sản phẩm
+                    </a>
+                    <span class="next-icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                    <a class="progress-step-title" href="product-import-view-step.html" title="">
+                        <span>3</span> Xác nhận và đăng sản phẩm
+                    </a>
+                </div>
+            </div>
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thêm hình sản phẩm</h3>
+                    <span class="pull-right product-import-sum">Bạn đã nhập <strong>5</strong> sản phẩm lên hệ thống</span>
+                </div>
+                <div class="panel-body panel-group import-addimg-panel">
+                    <div class="panel-left list-control-nav">  <!-- import-addimg-list-box -->
+                        <div class="nhead">
+                            <div class="checkbox checkbox-single">
+                                <input type="checkbox">
+                                <label></label>
+                            </div>
+                            tên sản phẩm
+                        </div>
+                        <div class="naction">
+                            <span class="">Đã chọn 4 sản phẩm</span>
+                            <input class="btn btn-secondary btn-sm" value="Xóa" type="button">
+                        </div>
+                        <div class="nbody list-toggle-Slimscroll">
+                            <ul class="block-list list-control import-addimg-list" role="tablist">
+                                <li class="item active"  role="presentation">
+                                    <div class="checkbox checkbox-single">
+                                        <input type="checkbox">
+                                        <label></label>
+                                    </div>
+                                    <a class="item-inner item-toggle" href="#img-panel-1" role="tab" data-toggle="tab">
+                                        <div class="item-img">
+                                            <img class="img-circle" src="assets/images/upload/bow.jpg" alt="myface">
+                                        </div>
+                                        <div class="item-info">
+                                            <p class="product-name">Tai Nghe Bluetooth</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                {% for x in [1,2,3,4,5] %}
+                                <li class="item" role="presentation">
+                                    <div class="checkbox checkbox-single">
+                                        <input type="checkbox">
+                                        <label></label>
+                                    </div>
+                                    <a class="item-inner item-toggle" href="#img-panel-2" role="tab" data-toggle="tab">
+                                        <div class="item-img">
+                                            <img class="img-circle" src="assets/images/upload/default-img.png" alt="myface">
+                                        </div>
+                                        <div class="item-info">
+                                            <p class="product-name">Tai Nghe Bluetooth</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-right import-addimg-box tab-content">
+                        <div class="tab-pane active" id="img-panel-1" role="tabpanel">
+                            <div class="panel-box-heading">
+                                <h2 class="panel-box-title">Tai Nghe Bluetooth</h2>
+                            </div>
+                            <div class="upload-img-step">
+                                <div class="row">
+                                    <div class="col-xs-6 first-item">
+                                        <div class="img-box-item">
+                                            <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                            <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 second-item">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <div class="img-box-item">
+                                                    <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                                    <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="img-box-item">
+                                                    <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                                    <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="img-box-item">
+                                                    <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                                    <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <div class="img-box-item">
+                                                    <img src="assets/images/upload/upload-img-item.jpg" title="img-item-1.jpg" alt="myface">
+                                                    <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix text-right">
+                                    <input class="btn btn-secondary" value="Lưu" type="button">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="img-panel-2" role="tabpanel">
+                            <div class="panel-box-heading">
+                                <h2 class="panel-box-title">Hồng hài nhi</h2>
+                            </div>
+                            <div class="upload-img-step empty-box">
+                                <img src="assets/images/upload/upload-img.jpg" alt="myface">
+                                <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer panel-padding">
+                    <div class="text-right pagination-nav">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">Trước</span>
+                                </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                              <a href="#" aria-label="Next">
+                                <span aria-hidden="true">Sau</span>
+                              </a>
+                            </li>
+                        </ul>
+                        <div class="form-inline">
+                            Hiển thị
+                            <select class="form-control">
+                                <option value="10">
+                                    10 dòng/ trang
+                                </option>
+                                <option value="25">
+                                    50 dòng/ trang
+                                </option>
+                                <option value="50">
+                                    100 dòng/ trang
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right cta-block">
+                <input class="btn btn-default" value="Quay lại" onclick="location.href='product-import-editinfo-step.html'" type="button">
+                <input class="btn btn-secondary" value="Bước tiếp theo" onclick="location.href='product-import-view-step.html'" type="button">
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

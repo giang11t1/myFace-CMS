@@ -1,0 +1,361 @@
+{% set current_page = 'order-list-view' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Sửa đơn hàng 12345678</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane invoice-view-tab active" id="invoice-view-tab">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Thông tin đơn hàng</h3>
+                            <div class="pull-right order-status-checkbox">
+                                <div class="invoice-status-select">
+                                    <span class="select-label">Trạng thái</span>
+                                    <select class="form-control">
+                                        <option>Đặt hàng thành công</option>
+                                        <option>Đã xác nhận</option>
+                                        <option>Chưa liên lạc được</option>
+                                        <option>Đang chuẩn bị hàng</option>
+                                        <option>Đã đóng gói</option>
+                                        <option>Đang giao hàng</option>
+                                        <option>Đã giao hàng</option>
+                                        <option>Hủy đơn hàng</option>
+                                        <option>Thanh toán thành công</option>
+                                        <option>Thanh toán thất bại</option>
+                                    </select>
+                                </div>
+                                <span class="yt-uix-checkbox-on-off lock-on-off">
+                                    <input type="checkbox" checked="" title="Khóa đơn hàng">
+                                    <label>
+                                        <span class="checked">mở khóa</span>
+                                        <span class="toggle">&nbsp;</span>
+                                        <span class="unchecked">khóa</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="invoice-info-box">
+                                <div class="row">
+                                    <div class="col-sm-4 invoice-col">
+                                        <address>
+                                            Người đặt hàng:<br>
+                                            <strong>(Anh) Raymond</strong>
+                                        </address>
+                                    </div>
+                                    <div class="col-sm-4 invoice-col">
+                                        <address>
+                                            Địa chỉ thu tiền:<br>
+                                            <strong>(Anh) Raymond Gold</strong><br>
+                                            Điện thoại: 0932 456 987<br>
+                                            Email: Raymond.Gold@itlvn.com
+                                        </address>
+                                    </div>
+                                    <div class="col-sm-4 invoice-col">
+                                        <address>
+                                            Địa chỉ giao hàng:<br>
+                                            <strong>(Chị) Raymond Gredy</strong><br>
+                                            Điện thoại: 0948 864 777<br>
+                                            Email: Raymond.Gredy@itlvn.com
+                                        </address>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 invoice-col">
+                                        <address>
+                                            Ngày đặt hàng:<br>
+                                            <strong>19:06:11 05/01/2017</strong>
+                                        </address>
+                                    </div>
+                                    <div class="col-sm-4 invoice-col">
+                                        <address>
+                                            Địa chỉ:<br>
+                                            36 Hưng Phú, Phường Mỹ Quý, Thành Phố Long Xuyên, Tỉnh An Giang.
+                                        </address>
+                                    </div>
+                                    <div class="col-sm-4 invoice-col">
+                                        <address>
+                                            Địa chỉ:<br>
+                                            232, Xã Tân Thạnh Đông , Huyện Củ Chi, Thành Phố Hồ Chí Minh.
+                                        </address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 invoice-info-col">
+                            <div class="panel box-panel padding-30">
+                                <div class="panel-body">
+                                    <h3 class="panel-title">Phương thức thanh toán</h3>
+                                    <p>Phương thức:</p>
+                                    <p>Người mua hàng trả tiền sản phẩm và phí vận chuyển.</p>
+                                    <br>
+                                    <p>Gói:</p>
+                                    <p>Giao tiết kiệm.</p>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 invoice-info-col">
+                            <div class="panel box-panel padding-30">
+                                <div class="panel-body">
+                                    <h3 class="panel-title">Thông tin vận chuyển</h3>
+                                    <p>Công ty vận chuyển: Speedlink</p>
+                                    <p>Cước vận chuyển: 9.000đ</p>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-body">
+                            <table class="table table-hover add-product-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 445px;">Tên sản phẩm</th>
+                                    <th class="text-right">Giá bán</th>
+                                    <th class="text-right">Số lượng</th>
+                                    <th class="text-right">khối lượng (gram)</th>
+                                    <th class="text-right">thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="block-list" style="width: 445px;">
+                                        <li class="item product-item">
+                                            <div class="item-img">
+                                                <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                            </div>
+                                            <div class="item-info">
+                                                <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                                                <p class="item-description">( Màu xanh, size 36 )</p>
+                                            </div>
+                                        </li>
+                                    </td>
+                                    <td class="text-right">120.000đ</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">200</td>
+                                    <td class="text-right">2.120.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td class="block-list" style="width: 445px;">
+                                        <li class="item product-item">
+                                            <div class="item-img">
+                                                <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                            </div>
+                                            <div class="item-info">
+                                                <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                                            </div>
+                                        </li>
+                                    </td>
+                                    <td class="text-right">120.000đ</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">200</td>
+                                    <td class="text-right">2.120.000đ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="invoice-total-review">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-7">
+                                    <div class="form-group">
+                                        <p class="form-label">Ghi chú đơn hàng:</p>
+                                        <textarea class="form-control" placeholder="Nhập nội dung ở đây" rows="4"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="form-label">Ghi chú khách hàng:</p>
+                                        <textarea class="form-control" placeholder="Nhập nội dung ở đây" rows="4"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-5">
+                                    <div class="table-responsive">
+                                        <table class="table total-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Tiền sản phẩm:</th>
+                                                    <td>2.000.000đ</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Phí vận chuyển:</th>
+                                                    <td>0đ</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Phí thu hộ:</th>
+                                                    <td>0đ</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr>
+                                        <table class="table total-table">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Giảm giá khuyến mãi:</th>
+                                                    <td>0đ</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Giảm giá coupon:</th>
+                                                    <td>0đ</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Mã coupon sử dụng:</th>
+                                                    <td>Chưa có</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <hr>
+                                        <label class="full-width total-price">
+                                            <span>Tổng tiền:</span>
+                                            <span class="pull-right">154.500.000đ</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="text-right cta-block">
+                        <a class="btn btn-cancel">Hủy</a>
+                        <input class="btn btn-secondary" value="Lưu đơn hàng" type="button" data-toggle="modal" data-target=".order-success-modal">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane invoice-history-tab" id="invoice-history-tab">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Lịch sử đơn hàng</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table lg-table invoice-history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Thời gian</th>
+                                        <th class="text-right">user</th>
+                                        <th class="text-right">thao tác</th>
+                                        <th class="text-right">chi tiết</th>
+                                        <th class="text-right">tổng tiền</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for x in [1,2,3,4] %}
+                                    <tr>
+                                        <td>
+                                            <i class="fa fa-clock-o" aria-hidden="true"></i> 15:30:00 09/01/2017
+                                        </td>
+                                        <td class="text-right">Raymond.Shop</td>
+                                        <td class="text-right">Tạo đơn hàng</td>
+                                        <td class="text-right">Tạo đơn hàng cho khách</td>
+                                        <td class="text-right">650.000.000đ</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane shipping-history-tab" id="shipping-history-tab">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                Lịch sử giao hàng
+                                <p class="panel-sub-title">Thông tin đơn hàng của công ty vận chuyển</p>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table lg-table shipping-info-table">
+                                <thead>
+                                    <tr>
+                                        <th>đơn hàng</th>
+                                        <th>mã vận tải</th>
+                                        <th>ngày đặt hàng</th>
+                                        <th style="width: 254px">hình thức thanh toán / gói dịch vụ</th>
+                                        <th>thông tin giao hàng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            0935984789
+                                        </td>
+                                        <td>SpeL3547</td>
+                                        <td>15:30:00 09/01/2017</td>
+                                        <td style="width: 254px">
+                                            <p>Người mua hàng trả tiền sản phẩm. Người bán hàng (chủ shop) trả phí vận chuyển. - Giao bình thường.</p>
+                                        </td>
+                                        <td style="width: 300px">
+                                            <p>(Chị)  Raymond Gold<p>
+                                            <p>Ấp3, Phú Ninh, Tam Nông, Đà Lạt</p>
+                                            <p>Điện thoại: 0914763600</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">
+                                            <div class="pull-right total-price">
+                                                <span>Tổng tiền đơn hàng:</span>
+                                                <span class="pull-right">22,000,000đ</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <table class="table table-blue-style shipping-history-table">
+                                <thead>
+                                    <tr>
+                                        <th>Thời gian</th>
+                                        <th>Trạng thái</th>
+                                        <th>Diễn giải</th>
+                                        <th style="width: 430px">Mô tả chi tiết</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for x in [1,2] %}
+                                    <tr>
+                                        <td>
+                                            15:30:00 09/01/2017
+                                        </td>
+                                        <td>Đã giao hàng</td>
+                                        <td>Đã nhận hàng</td>
+                                        <td style="width: 430px">Khách đã nhận được hàng, rồi cho thêm 100k nữa. ahuhu</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<div class="modal fade order-success-modal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Thông báo</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">                
+                <p class="success-detail">Bạn đã chỉnh sửa đơn hàng thành công</p>                
+            </div>
+            <div class="modal-footer text-center">
+                <button class="btn btn-success" data-dismiss="modal" aria-label="Close" type="button" onclick="location.href='order-detail.html'">Xem chi tiết đơn hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

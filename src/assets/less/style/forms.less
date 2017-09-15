@@ -1,0 +1,388 @@
+input {
+    &[disabled] {
+        border-color: @input-color-default;
+        background-color: @input-color-default;
+    }
+}
+select {
+    &[disabled] {
+        color: @text-color-3;
+    }
+}
+.select-box {
+    position: relative;
+    &:before {
+        z-index: 10;
+    }
+    // select {
+    //     -webkit-appearance: none;
+    //     -moz-appearance: none;
+    //     appearance: none;
+    // }
+    // select::-ms-expand {
+    //     display: none;
+    // }
+    // &:after {
+
+    // }
+
+}
+.form-control {
+    height: @form-control-height-base;
+    font-size: @font-size-base;
+    padding: 4px 12px;
+    border-radius: @border-radius;
+    box-shadow: none;
+    border-color: @input-color-default;
+    &:hover {
+        // background-color: transparent;
+    }
+    &:focus {
+        border-color: @border-color-focus;
+        box-shadow: none;
+    }
+    &[disabled] {
+        border-color: @border-color-disable;
+        background-color: @border-color-disable;
+    }
+}
+.form-label {
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: @font-size-base;
+}
+.radio {
+    margin: 0;
+}
+.checkbox,
+.radio,
+.checkbox-inline,
+.radio-inline {
+    position: relative;
+    margin-bottom: 0;
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: 100%;
+        margin-left: 0;
+        left: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+    label {
+        font-weight: normal;
+        pointer-events: none;
+        font-size: @font-size-base;
+        &:before {
+            font: normal normal normal 14px/1 FontAwesome;
+            color: @input-color-default;
+            font-size: 14px;
+            position: absolute;
+            top: 5px;
+            left: 0;
+        }
+        &.error {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            z-index: 1;
+            font-size: 12px;
+            top: 13px;
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+.checkbox,
+.checkbox-inline {
+    label {
+        &:before {
+            content: "\f096";
+        }
+    }
+    input {
+        &:checked {
+            & ~ label {
+                &:before {
+                    content: "\f14a";
+                    font-size: 14px;
+                    color: @typeface-color-2;
+                }
+            }
+        }
+    }
+}
+.radio,
+.radio-inline {
+    label {
+        font-size: 13px;
+        &:before {
+            content: "\f1db";
+            font-size: 14px;
+            color: @text-color-1;
+            top: 4px;
+        }
+    }
+    input {
+        &:checked {
+            & + label {
+                &:before {
+                    content: "\f192";
+                    color:  @text-color-1;
+                }
+            }
+        }
+    }
+}
+.checkbox-single,
+.radio-single {
+    margin-bottom: 0;
+    margin-left: 0;
+    input[type="radio"],
+    input[type="checkbox"] {
+        width: auto;
+    }
+    label {
+        &:before {
+            top: 0;
+            font-size: 15px;
+        }
+    }
+    input {
+        &:checked {
+            & + label {
+                &:before {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+input,
+textarea {
+    &.form-control {
+        .placeholder(@text-color-4, italic);
+    }
+}
+textarea {
+    &.form-control {
+        height: 110px;
+    }
+}
+select {
+    &.noborder {
+        min-width: 0;
+        border: 0;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+.text-center {
+    text-align: center !important;
+}
+.dropdown-menu {
+    min-width: 155px;
+    li {
+        a {
+            width: 100%;
+            display: block;
+            padding: 10px 20px;
+            color: @text-color-1;
+        }
+    }
+}
+.input-group {
+    .form-control {
+        &:focus {
+            border-color: @border-color-focus;
+            box-shadow: none;
+        }
+    }
+    .input-group-addon {
+        border-color: @input-color-default;
+    }
+    .input-group-lg {
+        .form-control {
+            height: 42px;
+            border-right: 0;
+            & + .input-group-addon {
+                border-right: 0;
+            }
+        }
+        > .input-group-addon {
+            height: 42px !important;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+    }
+    .btn {
+        border-top-right-radius: @border-radius;
+        border-bottom-right-radius: @border-radius;
+    }
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-title {
+    color: @text-color-1;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+//toggle
+#task_flyout {
+    .yt-uix-checkbox-on-off {
+        width: 40px;
+    }
+    .yt-uix-checkbox-on-off input[type=checkbox] {
+        width: 40px;
+    }
+    .yt-uix-checkbox-on-off label {
+       .unchecked {
+            width: 22px;
+        } 
+    }
+    .yt-uix-checkbox-on-off input[type=checkbox]:checked+label .checked {
+        width: 22px;
+        line-height: 16px;
+    }
+}
+.yt-uix-checkbox-on-off {
+    width: 76px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.yt-uix-checkbox-on-off input[type=checkbox] {
+    width: 76px;
+    height: 20px;
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+    margin: 0;
+}
+.yt-uix-checkbox-on-off input[type=checkbox]:checked+label {
+  background-color: @secondary-color;
+}
+.yt-uix-checkbox-on-off label {
+    width: 100%;
+    height: 20px;
+    padding: 2px 1px;
+    display: inline-block;
+    background: #b8b8b8;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 0;
+    > * {
+        float: left;
+        display: block;
+        line-height: 16px;
+        overflow: hidden;
+        -moz-transition: width .2s;
+        -webkit-transition: width .2s;
+        transition: width .2s;
+    }
+    .checked,
+    .unchecked {
+        height: 16px;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .checked {
+        width: 0;
+    }
+    .unchecked {
+        width: 58px;
+        float: right;
+    }
+}
+.yt-uix-checkbox-on-off input[type=checkbox]:checked+label .checked {
+    width: 58px;
+    line-height: 16px;
+}
+.yt-uix-checkbox-on-off input[type=checkbox]:checked+label .unchecked {
+    width: 0;
+}
+.yt-uix-checkbox-on-off label .toggle {
+    display: inline-block;
+    background: #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 13px;
+}
+.table {
+    .yt-uix-checkbox-on-off {
+        width: 40px;
+    }
+    .yt-uix-checkbox-on-off input[type=checkbox] {
+        width: 40px;
+    }
+    .yt-uix-checkbox-on-off label {
+        .unchecked {
+            width: 22px;
+        }
+    }
+    .yt-uix-checkbox-on-off input[type=checkbox]:checked+label .checked {
+        width: 22px;
+    }
+}
+
+.label {
+    font-weight: normal;
+    background-color: @general-color-1;
+    display: inline-block;
+    &.label-facebook {
+        background-color: #4863b0;
+    }
+    &.label-zalo {
+        background-color: #0f8edf;
+    }
+    &.label-myface {
+        background-color: @secondary-color;
+    }
+    &.secondary-label {
+        border-radius: 50%;
+        background-color: @primary-color;
+        text-align: center;
+    }
+}
+.date-picker-group {
+    position: relative;
+    .form-inline & {
+        display: inline-block;
+        float: right;
+    }
+    .form-control {
+        width: 100%;
+        border-radius: @border-radius;
+        padding-right: 30px;
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+        &[readonly] {
+            background-color: transparent;
+        }
+        &[disabled] {
+            border-color: @border-color-disable;
+            background-color: @border-color-disable;
+            cursor: not-allowed;
+        }
+    }
+    .datepicker-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: inline-block;
+        color: @text-color-3;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        pointer-events: none;
+    }
+}

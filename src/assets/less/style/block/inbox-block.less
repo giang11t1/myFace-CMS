@@ -1,0 +1,174 @@
+.inbox-tabs-list {
+    li {
+        width: 25%;
+        margin-bottom: 0;
+        a {
+            width: 100%;
+            height: 50px;
+            line-height: 42px;
+            display: block;
+            text-align: center;
+            border: 0;
+            &:hover,
+            &:active:focus,
+            &:focus,
+            &:visited:focus {
+                border: 0;
+                background-color: transparent;
+            }
+            > span {
+                width: 30px;
+                line-height: 20px;
+                display: inline-block;
+                vertical-align: baseline;
+                position: relative;
+            }
+        }
+        &.active {
+            a {
+                border: 0;
+                &:hover,
+                &:focus {
+                    border: 0;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+    .tab-item {
+        background: url(../images/icons/all-inbox.png) center center no-repeat;
+    }
+    .message-inbox {
+        background: url(../images/icons/message-inbox.png) center center no-repeat;
+    }
+    .comment-inbox {
+        background: url(../images/icons/comment-inbox.png) center center no-repeat;
+    }
+    .lock-inbox {
+        background: url(../images/icons/lock-inbox.png) center center no-repeat;
+    }
+    .active {
+        .tab-item {
+            background: url(../images/icons/all-inbox-active.png) center center no-repeat;
+        }
+        .message-inbox {
+            background: url(../images/icons/message-inbox-active.png) center center no-repeat;
+        }
+        .comment-inbox {
+            background: url(../images/icons/comment-inbox-active.png) center center no-repeat;
+        }
+        .lock-inbox {
+            background: url(../images/icons/lock-inbox-active.png) center center no-repeat;
+        }
+    }
+}
+.inbox-search {
+    padding: 10px 15px;
+    > * {
+        color: @text-color-1;
+    }
+    .search-icon {
+        background-color: transparent;
+        color: @text-color-3;
+        border-color: @border-color-default;
+    }
+    .form-control {
+        border-color: @border-color-default;
+        border-left: 0;
+        padding-left: 0;
+        .placeholder(@text-color-3, normal);
+        &:hover {
+            background-color: transparent;
+        }
+        &:focus {
+            border-color: @border-color-default;
+        }
+    }
+}
+.inbox-message-list {
+    .item {
+        padding: 8px 15px;
+        cursor: pointer;
+        position: relative;
+        border-bottom: @line;
+        .item-info {
+            margin-right: 30px;
+        }
+        .item-img {
+            border-radius: 50%;
+        }
+        .item-title {
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .item-description {
+            color: @text-color-2;
+            font-size: 13px;
+            img {
+                max-height: 16px;
+            }
+        }
+        .item-title,
+        .item-description {
+            text-transform: none;
+        }
+        &:first-child {
+            padding-top: 10px;
+        }
+        &:last-child {
+            padding-bottom: 10px;
+        }
+        &:hover {
+            background-color: @bg-color-2;
+        }
+        &.new {
+            .item-title,
+            .item-description,
+            .timestamp-wrap {
+                font-weight: bold;
+            }
+            .item-description {
+                color: @text-color-2;
+            }
+            .timestamp-wrap {
+                color: @text-color-1;
+                font-weight: normal;
+            }
+        }
+        &.active {
+            background-color: @bg-color-2;
+            .item-title,
+            .timestamp-wrap {
+                color: @text-color-1;
+            }
+            .item-description {
+                color: @text-color-2;
+            }
+            .kind-icon {
+                color: @primary-color;
+            }
+            &:before {
+                display: inline-block;
+                height: 60px;
+                content: " ";
+                text-shadow: none;
+                background-color: @primary-color;
+                width: 3px;
+                position: absolute;
+                left: 0;
+                top: 0px;
+            }
+        }
+        .timestamp {
+            display: block;
+            line-height: 7px;
+        }
+        .timestamp-wrap {
+            font-size: 10px;
+            text-align: right;
+            position: absolute;
+            top: 18px;
+            right: 15px;
+        }
+    }
+}

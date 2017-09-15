@@ -1,0 +1,417 @@
+{% set current_page = 'product-import-file' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Nhập sản phẩm </h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel">
+                <div class="panel-body progress-row">
+                    <a class="progress-step-title pass" href="product-import-editinfo-step.html" title="Quay lại bước 1">
+                        <span>1</span> Sửa thông tin sản phẩm
+                    </a>
+                    <span class="next-icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                    <a class="progress-step-title pass" href="product-import-addimg-step.html" title="Quay lại bước 2">
+                        <span>2</span> Thêm hình sản phẩm
+                    </a>
+                    <span class="next-icon">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </span>
+                    <a class="progress-step-title active" href="product-import-view-step.html" title="Quay lại bước 3">
+                        <span>3</span> Xác nhận và đăng sản phẩm
+                    </a>
+                </div>
+            </div>
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Nhập sản phẩm</h3>
+                    <span class="pull-right product-import-sum">Bạn đã nhập <strong>5</strong> sản phẩm lên hệ thống</span>
+                </div>
+                <div class="panel-body">
+                    <table class="table collapse-table product-import-table">
+                        <thead>
+                            <tr>
+                                <th class="input-col">
+                                    <div class="checkbox checkbox-single">
+                                        <input type="checkbox" data-toggle="checkall" data-target="input[name=choose]" class="checkbox_check">
+                                        <label></label>
+                                    </div>
+                                </th>
+                                <th>Mã sản phẩm</th>
+                                <th class="text-center product-img-col"></th>
+                                <th class="product-col">tên sản phẩm</th>
+                                <th class="cate-col">danh mục</th>
+                                <th class="text-right">giá thị trường</th>
+                                <th class="text-right">giá bán (vnd)</th>
+                                <th class="text-right">khối lượng (gram)</th>
+                                <th class="text-right">số lượng</th>
+                                <th class="action-col">sửa/xóa</th>
+                            </tr>
+                            <tr class="fillter switch_bar">
+                                <th colspan="10">
+                                    <div class="text-left">
+                                        <span class="">Xóa bỏ 4 sản phẩm đã chọn</span>
+                                        <input class="btn btn-secondary btn-sm" value="Xóa bỏ" type="button">
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for x in [1,2,3,4,5,6,7,8,9] %}
+                            <tr class="collapse-toggle-nav">
+                                <td class="input-col">
+                                    <div class="checkbox checkbox-single">
+                                        <input type="checkbox" class="checkbox_check" name="choose">
+                                        <label></label>
+                                    </div>
+                                </td>
+                                <td>00001</td>
+                                <td class="product-img-col">
+                                    <img class="img-circle" src="assets/images/upload/bow.jpg" alt="myface">
+                                </td>
+                                <td class="product-col">
+                                    Tai Nghe Bluetooth
+                                </td>
+                                <td class="cate-col">
+                                    Thiết bị số
+                                </td>
+                                <td class="text-right">350.000đ</td>
+                                <td class="text-right">350.000đ</td>
+                                <td class="text-right">12500</td>
+                                <td class="text-right">13</td>
+                                <td class="action-col">
+                                    <div class="action-list">
+                                        <a class="action-item edit-action collapse-toggle" data-toggle="tooltip" data-placement="left" title="Sửa" href="javascript:void(0)">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="collapse-row">
+                                <td class="collapse-inner" colspan="10">
+                                    <div class="collapse-div import-product-edit-info">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="panel box-panel">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Thông tin sản phẩm</h3>
+                                                    </div>
+                                                    <div class="panel-body panel-padding">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Tên sản phẩm</label>
+                                                            <input class="form-control" placeholder="Nhập tên sản phẩm" type="text" name="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Tên danh mục sản phẩm</label>
+                                                            <select class="form-control">
+                                                                <option>Tên danh mục sản phẩm</option>
+                                                                <option>Điện tử</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Mã sản phẩm</label>
+                                                            <input class="form-control" placeholder="Nhập mã sản phẩm" type="text" name="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Giá thị trường (VNĐ)</label>
+                                                            <input class="form-control" placeholder="0" type="number" name="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Giá bán sản phẩm (VNĐ)</label>
+                                                            <input class="form-control" placeholder="0" type="number" name="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Số lượng sản phẩm (Cái)</label>
+                                                            <input class="form-control" placeholder="0" type="number" name="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="form-label">Khối lượng sản phẩm (Gram)</label>
+                                                            <input class="form-control" placeholder="0" type="number" name="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="panel box-panel">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Chọn thuộc tính sản phẩm</h3>
+                                                    </div>
+                                                    <div class="panel-body panel-padding">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Chọn nhóm thuộc tính</label>
+                                                            <div class="form-control-auto property-select-wrap">
+                                                                <select class="form-control">
+                                                                    <option>Màu sắc</option>
+                                                                    <option>Kích thước</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="list-check property-list-check">
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Xanh ngọc</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Cam</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Trắng</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Hồng phấn</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-6">
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox">
+                                                                        <label>Màu khác</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <hr>
+                                                        <div class="property-list-choosen">
+                                                            <h2 class="list-title">Các thuộc tính đã chọn</h2>
+                                                            <div class="property-choosen-box">
+                                                                <div class="multi-select">
+                                                                    <div class="multi-select-label">
+                                                                        <span>Màu sắc</span>
+                                                                    </div>
+                                                                    <div class="multi-select-list">
+                                                                        <div class="multiselect-item">
+                                                                            Xanh
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="multiselect-item">
+                                                                            Đỏ
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="multiselect-item">
+                                                                            Trắng
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="property-choosen-box">
+                                                                <div class="multi-select">
+                                                                    <div class="multi-select-label">
+                                                                        <span>Giá</span>
+                                                                    </div>
+                                                                    <div class="multi-select-list">
+                                                                        <div class="multiselect-item">
+                                                                            500000đ
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="multiselect-item">
+                                                                            200000đ
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="multiselect-item">
+                                                                            10000đ
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="property-choosen-box">
+                                                                <div class="multi-select">
+                                                                    <div class="multi-select-label">
+                                                                        <span>Kích cỡ</span>
+                                                                    </div>
+                                                                    <div class="multi-select-list">
+                                                                        <div class="multiselect-item">
+                                                                            XXL
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="multiselect-item">
+                                                                            SM
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                        <div class="multiselect-item">
+                                                                            S
+                                                                            <span class="ui-icon remove-action">
+                                                                                <i class="fa fa-remove" aria-hidden="true"></i>
+                                                                            </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="panel box-panel">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Thông tin giới thiệu sản phẩm</h3>
+                                                    </div>
+                                                    <div class="panel-body panel-padding">
+                                                        <div class="editor">
+                                                            <img src="assets/images/upload/editor.jpg" alt="myface">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="panel box-panel">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title">Thông số sản phẩm</h3>
+                                                    </div>
+                                                    <div class="panel-body panel-padding">
+                                                        <div class="editor">
+                                                            <img src="assets/images/upload/editor.jpg" alt="myface">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right create-action">
+                                            <a class="btn btn-cancel collapse-close" href="">Đóng</a>
+                                            <a class="btn btn-secondary" href="order-detail-edit.html">Lưu thông tin</a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer panel-padding">
+                    {% include "block/_pagination-block.html" %}
+                </div>
+            </div>
+            <div class="text-right cta-block">
+                <input class="btn btn-default" value="Quay lại" onclick="location.href='product-import-addimg-step.html'" type="button">
+                <input class="btn btn-secondary" value="Bước tiếp theo" data-toggle="modal" data-target=".sale-chanel-modal" type="button">
+            </div>
+        </section>
+    </div>
+</main>
+{% include "block/_sale-chanel-modal.html" %}
+<div class="modal fade upload-success-modal" data-backdrop>
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Thông báo</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Bạn đã nhập sản phẩm thành công.</p>
+            </div>
+            <div class="modal-footer text-center">
+                <a class="btn btn-success" href="product-list-view.html">Hoàn thành</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

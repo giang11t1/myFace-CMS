@@ -1,0 +1,103 @@
+{% set current_page = 'product-import-file' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Nhập sản phẩm </h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-body panel-padding">
+                    <div class="import-head">
+                        <h3 class="panel-title">Từ file excel</h3>
+                        <button class="btn btn-default import-btn"><i class="fa fa-cloud-download" aria-hidden="true"></i> Tải file excel mẫu</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="import-kind-list">
+                                <div class="import-row">
+                                    <div class="import-label">
+                                        <img src="assets/images/upload/excel-img.jpg" alt="myface">
+                                    </div>
+                                    <div class="import-cta">
+                                        <div class="upload-file-div">
+                                            <button class="btn btn-basic">Chọn tập tin</button>
+                                            <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                                        </div>
+                                        <span class="file-import-name">Hang tet thang 11.xlsx</span>
+                                    </div>
+                                </div>
+                                <div class="import-row">
+                                    <div class="import-label">
+                                        <img src="assets/images/upload/haravan-img.jpg" alt="myface">
+                                    </div>
+                                    <div class="import-cta">
+                                        <div class="upload-file-div">
+                                            <button class="btn btn-basic">Chọn tập tin</button>
+                                            <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                                        </div>
+                                        <span class="file-import-name">Hang tet thang 11.xlsx</span>
+                                    </div>
+                                </div>
+                                <div class="import-row">
+                                    <div class="import-label">
+                                        <img src="assets/images/upload/bizweb.jpg" alt="myface">
+                                    </div>
+                                    <div class="import-cta">
+                                        <div class="upload-file-div">
+                                            <button class="btn btn-basic">Chọn tập tin</button>
+                                            <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                                        </div>
+                                        <span class="file-import-name">Hang tet thang 11.xlsx</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 import-guiline">
+                            <ul>
+                                <li>
+                                    Định dạng file excel nhập (import) sản phẩm là *.xls, *.xlsx
+                                </li>
+                                <li>
+                                    Mỗi file excel nhập (import) sản phẩm chỉ giới hạn 200 dòng, nếu nhiều hơn thì tách ra làm nhiều file nhập (import) sản phẩm.
+                                </li>
+                                <li>
+                                    File excel nhập (import) sản phẩm phải được điền đầy đủ thông tin.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right cta-block">
+                <input class="btn btn-secondary" value="Tải tệp tin" data-toggle="modal" data-target=".upload-success-modal" type="button">
+            </div>
+        </section>
+    </div>
+</main>
+<div class="modal fade upload-success-modal" data-backdrop>
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Thông báo</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="success-detail">Bạn vừa nhập 10 sản phẩm vào hệ thống cửa hàng.<br> Bạn cập nhật thông tin sản phẩm ngay luôn nhé.</p>                
+            </div>
+            <div class="modal-footer text-center">
+                <button class="btn btn-success" data-dismiss="modal" aria-label="Close" type="button" onclick="location.href='product-import-editinfo-step.html'">Cập nhật thông tin</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

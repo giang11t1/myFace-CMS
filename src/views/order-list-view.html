@@ -1,0 +1,476 @@
+{% set current_page = 'order-list-view' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <div class="clearfix">
+                <h2 class="page-title">Danh sách đơn hàng</h2>
+                <div class="pull-right right-header-group">
+                    <a class="btn btn-secondary" href="order-create.html">+ Tạo đơn hàng mới</a>
+                    <a class="btn hdsd-link">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        Hướng dẫn sử dụng
+                    </a>
+                </div>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel search-tool-block">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tìm kiếm đơn hàng</h3>
+                </div>
+                <div class="panel-body panel-padding search-tool-primary">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Từ ngày</label>
+                                <div class='date-picker-group'>
+                                    <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly>
+                                    <span class="datepicker-icon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Đến ngày</label>
+                                <div class='date-picker-group'>
+                                    <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly>
+                                    <span class="datepicker-icon">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Chọn trạng thái đơn hàng</label>
+                                <dl class="dropdown ChooseStatus">   
+                                    <dt>
+                                        <a href="#" type="button">
+                                            <span class="hida">Tất cả</span>    
+                                            <p class="multiSel"></p>  
+                                        </a>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </dt>  
+                                    <dd>
+                                        <div class="mutliSelect">
+                                            <ul>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Tất cả">
+                                                        <label>Tất cả</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Đang giao hàng">
+                                                        <label>Đang giao hàng</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Đã giao hàng">
+                                                        <label>Đã giao hàng</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Hủy đơn hàng">
+                                                        <label>Hủy đơn hàng</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Thanh toán thành công">
+                                                        <label>Thanh toán thành công</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Thanh toán thất bại">
+                                                        <label>Thanh toán thất bại</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Đã hoàn phí C.O.D">
+                                                        <label>Đã hoàn phí C.O.D</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>                            
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Chọn nhà vận chuyển</label>
+                                <dl class="dropdown ChooseTransport">   
+                                    <dt>
+                                        <a href="#" type="button">
+                                            <span class="hida">Tất cả</span>    
+                                            <p class="multiSel"></p>  
+                                        </a>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </dt>  
+                                    <dd>
+                                        <div class="mutliSelect">
+                                            <ul>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Tất cả">
+                                                        <label>Tất cả</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Speedlink(SPL)">
+                                                        <label>Speedlink (SPL)</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Giao hàng tiết kiệm (GHTK)">
+                                                        <label>Giao hàng tiết kiệm (GHTK)</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Shop giao hàng (SGH)">
+                                                        <label>Shop giao hàng (SGH)</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Tốc hành (TH)">
+                                                        <label>Tốc hành (TH)</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Kingship (KS)">
+                                                        <label>Kingship (KS)</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="checkbox">
+                                                        <input type="checkbox" value="Ninja Van (NJV)">
+                                                        <label>Ninja Van (NJV)</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Người nhận hàng</label>
+                                <input class="form-control" placeholder="Tên người nhận hàng" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="form-control" placeholder="Nhập Email" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Điện thoại</label>
+                                <input class="form-control" placeholder="Nhập số điện thoại" type="text">
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label class="form-label">Mã đơn hàng</label>
+                                <input class="form-control" placeholder="Nhập mã đơn hàng" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body panel-padding search-tool-advanced">
+                    <h3 class="label-title">Phí vận chuyển</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="checkbox">
+                                <input type="checkbox">
+                                <label>Tính phí vận chuyển</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="checkbox">
+                                <input type="checkbox">
+                                <label>Miễn phí vận chuyển</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="label-title">Coupon</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="checkbox">
+                                <input type="checkbox">
+                                <label>Có mã coupon</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="checkbox">
+                                <input type="checkbox">
+                                <label> Không có mã coupon</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="label-title">Tỉnh/ Thành phố</h3>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="col-sm-8">
+                                <div class="wrap_select bootstrap-multi-select-box">
+                                    <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                        <option>Chọn Tỉnh/ Thành phố</option>
+                                        <option>Hồ chí minh</option>
+                                        <option>Hà nội</option>
+                                        <option>Nghệ an</option>
+                                        <option>Đà Nẵng</option>
+                                        <option>Hồ chí minh</option>
+                                        <option>Hà nội</option>
+                                        <option>Nghệ an</option>
+                                        <option>Đà Nẵng</option>
+                                        <option>Hồ chí minh</option>
+                                        <option>Hà nội</option>
+                                        <option>Nghệ an</option>
+                                        <option>Đà Nẵng</option>
+                                        <option>Hồ chí minh</option>
+                                        <option>Hà nội</option>
+                                        <option>Nghệ an</option>
+                                        <option>Đà Nẵng</option>
+                                        <option>Hồ chí minh</option>
+                                        <option>Hà nội</option>
+                                        <option>Nghệ an</option>
+                                        <option>Đà Nẵng</option>
+                                    </select>
+                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>                         
+                    </div>
+                </div>
+                <div class="cta-block">
+                    <button class="btn btn-link search-btn search-advanced-show" type="button">Tìm kiếm nâng cao</button>
+                    <button class="btn btn-link search-btn search-advanced-hide" type="button">Tắt tìm kiếm nâng cao</button>
+                    <input class="pull-right btn btn-secondary" value="Tìm kiếm" type="submit" name="">
+                </div>
+            </div>
+            <div class="panel box-panel infor-order">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thông tin đơn hàng</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="filtter-nav product-list-view-filter">
+                        <div class="pull-right form-inline">
+                            <div class="switch_bar fillter-row">
+                                <div class="input-group-sm input-group change-invoice-status">
+                                    <select class="form-control">
+                                        <option>
+                                            Chuyển trạng thái đơn hàng
+                                        </option>
+                                        <option>
+                                            Đặt hàng thành công
+                                        </option>
+                                        <option>
+                                            Đã xác nhận
+                                        </option>
+                                        <option>
+                                            Chưa liên lạc được
+                                        </option>
+                                        <option>
+                                            Đang chuẩn bị hàng
+                                        </option>
+                                        <option>
+                                            Đã đóng gói
+                                        </option>
+                                        <option>
+                                            Đang giao hàng
+                                        </option>
+                                        <option>
+                                            Đã giao hàng
+                                        </option>
+                                        <option>
+                                            Hủy đơn hàng
+                                        </option>
+                                        <option>
+                                            Thanh toán thất bại
+                                        </option>
+                                    </select>
+                                    <span class="input-group-btn">
+                                        <input class="btn btn-secondary" value="Chuyển" type="button">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-relative">                        
+                        <table class="table table-hover sum-invoice-table collapse-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>ID</th>
+                                    <th>trạng thái đơn hàng</th>
+                                    <th>Vận chuyển</th>
+                                    <th class="text-right" style="width: 210px">người nhận hàng</th>
+                                    <th class="text-right">ngày đặt hàng</th>
+                                    <th class="text-right">tổng tiền</th>
+                                    <th style="width: 80px"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for x in [1,2,3] %}
+                                <tr class="collapse-toggle-nav">
+                                    <td>
+                                        <div class="checkbox checkbox-single">
+                                            <input type="checkbox" class="checkbox_check" name="choose">
+                                            <label></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <a href="order-detail.html">#0986345879</a>
+                                        </p>
+                                    </td>
+                                    <td class="status-col">
+                                        <p>Đã đóng gói</p>
+                                    </td>
+                                    <td>
+                                        <p>SPL</p>
+                                    </td>
+                                    <td class="text-right" style="width: 210px">
+                                        <p>
+                                            <a href="#">Lê Hoàng Hiếu Nghĩa Đệ Nhất Thương Tâm Nhân</a>
+                                        </p>
+                                    </td>
+                                    <td class="text-right">
+                                        30/12/2016 5:30 CH
+                                    </td>
+                                    <td class="text-right">
+                                        20.000.000đ
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-list">
+                                            <a class="action-item collapse-toggle" title="Xem nhanh" data-toggle="tooltip" data-placement="left">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                            <a class="action-item" href="order-detail.html" title="Xem chi tiết" data-toggle="tooltip" data-placement="left">
+                                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% include "block/_view_fast_block.html" %}
+                                <tr class="collapse-toggle-nav">
+                                    <td>
+                                        <div class="checkbox checkbox-single">
+                                            <input type="checkbox" class="checkbox_check" name="choose">
+                                            <label></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <a href="order-detail.html">#0986345879</a>
+                                        </p>
+                                    </td>
+                                    <td class="status-col">
+                                        <p>Đặt hàng thành công</p>
+                                    </td>
+                                    <td>
+                                        <p>SGH</p>
+                                    </td>
+                                    <td class="text-right" style="width: 210px">
+                                        <p>
+                                            <a href="#">Nguyễn Ngọc Anh</a>
+                                        </p>
+                                    </td>
+                                    <td class="text-right">
+                                        30/12/2016 5:30 CH
+                                    </td>
+                                    <td class="text-right">
+                                        20.000.000đ
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-list">
+                                            <a class="action-item collapse-toggle" title="Xem nhanh" data-toggle="tooltip" data-placement="left">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                            <a class="action-item" href="order-detail.html" title="Xem chi tiết" data-toggle="tooltip" data-placement="left">
+                                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% include "block/_view_fast_block.html" %}
+                                <tr class="collapse-toggle-nav">
+                                    <td>
+                                        <div class="checkbox checkbox-single">
+                                            <input type="checkbox" class="checkbox_check" name="choose">
+                                            <label></label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <a href="order-detail.html">#0986345879</a>
+                                        </p>
+                                    </td>
+                                    <td class="status-col">
+                                        <p>Đặt hàng thành công</p>
+                                    </td>
+                                    <td>
+                                        <p>GHTK</p>
+                                    </td>
+                                    <td class="text-right" style="width: 210px">
+                                        <p>
+                                            <a href="#">Nguyễn Ngọc Anh</a>
+                                        </p>
+                                    </td>
+                                    <td class="text-right">
+                                        30/12/2016 5:30 CH
+                                    </td>
+                                    <td class="text-right">
+                                        20.000.000đ
+                                    </td>
+                                    <td class="text-center">
+                                        <div class="action-list">
+                                            <a class="action-item collapse-toggle" title="Xem nhanh" data-toggle="tooltip" data-placement="left">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </a>
+                                            <a class="action-item" href="order-detail.html" title="Xem chi tiết" data-toggle="tooltip" data-placement="left">
+                                                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% include "block/_view_fast_block.html" %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-body panel-padding">
+                    <div class="pull-right total-price">
+                        <span>Tổng doanh thu:</span>
+                        <span class="pull-right">154.500.000đ</span>
+                    </div>
+                </div>
+                <div class="panel-footer panel-padding">
+                    <label class="pull-left sum-label">Tổng đơn hàng: 325</label>
+                    {% include "block/_pagination-block.html" %}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,160 @@
+<aside class="main-sidebar">
+    <div class="scrollbar">
+        <ul class="sidebar-menu panel-group" id="accordion">
+            <li class="{% if current_page == 'index' %}active{% endif %}">
+                <a href="index.html">
+                <span class="icon dashboard-icon"></span>
+                <span>Quản lý chung</span>
+            </a>
+            </li>
+            <li class="treeview panel {% if current_page == 'chat-comment' or current_page == 'chat-comment-zalo' or current_page == 'hide-comment' or current_page == 'auto-reply'%}active{% endif %}">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                    <span class="icon chat-icon"></span>
+                    <span>Chat & comment</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                        <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <div id="collapse2" class="panel-collapse collapse {% if current_page == 'chat-comment' or current_page == 'chat-comment-zalo' or current_page == 'hide-comment' or current_page == 'auto-reply'%}in{% endif %}">
+                    <ul class="treeview-menu">
+                        <li class="treeview {% if current_page == 'chat-comment' %}active{% endif %}">
+                            <a href="chat-comment.html">
+                            <span>Facebook</span>
+                            <span class="label secondary-label">2</span>
+                        </a>
+                        </li>
+                        <li class="treeview {% if current_page == 'chat-comment-zalo' %}active{% endif %}">
+                            <a href="chat-comment-zalo.html">
+                            <span>Zalo</span>
+                            <span class="label secondary-label">0</span>
+                        </a>
+                        </li>
+                        <li class="treeview {% if current_page == 'hide-comment' %}active{% endif %}">
+                            <a href="hide-comment.html">
+                            <span>Ẩn comment</span>
+                        </a>
+                        </li>
+                        <li class="treeview {% if current_page == 'auto-reply' %}active{% endif %}">
+                            <a href="auto-reply.html">
+                            <span>Trả lời tự động</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="treeview panel {% if current_page == 'order-list-view' or current_page == 'order-create-multi'%}active{% endif %}">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                <span class="icon order-icon"></span>
+                <span>Đơn hàng</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                    <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+                <div id="collapse3" class="panel-collapse collapse {% if current_page == 'order-list-view' or current_page == 'order-create-multi'%}in{% endif %}">
+                    <ul class="treeview-menu">
+                        <li class="{% if current_page == 'order-list-view' %}active{% endif %}">
+                            <a href="order-list-view.html">
+                                <span>Danh sách đơn hàng</span>
+                            </a>
+                        </li>
+                        <li class="{% if current_page == 'order-create' %}active{% endif %}">
+                            <a href="order-create.html">
+                                <span>Tạo đơn hàng</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="treeview panel {% if current_page == 'product-list-view' or current_page == 'product-create'  or current_page == 'category-list-view'  or current_page == 'category-create' or current_page == 'product-import-file' or current_page == 'product-export-file' or current_page == 'product-advanced'%}active{% endif %}">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                    <span class="icon product-icon"></span>
+                    <span>Sản phẩm</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-right pull-right"></i>
+                        <i class="fa fa-angle-down pull-right"></i>
+                    </span>
+                </a>
+                <div id="collapse4" class="panel-collapse collapse {% if current_page == 'product-list-view' or current_page == 'product-create'  or current_page == 'category-list-view'  or current_page == 'category-create' or current_page == 'product-import-file' or current_page == 'product-export-file' or current_page == 'product-advanced'%}in{% endif %}">
+                    <ul class="treeview-menu">
+                        <li class="{% if current_page == 'product-list-view' or current_page == 'product-create' %}active{% endif %}">
+                            <a href="product-list-view.html">
+                            <span>Sản phẩm</span>
+                        </a>
+                        </li>
+                        <li class="{% if current_page == 'product-import-file' %}active{% endif %}">
+                            <a href="product-import-file.html">
+                            <span>Nhập sản phẩm</span>
+                        </a>
+                        </li>
+                        <li class="{% if current_page == 'product-export-file' %}active{% endif %}">
+                            <a href="product-export-file.html">
+                            <span>Xuất sản phẩm</span>
+                        </a>
+                        </li>
+                        <li class="{% if current_page == 'product-advanced' %}active{% endif %}">
+                            <a href="product-advanced.html">
+                            <span>Cài đặt sản phẩm nâng cao</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="treeview panel {% if current_page == 'customer-list-view' or current_page == 'group-customer-list'%}active{% endif %}">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">
+                <span class="icon customer-icon"></span>
+                <span>Khách hàng</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right"></i>
+                    <i class="fa fa-angle-down pull-right"></i>
+                </span>
+            </a>
+                <div id="collapse5" class="panel-collapse collapse {% if current_page == 'customer-list-view' or current_page == 'group-customer-list'%}in{% endif %}">
+                    <ul class="treeview-menu">
+                        <li class="{% if current_page == 'customer-list-view' %}active{% endif %}">
+                            <a href="customer-list-view.html">
+                            <span>Danh sách khách hàng</span>
+                        </a>
+                        </li>
+                        <li class="{% if current_page == 'group-customer-list' %}active{% endif %}">
+                            <a href="group-customer-list.html">
+                            <span>Nhóm khách hàng</span>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="{% if current_page == 'promotion-coupon-list-view' or current_page == 'promotion-order-list-view' or current_page == 'promotion-product-list-view' or current_page == 'promotion-coupon-create' or current_page == 'promotion-order-create' or current_page == 'promotion-product-create'%}active{% endif %}">
+                <a href="promotion-coupon-list-view.html">
+                <span class="icon promotion-icon"></span>
+                <span>Khuyến mãi</span>
+            </a>
+            </li>
+            <li class="{% if current_page == 'report' %}active{% endif %}">
+                <a href="report.html">
+                <span class="icon report-icon"></span>
+                <span>Báo cáo</span>
+            </a>
+            </li>
+            <li class="{% if current_page == 'sales-chanel' %}active{% endif %}">
+                <a href="sales-chanel.html">
+                <span class="icon sale-chanel-icon"></span>
+                <span>Kênh bán hàng</span>
+            </a>
+            </li>
+            <!-- <li class="{% if current_page == 'transport' %}active{% endif %}">
+            <a href="transport.html">
+                <span class="icon transport-icon"></span>
+                <span>Vận chuyển</span>
+            </a>
+        </li> -->
+            <li class="{% if current_page == 'cauhinh' %}active{% endif %}">
+                <a href="cau-hinh-thong-tin-tk.html">
+                <span class="icon setting-icon"></span>
+                <span>Cấu hình</span>
+            </a>
+            </li>
+        </ul>
+    </div>
+</aside>

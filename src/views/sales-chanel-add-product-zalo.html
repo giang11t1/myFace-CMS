@@ -1,0 +1,105 @@
+{% set current_page = 'sales-chanel' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Kênh bán hàng</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Candy Shop</h3>
+                </div>
+                <div class="panel-body sales-chanel-panel">
+                    <div class="fanpage-info-wrap fanpage-info-setting">
+                        <div class="sales-product-nav">
+                            <h3 class="panel-title">Danh sách sản phẩm</h3>
+                            <div class="col-md-5 add-product-select-box">
+                                <div class="select-box bootstrap-multi-select-box">
+                                    <select class="form-control data-product" multiple="true" data-live-search="true" title="Chọn sản phẩm"  data-dropup-auto="false" data-size="6">
+                                        <option value="CA">Sản phẩm test 1</option>
+                                        <option value="NV">Sản phẩm test 2</option>
+                                        <option value="OR">Sản phẩm test 3</option>
+                                        <option value="WA">Sản phẩm test 4</option>
+                                        <option value="CA">Sản phẩm test 1</option>
+                                        <option value="NV">Sản phẩm test 2</option>
+                                        <option value="OR">Sản phẩm test 3</option>
+                                        <option value="WA">Sản phẩm test 4</option>
+                                        <option value="CA">Sản phẩm test 1</option>
+                                        <option value="NV">Sản phẩm test 2</option>
+                                        <option value="OR">Sản phẩm test 3</option>
+                                        <option value="WA">Sản phẩm test 4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table product-list-table">
+                            <thead>
+                                <tr>
+                                    <th>SKU</th>
+                                    <th class="text-center product-img-col"></th>
+                                    <th class="product-col">tên sản phẩm</th>
+                                    <th class="text-right">số lượng</th>
+                                    <th class="text-right">giá bán</th>
+                                    <th class="text-right action-col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for x in [1,2,3,4,5,6,7,8,9] %}
+                                <tr>
+                                    <td>
+                                        00001
+                                    </td>
+                                    <td class="product-img-col">
+                                        <img class="img-circle" src="assets/images/upload/bow.jpg" alt="myface">
+                                    </td>
+                                    <td class="product-col">
+                                        Tai Nghe Bluetooth
+                                    </td>
+                                    <td class="text-right">12</td>
+                                    <td class="text-right">350.000đ</td>
+                                    <td class="text-right">
+                                        <div class="action-list">
+                                            <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="" href="javascript:void(0)" data-original-title="Xóa">
+                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-block text-right">
+                <a class="btn btn-cancel" href="sales-chanel-view-zalo.html">Hủy bỏ</a>
+                <input class="btn btn-secondary" value="Kích hoạt và lưu kết nối Zalo" type="button" data-toggle="modal" data-target="#modal_success">
+            </div>
+            <div id="modal_success" class="modal fade upload-success-modal" role="dialog">
+                <div class="modal-dialog modal-show">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">Thông báo</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Bạn đã kích hoạt và lưu kết nối thành công.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-success" href="sales-chanel-view-zalo.html">Đóng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

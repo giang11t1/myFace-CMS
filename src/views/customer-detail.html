@@ -1,0 +1,469 @@
+{% set current_page = 'customer-list-view' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Chi tiết khách hàng</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Danh sách khách hàng</h3>
+                </div>
+                <div class="panel-body panel-group customer-detail-edit-panel">
+                    <div class="panel-left list-control-nav">
+                        <div class="nhead">
+                            Tên khách hàng
+                        </div>
+                        <div class="nbody list-toggle-Slimscroll">
+                            <ul class="block-list list-control">
+                                {% for x in [1,2,3,4,5,7,8,9,10] %}
+                                <li class="item item-control">
+                                    <div class="item-img">
+                                        <img class="img-circle" src="assets/images/upload/customer-default-img.png" alt="myface">
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="product-name">Hoàng Phi Hồng</p>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                                <li class="item item-control active">
+                                    <div class="item-img">
+                                        <img class="img-circle" src="assets/images/upload/customer-default-img.png" alt="myface">
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="product-name">Hoàng Phi Hồng</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nfoot">
+                            <p class="sum-label">
+                                Tổng khách hàng:
+                                <span class="sum-number">325</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel-right">
+                        <div class="panel-box-heading">
+                            <h2 class="panel-box-title">Hoàng Phi Hồng</h2>
+                        </div>
+                        <div class="customer-detail-block detail-info-block">
+                            <h3 class="customer-detail-title">
+                                <span>Thông tin khách hàng</span>
+                            </h3>                            
+                            <div class="customer-detail-body">
+                                <div class="pull-right info-cus-action-group" style="position: relative; z-index: 1; display: block;">
+                                    <a class="update-customer-btn" id="edit-info-cus-action">
+                                        <i class="fa fa-edit" aria-hidden="true"></i> Cập nhật
+                                    </a>
+                                </div>
+                                <div class="customer-show-info show-info show-info-customer">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <span>072 143 9920</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span>Raymond.Reddit@myface.com.vn</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>60A Trường Sơn, Tân Bình, Hồ Chí Minh</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                            <span>Consumer spending seems to be on the rise with less people interested in saving on the rise with less people interested in saving on the rise with less people interested in saving on the rise with less people interested in saving.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="customer-show-info edit-info edit-info-customer">
+                                    <ul class="list-group customer-info-list info-list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <input class="form-control" name="address_buyer_name" value="dadad" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <input class="form-control" name="address_buyer_phone" value="32323222323" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <input class="form-control" value="ad2@gmail.com" name="address_buyer_email" type="email">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="radio-inline">
+                                                <input value="1" type="radio" name="address_buyer_gender">
+                                                <label>Anh</label>
+                                            </div>
+                                            <div class="radio-inline">
+                                                <input value="2" type="radio" name="address_buyer_gender">
+                                                <label>Chị</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Tp HCM</option>
+                                                    <option>Hà Nội</option>
+                                                    <option>Đà Nẵng</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Tp HCM</option>
+                                                    <option>Hà Nội</option>
+                                                    <option>Đà Nẵng</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Tp HCM</option>
+                                                    <option>Hà Nội</option>
+                                                    <option>Đà Nẵng</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-control" value="dada" type="text" name="buyer_address_street">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                            <textarea id="notes" name="notes" class="form-control" placeholder="Ghi chú khách hàng" rows="4"></textarea>
+                                        </li>
+                                    </ul>
+                                    <div class="text-right cta-block">
+                                        <a class="btn btn-cancel btn-reset-info-cus" href="javascript:void(0)">Hủy bỏ</a>
+                                        <input class="btn btn-secondary submit-info-customer-btn" value="Cập nhật" data-id="57106" type="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-detail-block detail-order-block">
+                            <h3 class="customer-detail-title">
+                                <span>Đơn hàng gần nhất</span>
+                            </h3>
+                            <div class="customer-detail-body">
+                                {% for x in [1,2,3,4,5] %}
+                                <a class="order-view-item" href="order-detail.htmml">Old395246</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="customer-detail-block detail-info-block">
+                            <h3 class="customer-detail-title">
+                                <span>Nhóm khách hàng</span>
+                            </h3>
+                            <div class="customer-detail-body">
+                                <div class="pull-right info-group-action" style="position: relative; z-index: 1; display: block;">
+                                    <a class="update-customer-btn edit-address-action" id="edit-group-action">
+                                        <i class="fa fa-edit" aria-hidden="true"></i> Cập nhật
+                                    </a>
+                                </div>
+                                <div class="customer-show-info show-info show-group-cus">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-group" aria-hidden="true"></i>
+                                            <span>Chưa có thông tin</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="customer-show-info edit-info edit-group-cus">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-group" aria-hidden="true"></i>
+                                            <div class="select-box">
+                                                <select class="form-control groupCustomer" name="groupCustomer" id="groupCustomer"> 
+                                                    <option value="130">Nhóm 110</option>
+                                                    <option value="128">Nhóm Vip 02</option>       
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="text-right cta-block">
+                                        <a class="btn btn-cancel btn-reset-group-cus" href="javascript:void(0)">Hủy bỏ</a>
+                                        <input class="btn btn-secondary btn-sm-group-customer" value="Cập nhật" type="submit" data-id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="customer-detail-block address-info-block">
+                            <h3 class="customer-detail-title">
+                                <span>Địa chỉ</span>
+                            </h3>
+                            <div class="customer-detail-body">
+                                <div class="pull-right address-action-group">
+                                    <a class="update-customer-btn remove-action" href="customer-detail.html">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i> Xóa
+                                    </a>
+                                    <a class="update-customer-btn edit-address-action" href="customer-detail.html">
+                                        <i class="fa fa-edit" aria-hidden="true"></i> Cập nhật
+                                    </a>
+                                </div>
+                                <h4 class="address-info-title">Địa chỉ 1</h4>
+                                <div class="customer-show-info show-info">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Raymond Gold</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <span>072 143 9920</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span>Raymond.Reddit@myface.com.vn</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>60A Trường Sơn, Phường 2, Tân Bình, Hồ Chí Minh</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="customer-show-info edit-info">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <input class="form-control" value="Raymond Gold" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <input class="form-control" value="072 143 9920" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <input class="form-control" value="Raymond.Reddit@myface.com.vn" type="email">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="radio-inline">
+                                                <input value="option1" type="radio" checked="" name="example-2">
+                                                <label>Anh</label>
+                                            </div>
+                                            <div class="radio-inline">
+                                                <input value="option1" type="radio" name="example-2">
+                                                <label>Chị</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Tỉnh / Thành</option>
+                                                    <option selected="">Hà Nội</option>
+                                                    <option>TP. HCM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Quận / Huyện</option>
+                                                    <option selected="">Quận Tân Bình</option>
+                                                    <option>Quận 2</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Phường / Xã</option>
+                                                    <option selected="">Phường 2</option>
+                                                    <option>Phường 3</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-control" value="60A Trường Sơn" type="text">
+                                        </li>
+                                    </ul>
+                                    <div class="text-right cta-block">
+                                        <a class="btn btn-cancel" href="">Hủy bỏ</a>
+                                        <input class="btn btn-secondary submit-info-btn" value="Cập nhật" type="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-detail-block address-info-block">
+                            <h3 class="customer-detail-title">
+                                <span>Địa chỉ</span>
+                            </h3>
+                            <div class="customer-detail-body">
+                                <div class="pull-right address-action-group">
+                                    <a class="update-customer-btn remove-action" href="customer-detail.html">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i> Xóa
+                                    </a>
+                                    <a class="update-customer-btn edit-address-action" href="customer-detail.html">
+                                        <i class="fa fa-edit" aria-hidden="true"></i> Cập nhật
+                                    </a>
+                                </div>
+                                <h4 class="address-info-title">Địa chỉ 2</h4>
+                                <div class="customer-show-info show-info">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Raymond Gold</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <span>072 143 9920</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span>Raymond.Reddit@myface.com.vn</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>60A Trường Sơn, Phường 2, Quận Tân Bình, Hồ Chí Minh</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="customer-show-info edit-info">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <input class="form-control" value="Raymond Gold" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <input class="form-control" value="072 143 9920" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <input class="form-control" value="Raymond.Reddit@myface.com.vn" type="email">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="radio-inline">
+                                                <input value="option1" type="radio" checked="" name="example-3">
+                                                <label>Anh</label>
+                                            </div>
+                                            <div class="radio-inline">
+                                                <input value="option1" type="radio" name="example-3">
+                                                <label>Chị</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Tỉnh / Thành</option>
+                                                    <option selected="">Hà Nội</option>
+                                                    <option>TP. HCM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Quận / Huyện</option>
+                                                    <option selected="">Quận Tân Bình</option>
+                                                    <option>Quận 2</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Phường / Xã</option>
+                                                    <option selected="">Phường 2</option>
+                                                    <option>Phường 3</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-control" value="60A Trường Sơn" type="text">
+                                        </li>
+                                    </ul>
+                                    <div class="text-right cta-block">
+                                        <a class="btn btn-cancel" href="">Hủy bỏ</a>
+                                        <input class="btn btn-secondary submit-info-btn" value="Cập nhật" type="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-detail-block address-info-block">
+                            <div class="customer-detail-body">
+                                <a class="update-customer-btn add-address-action" href="">+ Thêm địa chỉ mới</a>
+                                <div class="customer-show-info edit-info">
+                                    <ul class="list-group customer-info-list info-list-group">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <input class="form-control" placeholder="Họ tên" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <input class="form-control" placeholder="Số điện thoại" type="text">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <input class="form-control" placeholder="Email" type="email">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="radio-inline">
+                                                <input value="option1" type="radio" checked="" name="example-1">
+                                                <label>Anh</label>
+                                            </div>
+                                            <div class="radio-inline">
+                                                <input value="option1" type="radio" name="example-1">
+                                                <label>Chị</label>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Tỉnh / Thành phố</option>
+                                                    <option>Hà Nội</option>
+                                                    <option>TP. HCM</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Quận / Huyện</option>
+                                                    <option>Quận 1</option>
+                                                    <option>Quận 2</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="select-box">
+                                                <select class="form-control">
+                                                    <option>Chọn Phường / Xã</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <input class="form-control" placeholder="Đường, số nhà, ngõ ngách, hẻm..." type="text">
+                                        </li>
+                                    </ul>
+                                    <div class="text-right cta-block">
+                                        <a class="btn btn-cancel" href="">Hủy bỏ</a>
+                                        <input class="btn btn-secondary submit-info-btn" value="Thêm mới" type="submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

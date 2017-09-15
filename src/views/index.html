@@ -1,0 +1,164 @@
+{% set current_page = 'index' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Quản lý chung</h2>
+            <div class="pull-right right-header-group">
+                <p class="service-info">
+                    Bạn đang sử dụng gói dịch vụ <strong class="service-name">Tên gói dịch vụ</strong> đến ngày <strong class="service-exp">end time</strong>
+                </p>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="row content-row">
+                <div class="col-md-9 left-side">
+                    <div class="panel box-panel">
+                        <div class="info-block panel-body">
+                            <div class="col-sm-4 info-box">
+                                <div class="info-box-content">
+                                    <p class="info-title">Hôm nay</p>
+                                    <p class="info-turnover">2,936,000đ</p>
+                                    <p class="info-order">12 đơn hàng</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 info-box">
+                                <div class="info-box-content">
+                                    <p class="info-title">Hôm qua</p>
+                                    <p class="info-turnover">2,936,000đ</p>
+                                    <p class="info-order">32 đơn hàng</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 info-box">
+                                <div class="info-box-content">
+                                    <p class="info-title">7 ngày trước</p>
+                                    <p class="info-turnover">2,936,000đ</p>
+                                    <p class="info-order">78 đơn hàng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Tổng doanh thu <span class="price">120.000.000 đ</span></h3>
+                            <div class="pull-right panel-tool wrap_select">
+                                <select class="form-control">
+                                    <option>Hôm nay</option>
+                                    <option>Hôm qua</option>
+                                    <option>Tuần trước</option>
+                                    <option>Tháng này</option>
+                                    <option>Tháng trước</option>
+                                </select>
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="chart">
+                                <canvas class="areaChart" style="height:320px"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 right-side">
+                    <div class="box-panel promotion-slider">
+                        <img src="assets/images/upload/term/term-2.jpg">
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Tin từ myFace</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <ul class="block-list">
+                                {% for x in [1,2,3,4,5] %}
+                                <li class="item">
+                                    <div class="item-img">
+                                        <a href="#">
+                                            <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                        </a>
+                                    </div>
+                                    <div class="item-info">
+                                        <a class="item-title" href="#">Ý tưởng kinh doanh kinh doanh kinh doanh kinh doanh</a>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Thống kê đơn hàng</h3>
+                            <div class="pull-right">
+                                <a class="link" href="#">
+                                    Xem tất cả đơn hàng
+                                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover sum-invoice-table">
+                                <thead>
+                                    <tr>
+                                        <th>Trạng thái giao hàng</th>
+                                        <th class="text-right">Hôm nay</th>
+                                        <th class="text-right">Trong tuần</th>
+                                        <th class="text-right">Trong tháng</th>
+                                        <th class="text-right">Trong quý</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for x in [1,2,3,4,5] %}
+                                    <tr>
+                                        <td>
+                                            <p>Đặt hàng thành công</p>
+                                        </td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Đã giao hàng</p>
+                                        </td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>
+                                            <p>Tổng đơn hàng</p>
+                                        </td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                        <td class="text-right">0</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Tổng doanh thu</p>
+                                        </td>
+                                        <td class="text-right">0đ</td>
+                                        <td class="text-right">0đ</td>
+                                        <td class="text-right">0đ</td>
+                                        <td class="text-right">0đ</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    {% include "block/_quicklink.html" %}
+</main>
+{% endblock %}

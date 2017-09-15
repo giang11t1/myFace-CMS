@@ -1,0 +1,64 @@
+<div class="modal fade customer-quick-view-modal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Thông tin khách hàng</h4>
+            </div>
+            <div class="modal-body">
+                <div class="customer-panel">
+                    <div class="customer-img-side">
+                        <img class="img-circle" src="assets/images/upload/customer-big-img.png" alt="myface">
+                    </div>
+                    <div class="customer-quick-view-side">
+                        <div class="customer-detail-block detail-info-block">
+                            <h3 class="customer-detail-title">
+                                <span>Thông tin khách hàng</span>
+                                <a class="pull-right update-customer-btn" href="customer-detail.html">
+                                    <i class="fa fa-edit" aria-hidden="true"></i> Cập nhật
+                                </a>
+                            </h3>
+                            <div class="customer-detail-body">
+                                <div class="customer-show-info">
+                                    <ul class="list-group customer-info-list">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                            <span>Raymond Gold</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-phone" aria-hidden="true"></i>
+                                            <span>072 143 9920</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            <span>Raymond.Reddit@myface.com.vn</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-home" aria-hidden="true"></i>
+                                            <span>60A Trường Sơn, Tân Bình, Hồ Chí Minh</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="customer-detail-block detail-order-block">
+                            <h3 class="customer-detail-title">
+                                <span>Đơn hàng gần nhất</span>
+                            </h3>
+                            <div class="customer-detail-body">
+                                {% for x in [1,2,3,4,5] %}
+                                <a class="order-view-item" href="order-detail.htmml">Old395246</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-right cta-block">
+                    <a class="btn btn-secondary" href="order-create.html">Tạo đơn hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

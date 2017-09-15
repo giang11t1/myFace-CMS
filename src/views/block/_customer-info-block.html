@@ -1,0 +1,143 @@
+<div class="chat-widget-item customer-info-block">
+    <div class="chat-widget-heading">
+        <label class="label-title">Khách hàng</label>
+        <a class="pull-right update-info-btn" href="#">
+            <i class="fa fa-edit" aria-hidden="true"></i>
+            Cập nhật
+        </a>
+    </div>
+    <div class="chat-widget-body">
+        <div class="customer-box-Slimscroll">
+            <div class="profile-customer">
+                <div class="profile-heading">
+                    <div class="profile-img-div">
+                        <p class="text-center img-circle profile-img">
+                            <img src="assets/images/upload/avata1.png" alt="myface">
+                        </p>
+                    </div>
+                    <h2 class="text-center profile-name">Raymond Gold</h2>
+                </div>
+                <div class="profile-info">
+                    <div class="show-customer-info">
+                        <ul class="list-group info-list-group">
+                            <li class="list-group-item">
+                                <i class="fa fa-group" aria-hidden="true"></i>
+                                <span>Nhóm khách hàng A</span>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>072 143 9920</span>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <span>Raymond.Reddit@myface.com.vn</span>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <span>Chưa có thông tin</span>
+                                <!-- <span> 121/11 Hưng Phú, Phường 8, Quận 8, Thành Phố Hồ Chí Minh</span> -->
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                <span class="note-customer">Consumer spending seems to be on the rise with less people interested in saving on the rise with less people interested in saving on the rise.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="edit-customer-info">
+                        <ul class="list-group info-list-group">
+                            <li class="list-group-item">
+                                <i class="fa fa-group" aria-hidden="true"></i>
+                                <select class="form-control">
+                                    <option>Nhóm khách hàng</option>
+                                    <option>Khách hàng A</option>
+                                    <option>Khách hàng B</option>
+                                </select>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-info" aria-hidden="true"></i>
+                                <input class="form-control" value="Raymond Gold" name="buyer_name" id="buyer_name_edit" type="text" placeholder="Nhập họ tên">
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <input class="form-control" value="072 143 9920" type="text">
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                <input class="form-control" value="Raymond.Reddit@myface.com.vn" type="email">
+                            </li>
+                            <li class="list-group-item">
+                                <div class="radio-inline">
+                                    <input value="option1" type="radio" checked="">
+                                    <label>Anh</label>
+                                </div>
+                                <div class="radio-inline">
+                                    <input value="option1" type="radio" checked="">
+                                    <label>Chị</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <select class="form-control">
+                                    <option>Tỉnh thành</option>
+                                    <option>Hà Nội</option>
+                                    <option>TP. HCM</option>
+                                </select>
+                            </li>
+                            <li class="list-group-item">
+                                <select class="form-control">
+                                    <option>Quận huyện</option>
+                                    <option>Quận 1</option>
+                                    <option>Quận 2</option>
+                                </select>
+                            </li>
+                            <li class="list-group-item">
+                                <select class="form-control">
+                                    <option>Phường xã</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </li>
+                            <li class="list-group-item">
+                                <input class="form-control" placeholder="Địa chỉ" type="text">
+                            </li>
+                            <li class="list-group-item">
+                                <textarea id="notes" name="notes" class="form-control valid" placeholder="Ghi chú khách hàng" rows="4">Ghi chú khách hàng1313</textarea>
+                            </li>
+                        </ul>
+                        <div class="text-right cta-block">
+                            <a class="btn btn-cancel">Hủy bỏ</a>
+                            <input class="btn btn-secondary submit-info-btn" value="Cập nhật" type="submit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-recent-box">
+                <h3 class="label-title">Đơn hàng gần đây</h3>
+                <div class="order-list-recent chat-widget-orderListSlimScroll">
+                    <div class="alert-box order-emty-alert">
+                        <p class="text-center alert-heading">
+                            <img src="assets/images/icons/big-bell.png" alt="myface">
+                        </p>
+                        <div class="text-center alert-body">
+                            <p><strong>Chưa có đơn hàng nào</strong></p>
+                            <p>Bạn có thể tạo đơn hàng  ngay tại đây</p>
+                        </div>
+                    </div>
+                    <ul class="list-group order-list" >
+                        {% for x in [1,2,3,4,5] %}
+                        <li class="list-group-item">
+                            <a href="#">
+                                <span class="order-id">#849534346</span>
+                                <span class="pull-right order-stt">Hủy đơn hàng</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="text-center cta-block customer-info-bottom">
+                    <button class="btn btn-secondary create-order-btn" data-toggle="modal" data-target=".create-order-modal">+ Tạo đơn hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

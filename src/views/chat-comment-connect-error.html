@@ -1,0 +1,247 @@
+{% set current_page = 'chat-comment' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper no-padding">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Đang kết nối với Reddit Shop</h2>
+            <div class="pull-right right-header-group">
+                <button class="btn btn-secondary" data-toggle="modal" data-target=".disconnect-fb-modal">Ngắt kết nối Facebook</button>
+                <button class="btn btn-secondary" data-toggle="modal" data-target=".connect-fb-modal">Kết nối Facebook store</button>
+                <a class="btn hdsd-link">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+                {% include "block/_connect-fb-modal.html" %}
+                {% include "block/_list-connect-fb-modal.html" %}
+                {% include "block/_disconnect-fb-modal.html" %}
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel chat-widget">
+                <div class="panel-body">
+                    {% include "block/_inbox-block.html" %}
+                    {% include "block/_customer-info-block.html" %}
+                    {% include "block/_message-block.html" %}
+                    <div style="top:200px;text-align: center; display: none;" id="please_select_inbox">
+                       <div class="displayed" style="margin-top: 152px;">
+                          <img src="assets/images/upload/empty.png" alt="chon doan hoi thoai">
+
+                          <p>Chưa có đoạn hội thoại nào</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<div class="modal create-order-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content create-box create-step-1">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Chọn sản phẩm</h4>
+            </div>
+            <div class="modal-body nopadding">
+                {% include "block/_order-create-addproduct.html" %}
+                <div class="text-right padding-30 cta-block">
+                    <a class="btn btn-cancel">Hủy bỏ</a>
+                    <input class="btn btn-secondary gotoStep2" value="Tiếp tục" type="button">
+                </div>
+            </div>
+        </div>
+        <div class="modal-content create-box create-step-2">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Thông tin giao hàng</h4>
+            </div>
+            <div class="modal-body padding-30 ship-info">
+                {% include "block/_order-create-fillshipinfo.html" %}
+                <div class="text-right cta-block">
+                    <a class="btn btn-cancel">Hủy bỏ</a>
+                    <input class="btn btn-secondary gotoStep3" value="Tiếp tục" type="button">
+                </div>
+            </div>
+        </div>
+        <div class="modal-content create-box create-step-3">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Thông tin đơn hàng</h4>
+            </div>
+            <div class="modal-body nopadding">
+                <div class="invoice-info-panel">
+                    <div class="row">
+                        <div class="col-sm-6 invoice-col">
+                            <p class="title">
+                                Thông tin nhận hàng
+                            </p>
+                            <address>
+                                <strong>Raymond Gold</strong><br>
+                                Email: Raymond.Gold@itlvn.com<br>
+                                Điện thoại: 0932 456 987
+                            </address>
+                        </div>
+                         <div class="col-sm-6 invoice-col">
+                            <p class="title">
+                                Địa điểm giao hàng
+                            </p>
+                            <address>
+                                60A1 Trường Sơn, Xã Mỹ An, <br>
+                                Huyện Chợ Mới, Tỉnh An Giang
+                            </address>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 invoice-col">
+                            <p class="title">Địa chỉ nhận hàng:</p>
+                            <address>
+                                36 Hưng Phú, Phường Mỹ Quý, <br>
+                                Thành Phố Long Xuyên, Tỉnh An Giang.
+                            </address>
+                        </div>
+                        <div class="col-sm-6 invoice-col">
+                            <p class="title">
+                                Cước vận chuyển (*)
+                            </p>
+                            <p>
+                                (*) Cước phí trả cho công ty vận chuyển<br>
+                                Phương thức giao hàng: <strong class="secondary-text"> Gói tiết kiệm của Speedlink<span >13.000đ</span></strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover add-product-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 445px;">Tên sản phẩm</th>
+                            <th class="text-right">Giá bán</th>
+                            <th class="text-right">Số lượng</th>
+                            <th class="text-right">khối lượng (gram)</th>
+                            <th class="text-right">thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="block-list" style="width: 445px;">
+                                <li class="item product-item">
+                                    <div class="item-img">
+                                        <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                                        <p class="item-description">( Màu xanh, size 36 )</p>
+                                    </div>
+                                </li>
+                            </td>
+                            <td class="text-right">120.000đ</td>
+                            <td class="text-right">3</td>
+                            <td class="text-right">200</td>
+                            <td class="text-right">2.120.000đ</td>
+                        </tr>
+                        <tr>
+                            <td class="block-list" style="width: 445px;">
+                                <li class="item product-item">
+                                    <div class="item-img">
+                                        <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                    </div>
+                                    <div class="item-info">
+                                        <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                                    </div>
+                                </li>
+                            </td>
+                            <td class="text-right">120.000đ</td>
+                            <td class="text-right">3</td>
+                            <td class="text-right">200</td>
+                            <td class="text-right">2.120.000đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="invoice-total-review padding-30">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-6">
+                            <div class="table-responsive">
+                                <table class="table total-table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Tiền sản phẩm:</th>
+                                            <td>2.000.000đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phí vận chuyển</th>
+                                            <td>0đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Phí thu tiền hộ</th>
+                                            <td>0đ</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <table class="table total-table">
+                                    <tbody>
+                                        <tr>
+                                            <th>Giảm giá khuyến mãi:</th>
+                                            <td>0đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Giảm giá coupon:</th>
+                                            <td>0đ</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Mã coupon sử dụng:</th>
+                                            <td>Chưa có</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <div class="total-price">
+                                    <span>Tổng tiền đơn hàng:</span>
+                                    <span class="pull-right">154.500.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-right">
+                <div class="text-right padding-30 cta-block">
+                    <a class="btn btn-cancel">Hủy bỏ</a>
+                    <input class="btn btn-secondary gotoDone" value="Hoàn thành" type="button">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade order-success-modal">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Thông báo</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="success-detail">Bạn đã đặt hàng thành công, mã đơn hàng của bạn là</p>
+                <p class="success-order-id">
+                    <a href="order-detail.html" href="#">#madonhang 4268</a>
+                </p>
+            </div>
+            <div class="modal-footer text-center">
+                <button class="btn btn-success" data-dismiss="modal" aria-label="Close" type="button">Chat với khách hàng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--kho hình-->
+{% include "block/_gallery-modal.html" %}
+<!--social-connect-error-->
+{% include "block/_connect-fb-with-error-modal.html" %}
+{% endblock %}

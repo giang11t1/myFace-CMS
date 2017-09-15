@@ -1,0 +1,17 @@
+/*Css page order detail*/
+.img-first img {
+    width: 100%;
+    height: 150px;
+}
+.list_img img {
+    width: 100%;
+    height: 80px;
+}
+.btn_right img {
+    width: 100%;
+    height: 80px;
+}
+._error{
+    color: red;
+    margin-left:8px;
+}

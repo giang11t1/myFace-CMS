@@ -1,0 +1,94 @@
+{% set current_page = 'customer-list-view' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <div class="clearfix">
+                <h2 class="page-title">Tạo khách hàng mới</h2>
+                <div class="pull-right right-header-group">
+                    <a class="btn hdsd-link">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        Hướng dẫn sử dụng
+                    </a>
+                </div>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-body panel-padding">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="form-label">Họ tên</label>
+                                <input class="form-control" value="Raymond Goldington" type="text" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input class="form-control" value="Raymond.gold@itlvn.com" type="email" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Điện thoại</label>
+                                <input class="form-control" value="0932 437 288" type="text" name="">
+                            </div>
+                            <div class="form-group">
+                                <div class="radio-inline">
+                                    <input value="option1" type="radio" checked="">
+                                    <label>Anh</label>
+                                </div>
+                                <div class="radio-inline">
+                                    <input value="option2" type="radio">
+                                    <label>Chị</label>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="form-label">Tỉnh / Thành phố</label>
+                                    <select class="form-control select-picker">
+                                        <option>Chọn Tỉnh / Thành phố</option>
+                                        <option>Hà Nội</option>
+                                        <option>TP. HCM</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label">Quận / Huyện</label>
+                                    <select class="form-control select-picker">
+                                        <option>Chọn Quận / Huyện </option>
+                                        <option>Quận 1</option>
+                                        <option>Quận 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label class="form-label">Phường / Xã</label>
+                                    <select class="form-control select-picker">
+                                        <option>Chọn Phường / Xã</option>
+                                        <option>Hà Nội</option>
+                                        <option>TP. HCM</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label">Địa chỉ</label>
+                                    <input class="form-control" placeholder="Chưa có thông tin" type="" name="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label class="form-label">Ghi chú</label>
+                                    <textarea id="notes" name="notes" class="form-control" placeholder="Ghi chú khách hàng" rows="4"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right cta-block">
+                <a class="btn btn-cancel">Hủy bỏ</a>
+                <input class="btn btn-secondary" value="Tạo khách hàng" onclick="location.href='customer-list-view.html'" type="button">
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
+

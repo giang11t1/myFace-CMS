@@ -1,0 +1,30 @@
+<div class="modal fade gallery-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Kho hình</h4>
+            </div>
+            <div class="modal-body nopadding">
+                <div class="gallery-content clearfix">
+                    <div class="galley-SlimScroll">
+                        <ul class="gallery-img-list">
+                            {% for x in [1,2,3,4,5,6,8,9,10,11,12] %}
+                            <li class="gallery-img-item">
+                                <div class="img-item-inner">
+                                    <img src="assets/images/upload/img-item.jpg" alt="myface">
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-right">
+                <div class="text-right cta-block">
+                    <a class="btn btn-cancel" data-dismiss="modal" aria-label="Close">Hủy bỏ</a>
+                    <input class="btn btn-secondary" value="Đăng tải" type="button" data-dismiss="modal" aria-label="Close">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

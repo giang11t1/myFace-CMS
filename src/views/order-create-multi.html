@@ -1,0 +1,1027 @@
+{% set current_page = 'order-create-multi' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Tạo nhanh nhiều đơn hàng</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-body">
+                    <table class="table table-hover create-multi-table collapse-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 320px;">Tên sản phẩm</th>
+                                <th style="width: 120px;">Nơi lấy hàng</th>
+                                <th>Thông tin giao hàng</th>
+                                <th>Thanh toán - vận chuyển</th>
+                                <th>Thành tiền</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="collapse-toggle-nav">
+                                <td>
+                                    <ul class="block-list multi-block">
+                                        <li class="item product-item">
+                                            <div class="item-img">
+                                                <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                            </div>
+                                            <div class="item-info">
+                                                <p class="item-title">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace - 14k Gold Filled </p>
+                                                <p class="item-description">( Màu xanh, size 36 )</p>
+                                                <div class="p-subtotal">
+                                                    <span class="product-p">16,000,000đ</span>
+                                                    <span>x</span>
+                                                    <input class="form-control inline_block" value="1">
+                                                    <span>=</span>
+                                                    <span class="green-highlight">16,000,000đ</span>
+                                                </div>
+                                            </div>
+                                            <button class="close" type="button">×</button>
+                                        </li>
+                                    </ul>
+                                    <div class="input-group add-product-group">
+                                        <input class="form-control" placeholder="Chọn sản phẩm" type="text">
+                                        <div class="product-list-box" style="display: none;">
+                                            <div class="product-list-SlimScroll">
+                                                <ul class="block-list">
+                                                    {% for x in [1,2,3] %}
+                                                    <li class="item product-item">
+                                                        <div class="item-img">
+                                                            <a href="#">
+                                                                <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <a class="item-title" href="#">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace </a>
+                                                        </div>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <input class="btn btn-secondary" value="Thêm" type="button">
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Địa chỉ 1</p>
+                                </td>
+                                <td>
+                                    <p>281Đường Lê Văn Sỹ, Phường 12, Quận Phú Nhuận, Thành phố Hồ Chí Minh</p>
+                                </td>
+                                <td>
+                                    <p>Người mua hàng không trả tiền sản phẩm. Người mua hàng trả phí vận chuyển</p>
+                                </td>
+                                <td>96.000.000đ</td>
+                                <td>
+                                    <a class="action-item" href="order-detail.html" title="Sửa đơn hàng" data-toggle="tooltip" data-placement="left">
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr class="collapse-toggle-nav">
+                                <td class="block-list">
+                                    <div class="input-group add-product-group">
+                                        <input class="form-control" placeholder="Chọn sản phẩm" type="text">
+                                        <div class="product-list-box" style="display: none;">
+                                            <div class="product-list-SlimScroll">
+                                                <ul class="block-list">
+                                                    {% for x in [1,2,3] %}
+                                                    <li class="item product-item">
+                                                        <div class="item-img">
+                                                            <a href="#">
+                                                                <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <a class="item-title" href="#">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace </a>
+                                                        </div>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <input class="btn btn-secondary" value="Thêm" type="button">
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Kho trung tâm</p>
+                                    <button class="btn btn-default multi-collapse-toggle show-store-address-control">Sửa</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default multi-collapse-toggle show-address-control">Thêm thông tin</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default multi-collapse-toggle show-ship-control">Thêm thông tin</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="collapse-row">
+                                <td class="collapse-inner" colspan="6">
+                                    <div class="collapse-div store-address-info">
+                                        <div class="col-sm-6 edit-info-inner">
+                                            <div class="panel box-panel">
+                                                <div class="panel-body panel-padding">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input checked="checked" type="radio">
+                                                            <p>Kho trung tâm :</p>
+                                                            <p>Taodan, Số 121/11, Đường Hưng Phú, Phường Mỹ Quý, Thành Phố Long Xuyên, Tỉnh An Giang</p>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio">
+                                                            <p>Địa chỉ 1 :</p>
+                                                            <p>Taodan, Số 121/11, Đường Hưng Phú, Phường 8, Thành Phố Hồ Chí Minh</p>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right create-action">
+                                                <a class="btn btn-cancel collapse-close" href="">Hủy bỏ</a>
+                                                <input class="btn btn-secondary" type="button" name="" value="Đồng ý">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse-div address-info">
+                                        <div class="col-sm-6 edit-info-inner">
+                                            <div class="panel box-panel">
+                                                <div class="panel-body panel-padding">
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Số điện thoại" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Email" type="email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Họ và Tên" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>
+                                                                Chọn Tỉnh / Thành phố
+                                                            </option>
+                                                            <option>
+                                                                Hồ Chí Minh
+                                                            </option>
+                                                            <option>
+                                                                Hà Nội
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>
+                                                                Chọn Quận / Huyện
+                                                            </option>
+                                                            <option>
+                                                                abc
+                                                            </option>
+                                                            <option>
+                                                                xyz
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>
+                                                                Chọn Phường / Xã
+                                                            </option>
+                                                            <option>
+                                                                abc
+                                                            </option>
+                                                            <option>
+                                                                xyz
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Địa chỉ" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right create-action">
+                                                <a class="btn btn-cancel collapse-close" href="">Hủy bỏ</a>
+                                                <input class="btn btn-secondary" type="button" name="" value="Đồng ý">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse-div ship-info">
+                                        <div class="col-sm-6 edit-info-inner">
+                                            <div class="panel box-panel">
+                                                <div class="panel-body panel-padding">
+                                                    <div class="row">
+                                                        <h3 class="form-title">Vận chuyển và thanh toán</h3>
+                                                        <div class="first_choice panel-outner">
+                                                            <div class="radio">
+                                                                <input value="" type="radio" name="pay" checked="" id="radio_shop">
+                                                                <label> <b>1. Shop tự giao hàng</b></label>
+                                                            </div>
+                                                            <div class="form-group panel-inner panel-shop">
+                                                                <div class="radio">
+                                                                    <label class="check">Tùy chỉnh</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <input class="form-control" placeholder="Nhập số tiền muốn thu" type="">
+                                                                        <div class="input-group-addon">VNĐ</div>
+                                                                    </div>
+                                                                    <label for="intPromotionVnd" class="error">Nhập nhỏ hơn tổng giá trị đơn hàng</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <input value="" type="radio" name="pay" id="radio_company">
+                                                            <label> <b>2. Công ty vận chuyển giao hàng</b></label>
+                                                        </div>
+                                                        <div class="panel-group">
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người mua hàng trả tiền sản phẩm + phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <label class="title">Speedlink</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label class="check">Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="radio">
+                                                                                    <input id="" name="" type="radio" value="">
+                                                                                    <label class="check">Tùy chỉnh</label>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control" placeholder="Nhập số tiền muốn thu" type="">
+                                                                                        <div class="input-group-addon">VNĐ</div>
+                                                                                    </div>
+                                                                                    <label for="intPromotionVnd" class="error">Nhập nhỏ hơn tổng giá trị đơn hàng</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="title">Giao hàng tiết kiệm</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label class="check">Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="radio">
+                                                                                    <input id="" name="" type="radio" value="">
+                                                                                    <label class="check">Tùy chỉnh</label>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control" placeholder="Nhập số tiền muốn thu" type="">
+                                                                                        <div class="input-group-addon">VNĐ</div>
+                                                                                    </div>
+                                                                                    <label for="intPromotionVnd" class="error">Nhập nhỏ hơn tổng giá trị đơn hàng</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người mua hàng không trả tiền sản phẩm. Người mua hàng trả phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <label class="title">Speedlink</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">27.000<span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label>Giao hàng tiết kiệm</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">27.000<span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người bán hàng đã thu tiền hàng. Người bán hàng trả phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <label class="title">Speedlink</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="title">Giao hàng tiết kiệm</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người mua hàng trả tiền sản phẩm. Người bán hàng (chủ shop) trả phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <lable class="title">Speedlink</lable>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <lable class="title">Giao hàng tiết kiệm</lable>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right create-action">
+                                                <a class="btn btn-cancel collapse-close" href="">Hủy bỏ</a>
+                                                <input class="btn btn-secondary" type="button" name="" value="Đồng ý">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="collapse-toggle-nav">
+                                <td class="block-list">
+                                    <div class="input-group add-product-group">
+                                        <input class="form-control" placeholder="Chọn sản phẩm" type="text">
+                                        <div class="product-list-box" style="display: none;">
+                                            <div class="product-list-SlimScroll">
+                                                <ul class="block-list">
+                                                    {% for x in [1,2,3] %}
+                                                    <li class="item product-item">
+                                                        <div class="item-img">
+                                                            <a href="#">
+                                                                <img src="assets/images/upload/thumb-1.jpg" alt="myface">
+                                                            </a>
+                                                        </div>
+                                                        <div class="item-info">
+                                                            <a class="item-title" href="#">Gold Ruby Necklace - July Birthstone -Tiny Stone Dainty Necklace </a>
+                                                        </div>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <span class="input-group-btn">
+                                            <input class="btn btn-secondary" value="Thêm" type="button">
+                                        </span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default multi-collapse-toggle show-store-address-control">Thêm</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default multi-collapse-toggle show-address-control">Thêm thông tin</button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-default multi-collapse-toggle show-ship-control">Thêm thông tin</button>
+                                </td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr class="collapse-row">
+                                <td class="collapse-inner" colspan="6">
+                                    <div class="collapse-div store-address-info">
+                                        <div class="col-sm-6 edit-info-inner">
+                                            <div class="panel box-panel">
+                                                <div class="panel-body panel-padding">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input checked="checked" type="radio">
+                                                            <p>Kho trung tâm :</p>
+                                                            <p>Taodan, Số 121/11, Đường Hưng Phú, Phường Mỹ Quý, Thành Phố Long Xuyên, Tỉnh An Giang</p>
+                                                        </label>
+                                                    </div>
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio">
+                                                            <p>Địa chỉ 1 :</p>
+                                                            <p>Taodan, Số 121/11, Đường Hưng Phú, Phường 8, Thành Phố Hồ Chí Minh</p>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right create-action">
+                                                <a class="btn btn-cancel collapse-close" href="">Hủy bỏ</a>
+                                                <input class="btn btn-secondary" type="button" name="" value="Đồng ý">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse-div address-info">
+                                        <div class="col-sm-6 edit-info-inner">
+                                            <div class="panel box-panel">
+                                                <div class="panel-body panel-padding">
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Số điện thoại" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Email" type="email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Họ và Tên" type="text">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>
+                                                                Chọn Tỉnh / Thành phố
+                                                            </option>
+                                                            <option>
+                                                                Hồ Chí Minh
+                                                            </option>
+                                                            <option>
+                                                                Hà Nội
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>
+                                                                Chọn Quận / Huyện
+                                                            </option>
+                                                            <option>
+                                                                abc
+                                                            </option>
+                                                            <option>
+                                                                xyz
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>
+                                                                Chọn Phường / Xã
+                                                            </option>
+                                                            <option>
+                                                                abc
+                                                            </option>
+                                                            <option>
+                                                                xyz
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <input class="form-control" id="" placeholder="Địa chỉ" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right create-action">
+                                                <a class="btn btn-cancel collapse-close" href="">Hủy bỏ</a>
+                                                <input class="btn btn-secondary" type="button" name="" value="Đồng ý">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="collapse-div ship-info">
+                                        <div class="col-sm-6 edit-info-inner">
+                                            <div class="panel box-panel">
+                                                <div class="panel-body panel-padding">
+                                                    <div class="row">
+                                                        <h3 class="form-title">Vận chuyển và thanh toán</h3>
+                                                        <div class="first_choice panel-outner">
+                                                            <div class="radio">
+                                                                <input value="" type="radio" name="pay1" checked="" id="radio_shop1">
+                                                                <label> <b>1. Shop tự giao hàng</b></label>
+                                                            </div>
+                                                            <div class="form-group panel-inner panel-shop">
+                                                                <div class="radio">
+                                                                    <label class="check">Tùy chỉnh</label>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="input-group">
+                                                                        <input class="form-control" placeholder="Nhập số tiền muốn thu" type="">
+                                                                        <div class="input-group-addon">VNĐ</div>
+                                                                    </div>
+                                                                    <label for="intPromotionVnd" class="error">Nhập nhỏ hơn tổng giá trị đơn hàng</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <input value="" type="radio" name="pay1" id="radio_company1">
+                                                            <label> <b>2. Công ty vận chuyển giao hàng</b></label>
+                                                        </div>
+                                                        <div class="panel-group">
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người mua hàng trả tiền sản phẩm + phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <label class="title">Speedlink</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label class="check">Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="radio">
+                                                                                    <input id="" name="" type="radio" value="">
+                                                                                    <label class="check">Tùy chỉnh</label>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control" placeholder="Nhập số tiền muốn thu" type="">
+                                                                                        <div class="input-group-addon">VNĐ</div>
+                                                                                    </div>
+                                                                                    <label for="intPromotionVnd" class="error">Nhập nhỏ hơn tổng giá trị đơn hàng</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="title">Giao hàng tiết kiệm</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label class="check">Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <div class="radio">
+                                                                                    <input id="" name="" type="radio" value="">
+                                                                                    <label class="check">Tùy chỉnh</label>
+                                                                                </div>
+                                                                                <div class="form-group">
+                                                                                    <div class="input-group">
+                                                                                        <input class="form-control" placeholder="Nhập số tiền muốn thu" type="">
+                                                                                        <div class="input-group-addon">VNĐ</div>
+                                                                                    </div>
+                                                                                    <label for="intPromotionVnd" class="error">Nhập nhỏ hơn tổng giá trị đơn hàng</label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người mua hàng không trả tiền sản phẩm. Người mua hàng trả phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <label class="title">Speedlink</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">27.000<span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label>Giao hàng tiết kiệm</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">19.000 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">27.000<span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người bán hàng đã thu tiền hàng. Người bán hàng trả phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <label class="title">Speedlink</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <label class="title">Giao hàng tiết kiệm</label>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group panel-outner">
+                                                                <div class="radio">
+                                                                    <input value="" type="radio" name="payment_method">
+                                                                    <label>Người mua hàng trả tiền sản phẩm. Người bán hàng (chủ shop) trả phí vận chuyển.</label>
+                                                                </div>
+                                                                <div class="block">
+                                                                    <div class="item">
+                                                                        <lable class="title">Speedlink</lable>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="item">
+                                                                        <lable class="title">Giao hàng tiết kiệm</lable>
+                                                                        <div class="panel-inner">
+                                                                            <div class="row">
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Tiết kiệm</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">13.200 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Bình thường</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">15.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <div class="radio">
+                                                                                        <input value="" type="radio" name="">
+                                                                                        <label>Hỏa tốc</label>
+                                                                                        <p class="note">Giao trong<b> xx </b> ngày</p>
+                                                                                        <p class="ship-fee">26.400 <span>đ</span></p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-right create-action">
+                                                <a class="btn btn-cancel collapse-close" href="">Hủy bỏ</a>
+                                                <input class="btn btn-secondary" type="button" name="" value="Đồng ý">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="text-right cta-block">
+                <input class="btn btn-secondary" value="Lưu & tiếp tục tạo đơn hàng" type="button">
+                <input class="btn btn-secondary" value="Hoàn thành & xem danh sách đơn hàng" type="button" onclick="location.href='order-list-view.html'">
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

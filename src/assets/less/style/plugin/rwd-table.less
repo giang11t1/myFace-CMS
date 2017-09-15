@@ -1,0 +1,35 @@
+@media (max-width: @screen-sm-max) {
+    .rwd-table {
+        color: @text-color-2;
+        margin-top: 15px;
+    }
+    .rwd-table {
+        tbody {
+            tr {
+                td  {
+                    display: block;
+                    border: 0 !important;
+                }
+            }
+        }
+    }
+    .rwd-table th {
+        display: none !important;
+    }
+    .rwd-table td {
+        &:before {
+            content: attr(data-th) ": ";
+            font-weight: bold;
+            width: 130px;
+            display: table-cell;
+            color: @text-color-1;
+        }
+        div {
+            display: table-cell;
+        }
+    }
+    .rwd-table th,
+    .rwd-table td {
+        text-align: left;
+    }
+}

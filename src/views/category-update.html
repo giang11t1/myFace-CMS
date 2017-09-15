@@ -1,0 +1,73 @@
+{% set current_page = 'category-create' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Cập nhật danh mục sản phẩm</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="row category-create-box">
+                <div class="col-md-8">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Danh mục sản phẩm</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="form-group">
+                                <label class="form-label">Chọn ngành hàng</label>
+                                <select class="form-control">
+                                    <option>Chọn ngành hàng</option>
+                                    <option>Điện tử</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Tên danh mục sản phẩm</label>
+                                <input class="form-control" placeholder="Nhập tên danh mục sản phẩm" type="text" name="" value="Tai Nghe Bluetooth">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Alias danh mục sản phẩm</label>
+                                <input class="form-control" placeholder="Alias danh mục sản phẩm" type="text" name="" value="Tai Nghe Bluetooth">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Trạng thái kích hoạt</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <span>Kích hoạt</span>
+                            <div class="pull-right">
+                                <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                    <input type="checkbox" checked="">
+                                    <label >
+                                        <span class="checked"></span>
+                                        <span class="toggle">&nbsp;</span>
+                                        <span class="unchecked"></span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-right cta-block cta-with-border">
+                <div class="cta-block-row">
+                    <input class="btn btn-secondary" value="Lưu danh mục sản phẩm" type="button">
+                </div>
+                <div>
+                    <input class="btn btn-default" value="Lưu & tiếp tục cập nhật danh mục sản phẩm" type="button">
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

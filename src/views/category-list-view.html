@@ -1,0 +1,110 @@
+{% set current_page = 'category-list-view' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <div class="clearfix">
+                <h2 class="page-title">Danh mục sản phẩm</h2>
+                <div class="pull-right right-header-group">
+                    <a class="btn btn-secondary" href="category-create.html">+ Tạo danh mục mới</a>
+                    <a class="btn hdsd-link">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                        Hướng dẫn sử dụng
+                    </a>
+                </div>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="panel box-panel">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Danh mục sản phẩm</h3>
+                </div>
+                <div class="panel-body">
+                    <table class="table category-list-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>tên danh mục</th>
+                                <th>ngành hàng</th>
+                                <th class="active-on-off-col">trạng thái</th>
+                                <th class="action-col">sửa/xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a class="cate-id" href="#">12345</a>
+                                </td>
+                                <td>
+                                    <a class="cate-name" href="#">Tai Nghe Bluetooth</a>
+                                </td>
+                                <td>
+                                    <p>Thiết bị số</p>
+                                </td>
+                                <td class="active-on-off-col">
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Chưa kích hoạt">
+                                        <input type="checkbox" onclick="return false;" onkeydown="return false;">
+                                        <label >
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                </td>
+                                <td class="action-col">
+                                    <div class="action-list">
+                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="category-update.html">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% for x in [1,2,3,4,5,6,7,8,9] %}
+                            <tr>
+                                <td>
+                                    <a class="cate-id" href="#">12345</a>
+                                </td>
+                                <td>
+                                    <a class="cate-name" href="#">Tai Nghe Bluetooth</a>
+                                </td>
+                                <td>
+                                    <p>Thiết bị số</p>
+                                </td>
+                                <td>
+                                    <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                        <input type="checkbox" checked="" onclick="return false;" onkeydown="return false;">
+                                        <label>
+                                            <span class="checked"></span>
+                                            <span class="toggle">&nbsp;</span>
+                                            <span class="unchecked"></span>
+                                        </label>
+                                    </span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="action-list">
+                                        <a class="action-item edit-action" data-toggle="tooltip" data-placement="left" title="Sửa" href="category-update.html">
+                                            <i class="fa fa-edit" aria-hidden="true"></i>
+                                        </a>
+                                        <a class="action-item remove-action" data-toggle="tooltip" data-placement="left" title="Xóa" href="javascript:void(0)">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer panel-padding">
+                    {% include "block/_pagination-block.html" %}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
+

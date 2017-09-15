@@ -1,0 +1,438 @@
+{% set current_page = 'product-create' %}
+{% extends "layout/_layout.html" %}
+{% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Tạo sản phẩm mới</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i>
+                    Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section><!-- Main content -->
+        <section class="page-content">
+            <div class="row product-create-box">
+                <div class="col-md-8">
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Hình ảnh sản phẩm</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="upload-img-step empty-box" style="display: none;">
+                                <img src="assets/images/upload/upload-img.jpg" alt="myface">
+                                <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                            </div>
+                            <div class="upload-img-step" >
+                                <div class="row">
+                                    <div class="col-xs-6 ">
+                                        <div class="img-box-item">
+                                            <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                            <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="row">
+                                            <div class="col-xs-6 ">
+                                                <div class="img-create">
+                                                    <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                                    <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 ">
+                                                <div class="img-create">
+                                                    <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                                    <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 ">
+                                                <div class="img-create">
+                                                    <button class="close remove-action" type="button" ><span aria-hidden="true">×</span></button>
+                                                    <img src="assets/images/upload/img-item-1.jpg" title="img-item-1.jpg" alt="myface">
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-6 ">
+                                                <div class="img-create">
+                                                    <img src="assets/images/upload/upload-img-item.jpg" title="img-item-1.jpg" alt="myface">
+                                                    <input class="upload-btn" id="upload-img-btn" type="file" name="files" multiple="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Thông tin sản phẩm</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="form-group">
+                                <label class="form-label">Tên sản phẩm</label>
+                                <input class="form-control" placeholder="Nhập tên sản phẩm" type="text" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Tên danh mục sản phẩm</label>
+                                <!-- <input id="choose-option" class="form-control" placeholder="Chọn tên danh mục sản phẩm" type="text" name=""> -->
+                                <a href="#" class="display-option ShowText">Chọn tên danh mục sản phẩm</a>
+                                <div class="box-option-click">
+                                    <div class="scrollbar">
+                                        <ul class="first-list">
+                                            <li><h4>Đồ dùng cho bé</h4>
+                                                <ul class="second-list">
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi1</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi3</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi4</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi5</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi6</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><h4>Đồ dùng cho bé</h4>
+                                                <ul class="second-list">
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data-id="">Áo thun couple đôi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><h4>Đồ dùng cho bé</h4>
+                                                <ul class="second-list">
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><h4>Đồ dùng cho bé</h4>
+                                                <ul class="second-list">
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><p>Áo thun couple</p>
+                                                        <ul class="third-list">
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                            <li><a href="#" title="" data="">Áo thun couple đôi</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Mã sản phẩm</label>
+                                <input class="form-control" placeholder="Nhập mã sản phẩm" type="text" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Giá thị trường (VNĐ)</label>
+                                <input class="form-control" placeholder="0" type="number" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Giá vốn (VNĐ)</label>
+                                <input class="form-control" placeholder="0" type="number" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Giá bán sản phẩm (VNĐ)</label>
+                                <input class="form-control" placeholder="0" type="number" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Số lượng sản phẩm (Cái)</label>
+                                <input class="form-control" placeholder="0" type="number" name="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Khối lượng sản phẩm (Gram)</label>
+                                <input class="form-control" placeholder="0" type="number" name="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Thông tin giới thiệu sản phẩm</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="editor">
+                                <img src="assets/images/upload/editor.jpg" alt="myface">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Thông số sản phẩm</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="editor">
+                                <img src="assets/images/upload/editor.jpg" alt="myface">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Chọn thuộc tính sản phẩm</h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="form-group">
+                                <label class="form-label">Chọn nhóm thuộc tính</label>
+                                <div class="form-control-auto property-select-wrap">
+                                    <select class="form-control">
+                                        <option>Màu sắc</option>
+                                        <option>Kích thước</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="list-check property-list-check">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label>Xanh ngọc</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label>Cam</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label>Trắng</label>
+                                        </div>
+                                    </div>
+                                    {% for x in [1,2,3,4,5,6,7,8,9,10] %}
+                                    <div class="col-sm-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label>Hồng phấn</label>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    <div class="col-sm-4">
+                                        <div class="checkbox">
+                                            <input type="checkbox">
+                                            <label>Màu khác</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="property-list-choosen">
+                                <h2 class="list-title">Các thuộc tính đã chọn</h2>
+                                <div class="property-choosen-box">
+                                    <div class="multi-select">
+                                        <div class="multi-select-label">
+                                            <span>Màu sắc</span>
+                                        </div>
+                                        <div class="multi-select-list">
+                                            <div class="multiselect-item">
+                                                Xanh
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="multiselect-item">
+                                                Đỏ
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="multiselect-item">
+                                                Trắng
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="property-choosen-box">
+                                    <div class="multi-select">
+                                        <div class="multi-select-label">
+                                            <span>Giá</span>
+                                        </div>
+                                        <div class="multi-select-list">
+                                            <div class="multiselect-item">
+                                                500000đ
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="multiselect-item">
+                                                200000đ
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="multiselect-item">
+                                                10000đ
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="property-choosen-box">
+                                    <div class="multi-select">
+                                        <div class="multi-select-label">
+                                            <span>Kích cỡ</span>
+                                        </div>
+                                        <div class="multi-select-list">
+                                            <div class="multiselect-item">
+                                                XXL
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="multiselect-item">
+                                                SM
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                            <div class="multiselect-item">
+                                                S
+                                                <span class="ui-icon remove-action">
+                                                    <i class="fa fa-remove" aria-hidden="true"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="right-bar">
+                        <div id="task_flyout" class="sidebar-nav-fixed pull-right" data-spy="affix" data-offset-top="100" data-offset-bottom="200">
+                            <div class="panel box-panel" >
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Kênh bán hàng</h3>
+                                </div>
+                                <div class="panel-body panel-padding">
+                                    <div class="fanpage-box">
+                                        <h2 class="fanpage-box-title">Mạng xã hội & OTT</h2>
+                                        <div class="fanpage-group">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <label>Facebook</label>
+                                            </div>
+                                            <ul class="block-list fanpage-list">
+                                                <li class="item">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox">
+                                                        <label>Candy Shop</label>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox">
+                                                        <label>Raymond Shop</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="fanpage-group">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <label>Zalo</label>
+                                            </div>
+                                            <ul class="block-list fanpage-list">
+                                                <li class="item">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox">
+                                                        <label>Candy Shop</label>
+                                                    </div>
+                                                </li>
+                                                <li class="item">
+                                                    <div class="checkbox">
+                                                        <input type="checkbox">
+                                                        <label>Raymond Shop</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="fanpage-box">
+                                        <h2 class="fanpage-box-title">Sàn C2C</h2>
+                                        <div class="fanpage-group">
+                                            <div class="checkbox">
+                                                <input type="checkbox">
+                                                <label>Shop myFace</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel box-panel ">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Trạng thái kích hoạt</h3>
+                                </div>
+                                <div class="panel-body panel-padding">
+                                    <span>Kích hoạt</span>
+                                    <div class="pull-right">
+                                        <span class="yt-uix-checkbox-on-off active-on-off-checkbox" data-toggle="tooltip" data-placement="left" title="Kích hoạt">
+                                            <input type="checkbox" checked="">
+                                            <label >
+                                                <span class="checked"></span>
+                                                <span class="toggle">&nbsp;</span>
+                                                <span class="unchecked"></span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="text-right cta-block cta-with-border">
+                <div class="cta-block-row">
+                    <input class="btn btn-secondary" value="Lưu sản phẩm" type="button">
+                </div>
+                <div>
+                    <input class="btn btn-default" value="Lưu & tiếp tục tạo sản phẩm" type="button">
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

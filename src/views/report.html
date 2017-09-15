@@ -1,0 +1,1231 @@
+{% set current_page = 'report' %} {% extends "layout/_layout.html" %} {% block page-container %}
+<main class="main-content-wrapper">
+    <div class="main-content">
+        <section class="page-header">
+            <h2 class="page-title">Báo cáo</h2>
+            <div class="pull-right right-header-group">
+                <a class="btn hdsd-link" href="#" target="_blank">
+                    <i class="fa fa-question-circle" aria-hidden="true"></i> Hướng dẫn sử dụng
+                </a>
+            </div>
+        </section>
+        <!-- Main content -->
+        <section class="page-content">
+            <div class="clearfix report-tab" id="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tabs-1" role="tab" data-toggle="tab">Doanh thu</a></li>
+                    <li><a href="#tabs-2" role="tab" data-toggle="tab">Đơn hàng</a></li>
+                    <li><a href="#tabs-3" role="tab" data-toggle="tab">Vận chuyển</a></li>
+                    <li><a href="#tabs-4" role="tab" data-toggle="tab">Khách hàng</a></li>
+                    <li><a href="#tabs-5" role="tab" data-toggle="tab">Sản phẩm</a></li>
+                </ul>
+                <div class="tab-content report-tab-content">
+                    <div id="tabs-1">
+                        <div class="panel box-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Báo cáo theo doanh thu</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="report-panel-img">
+                                    <img src="assets/images/upload/report-img.png" alt="bao cao doanh thu">
+                                </div>
+                                <div class="report-panel-body">
+                                    <div class="report-panel-head">
+                                        <p>Chọn thời gian để xuất file báo cáo</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label class="form-label">Từ ngày</label>
+                                                <div class="date-picker-group">
+                                                    <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                    <span class="datepicker-icon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group">
+                                                <label class="form-label">Đến ngày</label>
+                                                <div class="date-picker-group">
+                                                    <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                    <span class="datepicker-icon">
+                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% include "block/_transport-company.html" %}
+                                    <div class="cta-block pull-right">
+                                        <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh " type="button" name="">
+                                        <input class=" btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabs-2">
+                        <div class="panel box-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Báo cáo đơn hàng</h3>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-invoice-form-1" type="radio" name="intOrder" checked="">
+                                            <label>Bình thường</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-invoice-form-2" type="radio" name="intOrder">
+                                            <label>Sử dụng mã coupon</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-invoice-form-3" type="radio" name="intOrder">
+                                            <label>Theo ngành hàng</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-padding">
+                                <!--report-form-->
+                                <div class="report-form-wrap">
+                                    <div class="report-form report-invoice-form-1 active">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!-- /.form-group -->
+                                            <div class="form-group">
+                                                {% include "block/_transport-company.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right">
+                                                <input class=" btn btn-secondary btn-view" value="Xem báo cáo nhanh " type="button" name="">
+                                                <input class=" btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-1-->
+                                    <div class="report-form report-invoice-form-2">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn mã coupon</label>
+                                                <div class="col-sm-4">
+                                                    <input class="form-control" placeholder="Nhập mã coupon" type="text" name="">
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-2-->
+                                    <div class="report-form report-invoice-form-3">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn ngành hàng</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn ngành hàng">
+                                                            <option>Đồ dùng cho bé</option>
+                                                            <option>Sách tiếng Anh</option>
+                                                            <option>Đồ dùng cho mẹ</option>
+                                                            <option>Sách tiếng Việt</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right">
+                                                <input class=" btn btn-secondary btn-view" value="Xem báo cáo nhanh " type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-3-->
+                                </div>
+                                <!--/.report-form-->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabs-3">
+                        <div class="panel box-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Báo cáo đơn hàng vận chuyển</h3>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-1" type="radio" name="intTransport" checked="">
+                                            <label>Tất cả</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-2" type="radio" name="intTransport">
+                                            <label>Shop Giao Hàng (SGH)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-3" type="radio" name="intTransport">
+                                            <label>Speedlink (SPL)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-4" type="radio" name="intTransport">
+                                            <label>Giao Hàng Tiết Kiệm (GHTK)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-5" type="radio" name="intTransport">
+                                            <label>Tốc Hành (TH)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-6" type="radio" name="intTransport">
+                                            <label>Ninja Van (NJV)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-transport-form-7" type="radio" name="intTransport">
+                                            <label>Kingship (KS)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-padding">
+                                <!--report-form-->
+                                <div class="report-form-wrap">
+                                    <div class="report-form report-transport-form-1 active">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-1-->
+                                    <div class="report-form report-transport-form-2">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right">
+                                                <input class=" btn btn-secondary btn-view" value="Xem báo cáo nhanh " type="button" name="">
+                                                <input class=" btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-2-->
+                                    <div class="report-form report-transport-form-3">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-3-->
+                                    <div class="report-form report-transport-form-4">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-4-->
+                                    <div class="report-form report-transport-form-5">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-5-->
+                                    <div class="report-form report-transport-form-6">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-6-->
+                                    <div class="report-form report-transport-form-7">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                            </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary btn-view" value="Xem báo cáo nhanh" type="button" name="">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-7-->
+                                </div>
+                                <!--/.report-form-->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabs-4">
+                        <div class="panel box-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Báo cáo khách hàng</h3>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-custommer-form-1" type="radio" name="intCustomer" checked="">
+                                            <label>Bình thường</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-custommer-form-2" type="radio" name="intCustomer">
+                                            <label>Theo nhóm sản phẩm</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-custommer-form-3" type="radio" name="intCustomer">
+                                            <label>Giá trị đơn hàng</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-padding">
+                                <!--report-form-->
+                                <div class="report-form-wrap">
+                                    <div class="report-form report-custommer-form-1 active">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-1-->
+                                    <div class="report-form report-custommer-form-2">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn ngành hàng</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn ngành hàng">
+                                                            <option>Đồ dùng cho bé</option>
+                                                            <option>Sách tiếng Anh</option>
+                                                            <option>Đồ dùng cho mẹ</option>
+                                                            <option>Sách tiếng Việt</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class=" btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-2-->
+                                    <div class="report-form report-custommer-form-3">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn tỉnh / Thành phố</label>
+                                                <div class="col-sm-4">
+                                                    <div class="wrap_select bootstrap-multi-select-box">
+                                                        <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn Tỉnh/ Thành phố">
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                            <option>Hồ Chí Minh</option>
+                                                            <option>Hà Nội</option>
+                                                        </select>
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn giá trị đơn hàng</label>
+                                                <div class="col-sm-4">
+                                                    <select class="form-control">
+                                                        <option value="">Chọn giá trị đơn hàng</option>
+                                                        <option value="1">Dưới 1.000.000 VND</option>
+                                                        <option value="2">Trên 1.000.000 VND</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                {% include "block/_status-order.html" %}
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right">
+                                                <input class=" btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-3-->
+                                </div>
+                                <!--/.report-form-->
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tabs-5">
+                        <div class="panel box-panel">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Báo cáo sản phẩm</h3>
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-product-form-1" type="radio" name="intProduct" checked="">
+                                            <label>Trạng thái sản phẩm</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <div class="radio">
+                                            <input class="report-form-control" id="report-product-form-2" type="radio" name="intProduct">
+                                            <label>Số lượng bán</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-body panel-padding">
+                                <!--report-form-->
+                                <div class="report-form-wrap">
+                                    <div class="report-form report-product-form-1 active">
+                                        <div class="report-form-inner">
+                                            <div class="row form-group">
+                                                <label class="col-sm-3 form-label">Chọn trạng thái</label>
+                                                <div class="col-sm-4">
+                                                    <select class="form-control">
+                                                        <option>Vui lòng chọn</option>
+                                                        <option>Đã kích hoạth</option>
+                                                        <option>Chưa kích hoạt</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class=" btn btn-secondary" value="Xuất báo cáo excel" type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-1-->
+                                    <div class="report-form report-product-form-2">
+                                        <div class="report-form-inner">
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <input type="radio" name="quantity_sell" checked="">
+                                                    <label>Tất cả sản phẩm</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="radio">
+                                                            <input type="radio" name="quantity_sell">
+                                                            <label>Theo SKU</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <input class="form-control" placeholder="Nhập mã SKU" type="text" disabled="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="radio">
+                                                            <input type="radio" name="quantity_sell">
+                                                            <label>Theo ngành hàng</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <div class="wrap_select bootstrap-multi-select-box">
+                                                            <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn ngành hàng" disabled="">
+                                                                <option>Đồ dùng cho bé</option>
+                                                                <option>Sách tiếng Anh</option>
+                                                                <option>Đồ dùng cho mẹ</option>
+                                                                <option>Sách tiếng Việt</option>
+                                                            </select>
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="radio">
+                                                            <input type="radio" name="quantity_sell">
+                                                            <label>Theo tên sản phẩm</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <!-- <input class="form-control" placeholder="Nhập tên sản phẩm" type="text"> -->
+                                                        <select class="form-control select_product_name data-product-ajax select2-hidden-accessible" name="select_product_name" id="select_product_name" tabindex="-1" aria-hidden="true" disabled="">
+                                                            <option value="25561">Áo thun nam</option>
+                                                            <option value="25575">Áo thun nam</option>
+                                                            <option value="25570">blue chanel</option>
+                                                            <option value="25562">Đồng hồ</option>
+                                                            <option value="25558">Đồng hồ nam</option>
+                                                            <option value="25550">Đồng hồ thông minh</option>
+                                                            <option value="25577">giày nam và nữ</option>
+                                                            <option value="25566">Giày nữ mới 2017</option>
+                                                            <option value="25569">giày sneaker 2019</option>
+                                                            <option value="25565">Jean nam new 2018</option>
+                                                            <option value="25547">Mắt kính</option>
+                                                            <option value="25553">Nguyễn Hà Đông</option>
+                                                            <option value="25554">Nguyễn Hà Nam</option>
+                                                            <option value="5388">Nước hoa</option>
+                                                            <option value="25568">Nước hoa chanel</option>
+                                                            <option value="25544">Sản phẩm 500 g</option>
+                                                            <option value="25545">sản phẩm coupon</option>
+                                                            <option value="9927">Sản phẩm ngành hàng khác</option>
+                                                            <option value="25556">sản phẩm ngày 15</option>
+                                                            <option value="19614">Sản phẩm test</option>
+                                                            <option value="22840">Sản phẩm test</option>
+                                                            <option value="23263">Sản phẩm test</option>
+                                                            <option value="25551">Sản phẩm test</option>
+                                                            <option value="9699">Sản phẩm test</option>
+                                                            <option value="22518">Sản phẩm test 10/4</option>
+                                                            <option value="8320">Sản phẩm test 10/10</option>
+                                                            <option value="22615">Sản phẩm test 11/04</option>
+                                                            <option value="22674">Sản phẩm test 12/4</option>
+                                                            <option value="23219">Sản phẩm test 15/4</option>
+                                                            <option value="23337">Sản phẩm test 18/4</option>
+                                                            <option value="25226">Sản phẩm test 19/5</option>
+                                                            <option value="25400">Sản phẩm test 22/5</option>
+                                                            <option value="25571">Sản phẩm test 220231</option>
+                                                            <option value="17431">Sản phẩm test 24/1</option>
+                                                            <option value="25526">Sản phẩm test 25/5</option>
+                                                            <option value="25557">sản phẩm test 26</option>
+                                                            <option value="24320">Sản phẩm test 4/5</option>
+                                                            <option value="24392">Sản phẩm test 5/5</option>
+                                                            <option value="23509">sản phẩm test ngày 19/4</option>
+                                                            <option value="23586">sản phẩm test ngày 20/4</option>
+                                                            <option value="23792">Sản phẩm test ngày 24/4</option>
+                                                            <option value="25555">sdhfs</option>
+                                                            <option value="17425">SP test 12313</option>
+                                                            <option value="19612">Tã sữa test</option>
+                                                            <option value="23087">Tên sản phẩm</option>
+                                                            <option value="25546">Tên sản phẩm</option>
+                                                            <option value="5518">Test</option>
+                                                            <option value="25559">test sp</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Từ ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3">
+                                                        <div class="form-group">
+                                                            <label class="form-label">Đến ngày</label>
+                                                            <div class="date-picker-group">
+                                                                <input class="form-control datepicker" value="10/12/2016 12:35 SA" type="text" readonly="">
+                                                                <span class="datepicker-icon">
+                                                                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.form-group-->
+                                            <div class="cta-block pull-right ">
+                                                <input class="btn btn-secondary" value="Xuất báo cáo excel " type="button" name="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--/.report-form-2-->
+                                </div>
+                                <!--/.report-form-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel box-panel chartContainer">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Tổng doanh thu <span class="price">120.000.000 đ</span></h3>
+                        </div>
+                        <div class="panel-body panel-padding">
+                            <div class="chart1">
+                                <canvas id="canvas" style="height:250px; width: 1100px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}

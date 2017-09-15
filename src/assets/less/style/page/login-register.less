@@ -1,0 +1,167 @@
+.page-login {
+    main {
+        width: 100%;
+        min-height: 100vh;
+        float: left;
+        background: #333333 url(../images/upload/bg-login.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .hotline {
+        margin-bottom: 0;
+        a {
+            color: @text-color-4;
+        }
+        @media only screen and (min-height : 600px){
+            width: 100%;
+            position: fixed;
+            bottom: 30px;
+        }
+    }
+    footer {
+        display: none;
+        p {
+            margin-left: -9%;
+            bottom: 10px;
+            @media only screen and (max-width: 1600px){
+                margin-left: -13%;
+            }
+        }
+    }
+}
+.login-form,
+.register-form,
+.termofuse-form {
+    width: 90%;
+    max-width: 428px;
+    margin: 8% auto 0;
+    padding: 15px;
+    color: @text-color-4;
+    .form-title {
+        color: #fff;
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-control {
+        height: 36px;
+        color: #fff;
+        .placeholder(@text-color-4, normal);
+        border-color: @border-color-default;
+        background-color: transparent;
+    }
+    .cta-btn {
+        width: 244px;
+        height: 42px;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 600;
+    }
+}
+.register-form {
+    margin-top: 0;
+    & + .hotline {
+        @media only screen and (min-height : 600px){
+            position: relative;
+            bottom: 15px;
+        }
+        @media only screen and (min-height : 768px){
+            position: fixed;
+        }
+    }
+}
+.termofuse-form {
+    margin-top: 0;
+}
+.remember-checkbox {
+    display: inline-block;
+    margin: 0;
+}
+.link-to-register,
+.forget-pass {
+    text-decoration: underline;
+    color: @secondary-color;
+    &:hover {
+        text-decoration: none;
+    }
+}
+.link-to-register,
+.link-shop-text {
+    font-weight: 600;
+    margin-left: 5px;
+}
+.link-shop-text {
+    color: @secondary-color;
+    font-weight: 600;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.termofuse {
+    height: 340px;
+    padding: 20px 10px 20px 20px;
+    background-color: #fff;
+    border-radius: @border-radius;
+    margin-bottom: 20px;
+}
+.termofuse-inner {
+    width: 100%;
+    height: 300px;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+    color: @text-color-1;
+    > h4 {
+        font-weight: bold;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    ul,
+    ol {
+        padding-left: 20px;
+    }
+}
+.forget-password-modal {
+    .modal-dialog {
+        max-width: 474px;
+    }
+    .modal-header {
+        height: 34px;
+        padding: 0 5px;
+        background-color: transparent;
+        border-bottom: 0;
+        .close {
+            width: 30px;
+            height: 34px;
+            background-color: transparent;
+            color: #c4d6df;
+            margin: 0;
+        }
+    }
+    .modal-body {
+        padding-top: 0;
+    }
+}
+.send-email-form {
+    h2 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+    p,
+    .form-group {
+        margin-bottom: 25px;
+    }
+    .form-control {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cta-block {
+        margin-bottom: 15px;
+        .btn {
+            height: 46px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
