@@ -1100,12 +1100,7 @@
                                                     </div>
                                                     <div class="col-sm-4">
                                                         <div class="wrap_select bootstrap-multi-select-box">
-                                                            <select class="form-control data-product selectpicker" multiple data-actions-box="true" data-live-search="true" title="Chọn ngành hàng" disabled="">
-                                                                <option>Đồ dùng cho bé</option>
-                                                                <option>Sách tiếng Anh</option>
-                                                                <option>Đồ dùng cho mẹ</option>
-                                                                <option>Sách tiếng Việt</option>
-                                                            </select>
+                                                            {% include "block/_data-product-bootstrapselect.html" %}
                                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
@@ -1120,57 +1115,11 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4">
-                                                        <!-- <input class="form-control" placeholder="Nhập tên sản phẩm" type="text"> -->
-                                                        <select class="form-control select_product_name data-product-ajax select2-hidden-accessible" name="select_product_name" id="select_product_name" tabindex="-1" aria-hidden="true" disabled="">
-                                                            <option value="25561">Áo thun nam</option>
-                                                            <option value="25575">Áo thun nam</option>
-                                                            <option value="25570">blue chanel</option>
-                                                            <option value="25562">Đồng hồ</option>
-                                                            <option value="25558">Đồng hồ nam</option>
-                                                            <option value="25550">Đồng hồ thông minh</option>
-                                                            <option value="25577">giày nam và nữ</option>
-                                                            <option value="25566">Giày nữ mới 2017</option>
-                                                            <option value="25569">giày sneaker 2019</option>
-                                                            <option value="25565">Jean nam new 2018</option>
-                                                            <option value="25547">Mắt kính</option>
-                                                            <option value="25553">Nguyễn Hà Đông</option>
-                                                            <option value="25554">Nguyễn Hà Nam</option>
-                                                            <option value="5388">Nước hoa</option>
-                                                            <option value="25568">Nước hoa chanel</option>
-                                                            <option value="25544">Sản phẩm 500 g</option>
-                                                            <option value="25545">sản phẩm coupon</option>
-                                                            <option value="9927">Sản phẩm ngành hàng khác</option>
-                                                            <option value="25556">sản phẩm ngày 15</option>
-                                                            <option value="19614">Sản phẩm test</option>
-                                                            <option value="22840">Sản phẩm test</option>
-                                                            <option value="23263">Sản phẩm test</option>
-                                                            <option value="25551">Sản phẩm test</option>
-                                                            <option value="9699">Sản phẩm test</option>
-                                                            <option value="22518">Sản phẩm test 10/4</option>
-                                                            <option value="8320">Sản phẩm test 10/10</option>
-                                                            <option value="22615">Sản phẩm test 11/04</option>
-                                                            <option value="22674">Sản phẩm test 12/4</option>
-                                                            <option value="23219">Sản phẩm test 15/4</option>
-                                                            <option value="23337">Sản phẩm test 18/4</option>
-                                                            <option value="25226">Sản phẩm test 19/5</option>
-                                                            <option value="25400">Sản phẩm test 22/5</option>
-                                                            <option value="25571">Sản phẩm test 220231</option>
-                                                            <option value="17431">Sản phẩm test 24/1</option>
-                                                            <option value="25526">Sản phẩm test 25/5</option>
-                                                            <option value="25557">sản phẩm test 26</option>
-                                                            <option value="24320">Sản phẩm test 4/5</option>
-                                                            <option value="24392">Sản phẩm test 5/5</option>
-                                                            <option value="23509">sản phẩm test ngày 19/4</option>
-                                                            <option value="23586">sản phẩm test ngày 20/4</option>
-                                                            <option value="23792">Sản phẩm test ngày 24/4</option>
-                                                            <option value="25555">sdhfs</option>
-                                                            <option value="17425">SP test 12313</option>
-                                                            <option value="19612">Tã sữa test</option>
-                                                            <option value="23087">Tên sản phẩm</option>
-                                                            <option value="25546">Tên sản phẩm</option>
-                                                            <option value="5518">Test</option>
-                                                            <option value="25559">test sp</option>
-                                                        </select>
+                                                        <div class="wrap_select">
+                                                            <select class="form-control select_product_name data-product-ajax select2-hidden-accessible" name="select_product_name" id="select_product_name" tabindex="-1" aria-hidden="true">
+                                                            </select>
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

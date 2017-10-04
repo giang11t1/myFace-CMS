@@ -14,18 +14,21 @@ select {
     &:before {
         z-index: 10;
     }
-    // select {
-    //     -webkit-appearance: none;
-    //     -moz-appearance: none;
-    //     appearance: none;
-    // }
-    // select::-ms-expand {
-    //     display: none;
-    // }
-    // &:after {
-
-    // }
-
+  /*  select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }*/
+    select::-ms-expand {
+        display: none;
+    }
+    .fa {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        cursor: none;
+    }
 }
 .form-control {
     height: @form-control-height-base;
@@ -241,7 +244,7 @@ select {
     .yt-uix-checkbox-on-off label {
        .unchecked {
             width: 22px;
-        } 
+        }
     }
     .yt-uix-checkbox-on-off input[type=checkbox]:checked+label .checked {
         width: 22px;

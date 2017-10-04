@@ -340,14 +340,6 @@
 }
 
 .bootstrap-multi-select-box {
-    .dropdown-menu {
-        font-size: 13px;
-        li {
-            a {
-                padding: 6px 20px;
-            }
-        }
-    }
     .bs-searchbox {
         .form-control {
             height: 28px;
@@ -792,7 +784,7 @@
         overflow: hidden;
         border-radius: @border-radius;
         margin-top: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         position: relative;
         border: @line;
         &:hover {
@@ -1625,12 +1617,11 @@
 }
 
 .chartContainer {
-    visibility: hidden;
     width: 100%;
-}
-
-.visible {
-    visibility: visible !important;
+    display: none;
+    &.visible {
+        display: block !important;
+    }
 }
 
 //

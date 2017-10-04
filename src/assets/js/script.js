@@ -1,4 +1,4 @@
-var cont_size_1 = 0.75; //300*400
+var cont_size_1 = 1; //500*500
 $(document).ready(function() {
     //slimscroll
     $(function() {
@@ -599,8 +599,6 @@ $(document).ready(function() {
     $( "#tabs" ).tabs();
 
     //set Height of chat-comment content
-
-
     function chatWidgetSetHeight() {
         var header =  $('.main-header');
         var pageHeader = $('.page-header');
@@ -634,7 +632,6 @@ $(document).ready(function() {
         $('.inbox-list-Slimscroll').slimScroll({
             height: h_inbox_block +'px',
             color: '#d8e7f4',
-            start: 'bottom',
             size: '5px',
             opacity: 1,
             railVisible: true,
@@ -645,7 +642,6 @@ $(document).ready(function() {
         $('.customer-box-Slimscroll').slimScroll({
             height: h_chatcontent +'px',
             color: '#d8e7f4',
-            start: 'bottom',
             size: '5px',
             opacity: 1,
             railVisible: true,

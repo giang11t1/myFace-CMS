@@ -194,6 +194,14 @@ select.selectpicker {
             opacity: 0.9;
             box-sizing: border-box;
         }
+        .bootstrap-multi-select-box & + {
+            font-size: 13px;
+            li {
+                a {
+                    padding: 6px 25px 6px 10px;
+                }
+            }
+        }
     }
     .no-results {
         padding: 3px;
@@ -215,11 +223,8 @@ select.selectpicker {
         &.selected a span.check-mark {
             position: absolute;
             display: inline-block;
-            right: 15px;
-            margin-top: 10px;
-        }
-        a span.text {
-            margin-right: 34px;
+            right: 6px;
+            top: 10px;
         }
     }
 }
@@ -285,7 +290,7 @@ select.selectpicker {
 .bs-searchbox,
 .bs-actionsbox,
 .bs-donebutton {
-    padding: 4px 8px;
+    padding: 4px 10px;
 }
 
 .bs-actionsbox {
@@ -307,11 +312,77 @@ select.selectpicker {
 
 .bs-searchbox {
     & + .bs-actionsbox {
-        padding: 0 8px 4px;
+        padding: 0 10px 4px;
     }
     & .form-control {
         margin-bottom: 0;
         width: 100%;
         float: none;
+    }
+}
+// custom
+.data-product {
+    &.bootstrap-select {
+        .dropdown-menu {
+            &.inner {
+                max-height: 250px !important;
+            }
+            li {
+                 &.selected {
+                    a {
+                        span {
+                            color: #fff;
+                        }
+                    }
+                }
+                a {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                &.disabled {
+                    .is_disable {
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                        background-color: @input-color-default;
+                        border-bottom: @line;
+                        border-color: @border-color-default;
+                    }
+                }
+            }
+            .text {
+                color:#000;
+                font-weight:normal;
+                font-size:12px;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+.bootstrap-select {
+    .dropdown-menu {
+        .option-parent,
+        .option-parent-inner {
+            color: #000;
+            font-weight: normal;
+            font-size: 13px;
+        }
+        .option-parent {
+        }
+        .option-parent-inner {
+            padding-left: 10px;
+        }
+        li {
+            &.selected {
+                span {
+                    color: #fff;
+                }
+            }
+            a {
+                white-space: normal;
+                span {
+                    display: block;
+                }
+            }
+        }
     }
 }
